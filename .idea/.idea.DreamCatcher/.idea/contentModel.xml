@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\hyunji\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_DreamCatcher.438980891.00" t="ExcludeRecursive" />
+    <e p="C:\Users\hyunji\Documents\GitHub\DreamCatcher" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Script" t="Include">
+          <e p="Scene1" t="Include">
+            <e p="ButtonControl.cs" t="Include" />
+            <e p="HomeLoad.cs" t="Include" />
+            <e p="Joystick.cs" t="Include" />
+            <e p="PlayerControllerScript.cs" t="Include" />
+          </e>
+          <e p="Scene2" t="Include">
+            <e p="ButtonControl_1.cs" t="Include" />
+            <e p="PlayerControllerScript_1.cs" t="Include" />
+          </e>
+          <e p="Scene4" t="Include">
+            <e p="ButtonControl_2.cs" t="Include" />
+          </e>
+          <e p="Select" t="Include">
+            <e p="HomeManager.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="DreamCatcher.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
