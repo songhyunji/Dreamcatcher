@@ -6,21 +6,21 @@ using System.IO;
 
 public class Database : MonoBehaviour {
 
-    public List<Item> items = new List<Item>();
+    public List<Item> databaseItems = new List<Item>();
     private JsonData itemData;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+        //Start()로 하면 Inventory의 InitializeItem()이 먼저 실행되는 경우가 있어서 Awake 사용함
         itemData = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/StreamingAssets/Items.json"));
         ConstructItemDatabase();
 	}
 
-
-
 	
-    void ConstructItemDatabase()
+    public void ConstructItemDatabase()
     {
-        for(int i = 0; i<itemData.Count;i++)
+        //해당 Path의 파일 내용을 읽어들여 item형 list에 Add합니다.
+        for (int i = 0; i<itemData.Count;i++)
         {
             Item newItem = new Item();
             newItem.itemID = (int)itemData[i]["id"];
@@ -28,11 +28,9 @@ public class Database : MonoBehaviour {
             newItem.itemName = itemData[i]["name"].ToString();
             newItem.itemDescription = itemData[i]["description"].ToString();
 
-            items.Add(newItem);
+            databaseItems.Add(newItem);
         }
+
+
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
