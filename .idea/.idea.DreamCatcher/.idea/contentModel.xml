@@ -6,6 +6,11 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Script" t="Include">
+          <e p="Inventory" t="Include">
+            <e p="Database.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+          </e>
           <e p="Scene1" t="Include">
             <e p="ButtonControl.cs" t="Include" />
             <e p="HomeLoad.cs" t="Include" />
