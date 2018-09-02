@@ -16,7 +16,20 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
 		bgImg = GetComponent<Image>();
 		joystickImg = transform.GetChild(0).GetComponent<Image>();
 	}
+	
+	private void Update()
+	{
+		if (Input.touchCount > 0)
+		{
+			Vector3 touchPos = Input.GetTouch(0).position;
+			Debug.Log(Input.GetTouch(0).position);
 
+			if (touchPos.x <= Screen.width / 2)
+			{
+				this.transform.position = touchPos;
+			}			
+		}
+	}
 
 	public virtual void OnDrag(PointerEventData ped)
 	{

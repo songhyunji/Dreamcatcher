@@ -66,18 +66,7 @@
     <Compile Include="Assets\Script\Scene2\PlayerControllerScript_1.cs" />
     <Compile Include="Assets\Script\Scene4\ButtonControl_2.cs" />
     <Compile Include="Assets\Script\Select\HomeManager.cs" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/hyunji/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/hyunji/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/hyunji/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/hyunji/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
+    <None Include="Assets\JsonDotNet\link.xml" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -272,6 +261,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/hyunji/Documents/GitHub/Dreamcatcher/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
       <HintPath>C:/Users/hyunji/Documents/GitHub/Dreamcatcher/Assets/Plugins/LitJson.dll</HintPath>
