@@ -30,6 +30,9 @@
           <e p="Select" t="Include">
             <e p="HomeManager.cs" t="Include" />
           </e>
+          <e p="touch" t="Include">
+            <e p="PlayerMove.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="DreamCatcher.sln" t="IncludeFlat" />
