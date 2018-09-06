@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Animator\AnimatorWalk.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Inventory\Database.cs" />
     <Compile Include="Assets\Script\Inventory\Inventory.cs" />
