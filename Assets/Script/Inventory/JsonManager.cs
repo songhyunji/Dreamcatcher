@@ -10,36 +10,40 @@ using System;
 public class JsonManager : MonoBehaviour {
 
     public List<Item> inventoryItems = new List<Item>();                                //저장된 data를 로드할 리스트
-    WWW itemPath;                                                                       //json data가 저장된 경로 지정
-    WWW originPath;                                                                     //새로 시작할 경우 불러올 original item file
-    JsonData getData;                                                                   //load시 경로따라 저장하는 json file
-    string dataJason;                                                                   //Save할 JsonData의 string
+    string content;                                                                     //Save할 JsonData의 string
     public Text testText;                                                               //Test용 text 연결
     public Text gamingTestText;                                                         //Test용 text 연결
     string text;                                                                        //데이터 save할 때 json data를 임시 저장
+    TextAsset userItemFile;
+    bool wantNewGame = false;
     
-    public void startNewGameAboutItem()
-    {   //새로 게임을 시작했을 때, 기존의 아이템 DB를 지우고 originData를 덮어씁니다.
-#if UNITY_ANDROID
-        originPath = new WWW(Application.streamingAssetsPath + "/Inventory/OriginItems.json");
-        itemPath = new WWW(Application.streamingAssetsPath + "/Inventory/UserInventory.json");
-
-        File.Copy(originPath, itemPath, true);
-#else
-        File.Copy(Application.streamingAssetsPath + "/Inventory/OriginItems.json", Application.streamingAssetsPath + "/Inventory/UserInventory.json", true);
-#endif
+    public void LoadNewGame()
+    {   //새 게임 로드
+        wantNewGame = true;
         itemLoad();
+        wantNewGame = false;
     }
-    
+
     public void itemLoad()
-    {   // 저장된 item data를 inventory list에 로드
-        itemPath = new WWW(Application.streamingAssetsPath + "/Inventory/UserInventory.json");
-        getData = JsonMapper.ToObject(itemPath.text);
+    {   // 저장된 item data를 inventory list에 로드 
+        if(!File.Exists(Application.persistentDataPath + "/UserInventory.json") || wantNewGame)
+        {   //파일이 존재하지 않는다 -> Origin값을 복사해와서 user전용 json 파일 생성 후 불러오기
+            userItemFile = Resources.Load("Inventory/OriginItems") as TextAsset;
+            content = userItemFile.ToString();
+            File.WriteAllText(Application.persistentDataPath + "/UserInventory.json", content);
+        }
+        else
+        {   //파일이 존재한다 -> 기존 json 파일 값 불러오기
+            content = File.ReadAllText(Application.persistentDataPath + "/UserInventory.json");
+        }
+
+        JsonData getData = JsonMapper.ToObject(content);
 
         if (inventoryItems.Count != 0)
         {   //이미 인벤토리아이템에 기존 아이템이 저장되어있다면 모두 삭제
             inventoryItems.Clear();
         }
+
         text = null;
         for(int i = 0; i<getData.Count; i++)
         {
@@ -58,8 +62,8 @@ public class JsonManager : MonoBehaviour {
 
     public void itemSave()
     {   // inventory list의 값을 json으로 저장 : Newtonsoft.JSON으로 serialize
-        dataJason = JsonConvert.SerializeObject(inventoryItems);
-        File.WriteAllText(Application.platform == RuntimePlatform.Android ? itemPath.text : Application.streamingAssetsPath + "/Inventory/UserInventory.json", dataJason);
+        content = JsonConvert.SerializeObject(inventoryItems);
+        File.WriteAllText(Application.persistentDataPath + "/UserInventory.json", content);
     }
 
 }
