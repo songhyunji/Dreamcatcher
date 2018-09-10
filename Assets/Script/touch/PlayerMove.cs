@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
 
 	public float speed;
+	public float speed_up;
 	public float jumpForce;
 	public GameObject speechBubble;
 	public Vector2 startPos;			
@@ -14,70 +15,53 @@ public class PlayerMove : MonoBehaviour
 	private bool isGround = true;
 	private Rigidbody2D rd2D;
 	private Transform transform;
-	private bool isMoving = false;
+	private bool isMovingHorizental = false;
+	private bool isMovingVertical = false;
 	private float dir;
+	private bool nearFrog = false;
+	private bool onLadder = false;
+	private bool goUpside = false;
 	
 	void Start ()
 	{
-
 		rd2D = GetComponent<Rigidbody2D>();
 		transform = GetComponent<Transform>();
 	}
 
 	private void Update()
 	{
-		if (Input.touchCount > 0)
+		if (goUpside)
 		{
-			Touch touch = Input.GetTouch(0);
-
-			if (touch.position.x <= Screen.width / 2)
-			{
-				switch (touch.phase)
-				{
-					case TouchPhase.Began:
-						startPos = touch.position;
-						isMoving = true;
-						break;
-						
-					case TouchPhase.Moved:
-						direction = touch.position - startPos;
-						if (direction.x > 0)
-						{
-							dir = 1;
-						}
-						else if (direction.x < 0)
-						{
-							dir = -1;
-						}
-						break;
-					
-					case TouchPhase.Ended:
-						isMoving = false;
-						break;
-				}
-			}
-			else
-			{
-				isMoving = false;
-			}
+			rd2D.gravityScale = 0;
+			MoveVertical();
+			
 		}
-		
-		/* if(Input.GetKey(KeyCode.D))
+		else
 		{
-			rd2D.AddForce(transform.right * speed * Time.deltaTime);
+			rd2D.gravityScale = 2;
+			MoveHorizental();
 		}
-		else if (Input.GetKey(KeyCode.A))
-		{
-			rd2D.AddForce(-1 * transform.right * speed * Time.deltaTime);
-		} */
 	}
 
 	private void FixedUpdate()
 	{
-		if (isMoving)
+		if (isMovingHorizental)
 		{
 			rd2D.AddForce(dir * transform.right * speed * Time.deltaTime);
 		}
+		else if (isMovingVertical)
+		{
+			rd2D.AddForce(dir * transform.up* speed_up * Time.deltaTime);
+		}
+		
+		/* if(Input.GetKey(KeyCode.D))
+			{
+				rd2D.AddForce(transform.right * speed * Time.deltaTime);
+			}
+			else if (Input.GetKey(KeyCode.A))
+			{
+				rd2D.AddForce(-1 * transform.right * speed * Time.deltaTime);
+			} */
 	}
 	
 	public void PressJumpBtn()
@@ -91,27 +75,149 @@ public class PlayerMove : MonoBehaviour
 
 	public void PressInteractBtn()
 	{
-		if (speechBubble.activeSelf == true)
+		if (nearFrog)
 		{
-			speechBubble.SetActive(false);
+			if (speechBubble.activeSelf == true)
+			{
+				speechBubble.SetActive(false);
+			}
+			else if (speechBubble.activeSelf == false)
+			{
+				speechBubble.SetActive(true);
+			}
 		}
-		else if (speechBubble.activeSelf == false)
+		else if (onLadder)
 		{
-			speechBubble.SetActive(true);
+			if (goUpside)
+			{
+				goUpside = false;
+			}
+			else if (!goUpside)
+			{
+				goUpside = true;
+			}
 		}
 	}
 	
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.contacts[0].normal.y>0.9f)
+		if (other.contacts[0].normal.y > 0.9f)
 		{
-
-			if (other.collider.CompareTag("Ground"))
+			isGround = true;
+			
+			/*if (other.collider.CompareTag("Ground"))
 			{
 				isGround = true;
-			}
-
+			}*/
 		}
+	}
 
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Frog"))
+		{
+			nearFrog = true;
+			Debug.Log("Touch Frog");
+		}
+		else if (other.CompareTag("Ladder"))
+		{
+			onLadder = true;
+			Debug.Log("Touch Ladder");
+		}
+	}
+	
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.CompareTag("Frog"))
+		{
+			nearFrog = false;
+			Debug.Log("Exit Frog");
+		}
+		else if (other.CompareTag("Ladder"))
+		{
+			onLadder = false;
+			goUpside = false;
+			Debug.Log("Exit Ladder");
+		}
+	}
+
+	public void MoveVertical()
+	{
+		if (Input.touchCount > 0)
+		{
+			Touch touch = Input.GetTouch(0);
+
+			if (touch.position.x <= Screen.width / 2)
+			{
+				switch (touch.phase)
+				{
+					case TouchPhase.Began:
+						startPos = touch.position;
+						isMovingVertical = true;
+						break;
+
+					case TouchPhase.Moved:
+						direction = touch.position - startPos;
+						if (direction.y > 0)
+						{
+							dir = 1;
+						}
+						else if (direction.y < 0)
+						{
+							dir = -1;
+						}
+
+						break;
+
+					case TouchPhase.Ended:
+						isMovingVertical = false;
+						break;
+				}
+			}
+			else
+			{
+				isMovingVertical = false;
+			}
+		}
+	}
+
+	public void MoveHorizental()
+	{
+		if (Input.touchCount > 0)
+		{
+			Touch touch = Input.GetTouch(0);
+
+			if (touch.position.x <= Screen.width / 2)
+			{
+				switch (touch.phase)
+				{
+					case TouchPhase.Began:
+						startPos = touch.position;
+						isMovingHorizental = true;
+						break;
+
+					case TouchPhase.Moved:
+						direction = touch.position - startPos;
+						if (direction.x > 0)
+						{
+							dir = 1;
+						}
+						else if (direction.x < 0)
+						{
+							dir = -1;
+						}
+
+						break;
+
+					case TouchPhase.Ended:
+						isMovingHorizental = false;
+						break;
+				}
+			}
+			else
+			{
+				isMovingHorizental = false;
+			}
+		}
 	}
 }
