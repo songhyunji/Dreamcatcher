@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Ground
   - Trap
-  - Ladder
-  - Frog
   layers:
   - Default
   - TransparentFX
