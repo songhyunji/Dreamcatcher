@@ -9,10 +9,17 @@
           <e p="link.xml" t="Include" />
         </e>
         <e p="Script" t="Include">
+          <e p="Animator" t="Include">
+            <e p="AnimatorWalk.cs" t="Include" />
+          </e>
+          <e p="Dead" t="Include">
+            <e p="OntheDeadTrap.cs" t="Include" />
+          </e>
           <e p="Inventory" t="Include">
             <e p="Database.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
+            <e p="JsonManager.cs" t="Include" />
           </e>
           <e p="Scene1" t="Include">
             <e p="ButtonControl.cs" t="Include" />
