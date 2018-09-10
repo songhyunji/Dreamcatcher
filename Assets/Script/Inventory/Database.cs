@@ -25,10 +25,10 @@ public class Database : MonoBehaviour
         for (int i = 0; i < itemData.Count; i++)
         {
             Item item = new Item();
-            item.itemID = (int)itemData[i]["id"];
-            item.isActivated = (bool)itemData[i]["activated"];
-            item.itemName = itemData[i]["name"].ToString();
-            item.itemDescription = itemData[i]["description"].ToString();
+            item.id = (int)itemData[i]["id"];
+            item.activated = (int)itemData[i]["activated"];
+            item.name = itemData[i]["name"].ToString();
+            item.description = itemData[i]["description"].ToString();
 
             databaseItems.Add(item);
         }

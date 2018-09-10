@@ -37,10 +37,10 @@ public class Inventory : MonoBehaviour {
         {
 
             Item itemObj = slotPanel.transform.GetChild(i).GetComponent<Item>();
-            itemObj.itemID = database.databaseItems[i].itemID;
-            itemObj.itemName = database.databaseItems[i].itemName;
-            itemObj.itemDescription = database.databaseItems[i].itemDescription;
-            itemObj.isActivated = database.databaseItems[i].isActivated;
+            itemObj.id = database.databaseItems[i].id;
+            itemObj.name = database.databaseItems[i].name;
+            itemObj.description = database.databaseItems[i].description;
+            itemObj.activated = database.databaseItems[i].activated;
 
         }
     }
@@ -59,13 +59,5 @@ public class Inventory : MonoBehaviour {
         {
             inventoryBackground.SetActive(false);
         }
-    }
-
-    public void ActivatedItem(int id)
-    {   //스토리 흐름에 따라 기본값이 isActviate = false인데 이를 true로 바꾸고 아이템이 나타나게 합니다. (미구현 + 물어 볼 것..)
-        //database를 true로 수정
-        items[id].isActivated = true;
-        items[id].ItemActivated();
-        
     }
 }
