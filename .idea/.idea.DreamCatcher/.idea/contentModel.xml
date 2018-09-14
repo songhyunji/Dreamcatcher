@@ -5,15 +5,13 @@
     <e p="C:\Users\hyunji\Documents\GitHub\DreamCatcher" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Asset" t="Include">
-          <e p="PennyPixel" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="PhysicsObject.cs" t="Include" />
-              <e p="PlayerPlatformerController.cs" t="Include" />
-            </e>
-          </e>
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
         </e>
         <e p="Script" t="Include">
+          <e p="Animator" t="Include">
+            <e p="AnimatorWalk.cs" t="Include" />
+          </e>
           <e p="Dead" t="Include">
             <e p="OntheDeadTrap.cs" t="Include" />
           </e>
@@ -22,18 +20,26 @@
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="JsonManager.cs" t="Include" />
-            <e p="ValueChangeTest.cs" t="Include" />
           </e>
-          <e p="LoadScene.cs" t="Include" />
-          <e p="Test" t="Include">
-            <e p="Canvas_Keep.cs" t="Include" />
-            <e p="Controller2D.cs" t="Include" />
-            <e p="Player.cs" t="Include" />
+          <e p="Scene1" t="Include">
+            <e p="ButtonControl.cs" t="Include" />
+            <e p="HomeLoad.cs" t="Include" />
+            <e p="Joystick.cs" t="Include" />
+            <e p="PlayerControllerScript.cs" t="Include" />
+          </e>
+          <e p="Scene2" t="Include">
+            <e p="ButtonControl_1.cs" t="Include" />
+            <e p="PlayerControllerScript_1.cs" t="Include" />
+          </e>
+          <e p="Scene4" t="Include">
+            <e p="ButtonControl_2.cs" t="Include" />
+          </e>
+          <e p="Select" t="Include">
+            <e p="HomeManager.cs" t="Include" />
           </e>
           <e p="touch" t="Include">
             <e p="PlayerMove.cs" t="Include" />
           </e>
-          <e p="VcamSceneLoad.cs" t="Include" />
         </e>
       </e>
       <e p="DreamCatcher.sln" t="IncludeFlat" />

@@ -10,12 +10,10 @@ public class LoadScene : MonoBehaviour {
     public int sceneNum;
     public CinemachineVirtualCamera vcam;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Touch Load Scene Collider");
-            SceneManager.LoadScene(sceneName + sceneNum);
-        }
+        SceneManager.LoadScene(sceneName + sceneNum);
     }
 }
