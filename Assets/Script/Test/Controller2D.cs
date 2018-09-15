@@ -6,6 +6,7 @@ using UnityEngine;
 public class Controller2D : MonoBehaviour {
 
 	public LayerMask collisionMask;
+//    public Animator animator;
 
 	const float skinWidth = .015f;
 	public int horizontalRayCount = 4;
@@ -22,6 +23,7 @@ public class Controller2D : MonoBehaviour {
 
 	void Start() {
 		collider = GetComponent<BoxCollider2D> ();
+ //       animator = GetComponent<Animator>();
 		CalculateRaySpacing ();
 	}
 
@@ -36,7 +38,9 @@ public class Controller2D : MonoBehaviour {
 			VerticalCollisions (ref velocity);
 		}
 
-		transform.Translate (velocity);
+//        animator.SetBool("IsWalking", true);
+
+        transform.Translate (velocity);
 	}
 
 	void HorizontalCollisions(ref Vector3 velocity) {
