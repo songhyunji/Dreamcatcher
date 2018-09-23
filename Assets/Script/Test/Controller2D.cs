@@ -23,7 +23,6 @@ public class Controller2D : MonoBehaviour {
 
 	void Start() {
 		collider = GetComponent<BoxCollider2D> ();
- //       animator = GetComponent<Animator>();
 		CalculateRaySpacing ();
 	}
 
@@ -37,8 +36,6 @@ public class Controller2D : MonoBehaviour {
 		if (velocity.y != 0) {
 			VerticalCollisions (ref velocity);
 		}
-
-//        animator.SetBool("IsWalking", true);
 
         transform.Translate (velocity);
 	}

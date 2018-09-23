@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
-
-    public Animator animator;
 
 	public float jumpHeight = 4;
 	public float timeToJumpApex = .4f;
@@ -20,17 +19,20 @@ public class Player : MonoBehaviour {
 	float velocityXSmoothing;
 
 	private bool isJumping = false;
-    private bool isWalking = false;
+	private bool isGround = false;
 	public float dir;
 	public Vector2 startPos;			
 	public Vector2 direction;
 
-	Controller2D controller;
+	private Controller2D controller;
+	private SpriteRenderer spriteRenderer;
+	private Animator animator;
 	
 	void Awake () 
 	{
-
+		
 		DontDestroyOnLoad(this);
+		
 		if (FindObjectsOfType(GetType()).Length > 1)
 		{
 			Destroy(gameObject);
@@ -38,28 +40,30 @@ public class Player : MonoBehaviour {
 	}
 
 	void Start() {
+		
 		controller = GetComponent<Controller2D> ();
         animator = GetComponent<Animator>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
 
 		gravity = -(2 * jumpHeight) / Mathf.Pow (timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 		print ("Gravity: " + gravity + "  Jump Velocity: " + jumpVelocity);
 	}
 
-	void Update() {
+	void FixedUpdate()
+	{
 
-        if (controller.collisions.above || controller.collisions.below) {
+		if (controller.collisions.above || controller.collisions.below)
+		{
 			velocity.y = 0;
 		}
-		
+
 		if (Input.touchCount > 0)
 		{
 			Touch touch = Input.GetTouch(0);
 
 			if (touch.position.x <= Screen.width / 2)
 			{
-                isWalking = true;
-
 				switch (touch.phase)
 				{
 					case TouchPhase.Began:
@@ -70,16 +74,21 @@ public class Player : MonoBehaviour {
 						direction = touch.position - startPos;
 						if (direction.x > 0)
 						{
+							animator.SetBool("isWalking", true);
+							spriteRenderer.flipX = false;
 							dir = 1;
 						}
 						else if (direction.x < 0)
 						{
+							animator.SetBool("isWalking", true);
+							spriteRenderer.flipX = true;
 							dir = -1;
 						}
 
 						break;
 
 					case TouchPhase.Ended:
+						animator.SetBool("isWalking", false);
 						dir = 0;
 						break;
 				}
@@ -87,65 +96,68 @@ public class Player : MonoBehaviour {
 			else
 			{
 				dir = 0;
-                isWalking = false;
+				animator.SetBool("isWalking", false);
 			}
 		}
-		
+
 		Vector2 input = new Vector2(dir, Input.GetAxisRaw("Vertical"));
 		//print(input.x);
 		
+		//Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
 
 		if (isJumping)
 		{
 			velocity.y = jumpVelocity;
 			isJumping = false;
-//            animator.SetBool("isJumping", isJumping);
-        }
-
-
-
-        /*if (controller.collisions.below)
-        {
-//            isJumping = true;
-            animator.SetBool("isJumping", false);
-            Debug.Log("착지");
-        }*/
-            float targetVelocityX = input.x * moveSpeed;
-		velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
+			isGround = false;
+			
+			animator.SetBool(("isJumping"), true);
+		}
+		
+		
+		
+		if (isGround)
+		{
+			animator.SetBool(("isJumping"), false);
+		}
+		
+		
+		float targetVelocityX = input.x * moveSpeed;
+		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing,
+			(controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
 		velocity.y += gravity * Time.deltaTime;
-		controller.Move (velocity * Time.deltaTime);
+		controller.Move(velocity * Time.deltaTime);
 
-        animator.SetBool("isWalking", isWalking);
+		/*if (Input.GetAxisRaw("Horizontal") != 0)
+		{
+			animator.SetBool("isWalking", true);
+		}
+		else
+		{
+			animator.SetBool("isWalking", false);
+		}*/
 
-//        Debug.Log(isJump + " in Update");
+		
+	}
+	
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.contacts[0].normal.y > 0.9f)
+		{
+			isGround = true;
+			Debug.Log("착지");
+		}
+	}
 
-    }
 
-    public void PressJumpBtn()
+	public void Jump()
 	{
 		if (controller.collisions.below)
 		{
 			isJumping = true;
-            animator.SetBool("isJumping", isJumping);
-
-//            while(!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_JumpStart"))
-/*            {
-                yield return null;
-            }
-            */
-//            isJumping
-
-            print(isJumping);
-            print(animator.GetBool("isJumping"));
+            animator.SetBool("isJumping", true);
         }
-		else
-		{
-			isJumping = false;
-            animator.SetBool("isJumping", isJumping);
-        }
-
- //       Debug.Log(isJump+" in PressJumpBtn"); -> 인식될 때도 있고 아닐 때도 있음
         
 	}
-
 }
