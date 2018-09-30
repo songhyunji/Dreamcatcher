@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32209050}
   - component: {fileID: 32209051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,8 +199,7 @@ GameObject:
   - component: {fileID: 57208307}
   - component: {fileID: 57208306}
   - component: {fileID: 57208305}
-  - component: {fileID: 57208304}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,48 +219,6 @@ Transform:
   m_Father: {fileID: 937658206}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &57208304
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 57208302}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 57208306}
-    m_ColliderPaths:
-    - - X: -6399994
-        Y: -6399975
-      - X: -997848
-        Y: -6387820
-      - X: -5460739
-        Y: -6399998
-      - X: 5063858
-        Y: -6360697
-      - X: 32000046
-        Y: -6400313
-      - X: 31999970
-        Y: 31999988
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 3.199997, y: 3.1999989}
-      - {x: -0.6399994, y: -0.6399975}
-      - {x: -0.4021315, y: -0.6394623}
-      - {x: 0.5063858, y: -0.6360697}
-      - {x: 3.2000046, y: -0.6400313}
-    - - {x: -0.0997848, y: -0.638782}
-      - {x: -0.4021315, y: -0.6394623}
-      - {x: -0.5460739, y: -0.6399998}
-  m_VertexDistance: 0.0005
 --- !u!50 &57208305
 Rigidbody2D:
   serializedVersion: 4
@@ -293,7 +250,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,9 +264,6 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.6399994, y: -0.6399975}
-      - {x: -0.09978485, y: -0.638782}
-      - {x: -0.5460739, y: -0.63999987}
-      - {x: 0.5063858, y: -0.6360698}
       - {x: 3.2000046, y: -0.64003134}
       - {x: 3.199997, y: 3.1999989}
 --- !u!212 &57208307
@@ -489,7 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166251199}
   - component: {fileID: 166251200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,8 +550,7 @@ GameObject:
   - component: {fileID: 253717154}
   - component: {fileID: 253717153}
   - component: {fileID: 253717157}
-  - component: {fileID: 253717156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +568,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,8 +583,6 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.6473465, y: -0.6476183}
       - {x: -0.6692047, y: -0.67135715}
-      - {x: -0.20256805, y: -0.76001453}
-      - {x: -0.03968048, y: -0.73876786}
       - {x: 0.6082916, y: -0.6458769}
       - {x: 0.64, y: -0.64}
       - {x: 0.64, y: 0.64}
@@ -694,49 +645,6 @@ Transform:
   m_Father: {fileID: 937658206}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &253717156
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 253717152}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 253717153}
-    m_ColliderPaths:
-    - - X: -6473465
-        Y: -6476183
-      - X: -6692047
-        Y: -6713571
-      - X: -2025680
-        Y: -7600145
-      - X: -396804
-        Y: -7387678
-      - X: 6082916
-        Y: -6458769
-      - X: 6400000
-        Y: -6400000
-      - X: 6400000
-        Y: 6400000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.0396804, y: -0.7387678}
-      - {x: 0.6082916, y: -0.6458769}
-      - {x: 0.64, y: -0.64}
-      - {x: 0.64, y: 0.64}
-      - {x: -0.6473465, y: -0.6476183}
-      - {x: -0.6692047, y: -0.6713571}
-      - {x: -0.20256801, y: -0.76001453}
-  m_VertexDistance: 0.0005
 --- !u!50 &253717157
 Rigidbody2D:
   serializedVersion: 4
@@ -768,8 +676,7 @@ GameObject:
   - component: {fileID: 313888819}
   - component: {fileID: 313888818}
   - component: {fileID: 313888817}
-  - component: {fileID: 313888816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,43 +696,6 @@ Transform:
   m_Father: {fileID: 937658206}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &313888816
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 313888814}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 313888818}
-    m_ColliderPaths:
-    - - X: -7909851
-        Y: 3840060
-      - X: -17980576
-        Y: -5407476
-      - X: -19199944
-        Y: -6399851
-      - X: 6400000
-        Y: -6400000
-      - X: -6870193
-        Y: 6868586
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.6870193, y: 0.6868586}
-      - {x: -0.7909851, y: 0.384006}
-      - {x: -1.7980577, y: -0.5407476}
-      - {x: -1.9199945, y: -0.6399851}
-      - {x: 0.64, y: -0.64}
-  m_VertexDistance: 0.0005
 --- !u!50 &313888817
 Rigidbody2D:
   serializedVersion: 4
@@ -857,7 +727,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -870,9 +740,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.7909851, y: 0.38400602}
-      - {x: -1.7980576, y: -0.54074764}
-      - {x: -1.9199944, y: -0.6399851}
+    - - {x: -1.9199944, y: -0.6399851}
       - {x: 0.64, y: -0.64}
       - {x: -0.68701935, y: 0.68685865}
 --- !u!212 &313888819
@@ -1074,7 +942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768500035}
   - component: {fileID: 768500036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,8 +1160,7 @@ GameObject:
   - component: {fileID: 808819021}
   - component: {fileID: 808819020}
   - component: {fileID: 808819024}
-  - component: {fileID: 808819023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1_grey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1311,7 +1178,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1324,9 +1191,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.6507721, y: -0.121485054}
-      - {x: -0.64, y: -0.61}
-      - {x: -0.64, y: -0.64}
+    - - {x: -0.64, y: -0.64}
       - {x: 0.65904236, y: -0.6593077}
       - {x: -0.6400986, y: 0.6399509}
 --- !u!212 &808819021
@@ -1388,43 +1253,6 @@ Transform:
   m_Father: {fileID: 937658206}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &808819023
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808819019}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 808819020}
-    m_ColliderPaths:
-    - - X: -6507721
-        Y: -1214850
-      - X: -6400000
-        Y: -6100000
-      - X: -6400000
-        Y: -6400000
-      - X: 6590423
-        Y: -6593077
-      - X: -6400985
-        Y: 6399508
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.6400985, y: 0.6399508}
-      - {x: -0.6507721, y: -0.121485}
-      - {x: -0.64, y: -0.61}
-      - {x: -0.64, y: -0.64}
-      - {x: 0.6590423, y: -0.6593077}
-  m_VertexDistance: 0.0005
 --- !u!50 &808819024
 Rigidbody2D:
   serializedVersion: 4
@@ -1525,8 +1353,7 @@ GameObject:
   - component: {fileID: 860115233}
   - component: {fileID: 860115232}
   - component: {fileID: 860115231}
-  - component: {fileID: 860115230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,43 +1373,6 @@ Transform:
   m_Father: {fileID: 937658206}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &860115230
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 860115228}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 860115232}
-    m_ColliderPaths:
-    - - X: 19199830
-        Y: 19199524
-      - X: -6399917
-        Y: -6399965
-      - X: -6400000
-        Y: -6400000
-      - X: 6400000
-        Y: -6400000
-      - X: 29119186
-        Y: 13089914
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 2.9119186, y: 1.3089914}
-      - {x: 1.919983, y: 1.9199524}
-      - {x: -0.6399917, y: -0.6399965}
-      - {x: -0.64, y: -0.64}
-      - {x: 0.64, y: -0.64}
-  m_VertexDistance: 0.0005
 --- !u!50 &860115231
 Rigidbody2D:
   serializedVersion: 4
@@ -1614,7 +1404,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -2948,51 +2738,13 @@ GameObject:
   - component: {fileID: 1220295764}
   - component: {fileID: 1220295763}
   - component: {fileID: 1220295762}
-  - component: {fileID: 1220295761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1_grey (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!66 &1220295761
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1220295760}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1220295763}
-    m_ColliderPaths:
-    - - X: -6163482
-        Y: -6104889
-      - X: -6212387
-        Y: -6756538
-      - X: -5555877
-        Y: -6775164
-      - X: 6717300
-        Y: -6724562
-      - X: -6399994
-        Y: 6399972
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 0.67173, y: -0.6724562}
-      - {x: -0.6399994, y: 0.6399972}
-      - {x: -0.6163482, y: -0.6104889}
-      - {x: -0.6212387, y: -0.6756538}
-      - {x: -0.5555877, y: -0.6775164}
-  m_VertexDistance: 0.0005
 --- !u!50 &1220295762
 Rigidbody2D:
   serializedVersion: 4
@@ -3024,7 +2776,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3038,8 +2790,6 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.61634827, y: -0.6104889}
-      - {x: -0.6212387, y: -0.6756538}
-      - {x: -0.55558777, y: -0.67751646}
       - {x: 0.67173004, y: -0.67245626}
       - {x: -0.6399994, y: 0.63999724}
 --- !u!212 &1220295764
@@ -3156,7 +2906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276802026}
   - component: {fileID: 1276802027}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3270,8 +3020,7 @@ GameObject:
   - component: {fileID: 1508918324}
   - component: {fileID: 1508918323}
   - component: {fileID: 1508918326}
-  - component: {fileID: 1508918325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3302,7 +3051,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3316,10 +3065,6 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.1933517, y: -1.087728}
-      - {x: -2.931244, y: -1.0761285}
-      - {x: -2.4453278, y: -1.0576544}
-      - {x: -1.3305511, y: -1.0373554}
-      - {x: -0.7126694, y: -0.9887066}
       - {x: 0.7184448, y: -0.720206}
       - {x: -3.1999893, y: 3.1999886}
 --- !u!212 &1508918324
@@ -3368,49 +3113,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!66 &1508918325
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1508918321}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1508918323}
-    m_ColliderPaths:
-    - - X: -31933518
-        Y: -10877280
-      - X: -29312438
-        Y: -10761285
-      - X: -24453278
-        Y: -10576544
-      - X: -13305511
-        Y: -10373554
-      - X: -7126693
-        Y: -9887066
-      - X: 7184448
-        Y: -7202060
-      - X: -31999894
-        Y: 31999886
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -2.931244, y: -1.0761285}
-      - {x: -2.4453278, y: -1.0576544}
-      - {x: -1.3305511, y: -1.0373554}
-      - {x: -0.7126693, y: -0.9887066}
-      - {x: 0.7184448, y: -0.720206}
-      - {x: -3.1999893, y: 3.1999886}
-      - {x: -3.1933517, y: -1.087728}
-  m_VertexDistance: 0.0005
 --- !u!50 &1508918326
 Rigidbody2D:
   serializedVersion: 4
@@ -3546,8 +3248,7 @@ GameObject:
   - component: {fileID: 2030743656}
   - component: {fileID: 2030743655}
   - component: {fileID: 2030743659}
-  - component: {fileID: 2030743658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3565,7 +3266,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3579,8 +3280,6 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.66567993, y: -0.6660454}
-      - {x: -0.31472778, y: -0.650403}
-      - {x: 0.17840576, y: -0.644367}
       - {x: 0.64, y: -0.64}
       - {x: 0.64, y: 0.64}
 --- !u!212 &2030743656
@@ -3642,43 +3341,6 @@ Transform:
   m_Father: {fileID: 937658206}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &2030743658
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2030743654}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2030743655}
-    m_ColliderPaths:
-    - - X: -6656799
-        Y: -6660454
-      - X: -3147277
-        Y: -6504030
-      - X: 1784057
-        Y: -6443670
-      - X: 6400000
-        Y: -6400000
-      - X: 6400000
-        Y: 6400000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.3147277, y: -0.650403}
-      - {x: 0.1784057, y: -0.644367}
-      - {x: 0.64, y: -0.64}
-      - {x: 0.64, y: 0.64}
-      - {x: -0.66567993, y: -0.6660454}
-  m_VertexDistance: 0.0005
 --- !u!50 &2030743659
 Rigidbody2D:
   serializedVersion: 4
@@ -4110,7 +3772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125781621}
   - component: {fileID: 2125781622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

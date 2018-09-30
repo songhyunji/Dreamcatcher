@@ -124,8 +124,7 @@ GameObject:
   - component: {fileID: 419072791}
   - component: {fileID: 419072790}
   - component: {fileID: 419072793}
-  - component: {fileID: 419072792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +155,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,27 +171,7 @@ PolygonCollider2D:
     - - {x: 2.7084644, y: 0.67650276}
       - {x: -2.607217, y: -0.65523523}
       - {x: -2.610654, y: -0.6572973}
-      - {x: 0.863673, y: -0.7315554}
-      - {x: 1.4036586, y: -0.43842527}
-      - {x: 0.63079715, y: -0.27616116}
-      - {x: 0.51023364, y: -0.279752}
-      - {x: 0.29252502, y: -0.32804748}
-      - {x: -0.4578183, y: -0.52332085}
-      - {x: -0.5797436, y: -0.514661}
-      - {x: -0.7467015, y: -0.53409284}
-      - {x: -0.7714894, y: -0.7163593}
-      - {x: -0.38889053, y: -0.7138645}
-      - {x: -0.2270787, y: -0.7104928}
-      - {x: -0.9783757, y: -0.69442695}
-      - {x: -0.45140198, y: -0.7003233}
-      - {x: -1.1310208, y: -0.68265647}
-      - {x: -0.42770126, y: -0.7022149}
-      - {x: -0.13890961, y: -0.720246}
-      - {x: 0.37567016, y: -0.71914786}
-      - {x: 1.5463626, y: -0.8234255}
-      - {x: 1.7410533, y: -0.5397236}
       - {x: 2.56, y: -0.64}
-      - {x: 2.6270359, y: 0.12103704}
 --- !u!212 &419072791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -239,98 +218,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!66 &419072792
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 419072788}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 419072790}
-    m_ColliderPaths:
-    - - X: 27084644
-        Y: 6765027
-      - X: -26072170
-        Y: -6552352
-      - X: -26106542
-        Y: -6572973
-      - X: 8636730
-        Y: -7315554
-      - X: 14036586
-        Y: -4384252
-      - X: 6307971
-        Y: -2761611
-      - X: 5102336
-        Y: -2797519
-      - X: 2925250
-        Y: -3280474
-      - X: -4578183
-        Y: -5233208
-      - X: -5797436
-        Y: -5146610
-      - X: -7467015
-        Y: -5340928
-      - X: -7714894
-        Y: -7163593
-      - X: -3888905
-        Y: -7138645
-      - X: -2270787
-        Y: -7104928
-      - X: -9783757
-        Y: -6944269
-      - X: -4514020
-        Y: -7003233
-      - X: -11310208
-        Y: -6826564
-      - X: -4277012
-        Y: -7022149
-      - X: -1389096
-        Y: -7202460
-      - X: 3756701
-        Y: -7191478
-      - X: 15463626
-        Y: -8234254
-      - X: 17410534
-        Y: -5397236
-      - X: 25600000
-        Y: -6400000
-      - X: 26270358
-        Y: 1210370
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 1.7410535, y: -0.53972363}
-      - {x: 2.56, y: -0.64}
-      - {x: 2.6270359, y: 0.121037}
-      - {x: 2.7084644, y: 0.6765027}
-      - {x: -2.607217, y: -0.65523523}
-      - {x: -2.610654, y: -0.6572973}
-      - {x: -0.7688108, y: -0.69666374}
-      - {x: -0.76882553, y: -0.6967716}
-      - {x: -0.7582015, y: -0.69689053}
-      - {x: -0.3853401, y: -0.7048598}
-      - {x: -0.3305627, y: -0.7082799}
-      - {x: -0.7691152, y: -0.69890183}
-      - {x: -0.76882553, y: -0.6967716}
-      - {x: -0.97837573, y: -0.6944269}
-      - {x: -0.7691152, y: -0.69890183}
-      - {x: -0.7714894, y: -0.7163593}
-      - {x: -0.3888905, y: -0.7138645}
-      - {x: -0.2780942, y: -0.7115558}
-      - {x: -0.13890961, y: -0.720246}
-      - {x: 0.2915554, y: -0.71932733}
-      - {x: 0.4048773, y: -0.7217494}
-      - {x: 1.5463626, y: -0.8234254}
-  m_VertexDistance: 0.0005
 --- !u!50 &419072793
 Rigidbody2D:
   serializedVersion: 4
@@ -949,56 +836,13 @@ GameObject:
   - component: {fileID: 1277850695}
   - component: {fileID: 1277850694}
   - component: {fileID: 1277850693}
-  - component: {fileID: 1277850692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!66 &1277850692
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1277850691}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1277850694}
-    m_ColliderPaths:
-    - - X: 6399765
-        Y: 6399746
-      - X: -6471023
-        Y: -6469946
-      - X: -6471023
-        Y: -6461067
-      - X: -3280372
-        Y: -6397304
-      - X: 6400000
-        Y: -6400000
-      - X: 6400000
-        Y: 6400000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.6461962, y: -0.6460886}
-      - {x: -0.3280372, y: -0.6397304}
-      - {x: 0.64, y: -0.64}
-      - {x: 0.64, y: 0.64}
-      - {x: 0.6399765, y: 0.6399746}
-      - {x: -0.6461962, y: -0.6460886}
-      - {x: -0.6471023, y: -0.6461067}
-      - {x: -0.6471023, y: -0.6469946}
-  m_VertexDistance: 0.0005
 --- !u!50 &1277850693
 Rigidbody2D:
   serializedVersion: 4
@@ -1030,7 +874,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1046,7 +890,6 @@ PolygonCollider2D:
     - - {x: 0.6399765, y: 0.6399746}
       - {x: -0.64710236, y: -0.6469946}
       - {x: -0.64710236, y: -0.6461067}
-      - {x: -0.32803726, y: -0.63973045}
       - {x: 0.64, y: -0.64}
       - {x: 0.64, y: 0.64}
 --- !u!212 &1277850695
@@ -1119,8 +962,7 @@ GameObject:
   - component: {fileID: 1529515137}
   - component: {fileID: 1529515141}
   - component: {fileID: 1529515140}
-  - component: {fileID: 1529515139}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1X1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,45 +1028,6 @@ Transform:
   m_Father: {fileID: 611890121}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &1529515139
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529515136}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1529515141}
-    m_ColliderPaths:
-    - - X: -6399650
-        Y: -6399774
-      - X: 3488083
-        Y: -7036762
-      - X: -6400000
-        Y: -6400000
-      - X: 6400000
-        Y: -6400000
-      - X: 6400000
-        Y: 6400000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.6396142, y: -0.64}
-      - {x: 0.64, y: -0.64}
-      - {x: 0.64, y: 0.64}
-      - {x: -0.639965, y: -0.6399774}
-      - {x: -0.6396142, y: -0.64}
-      - {x: -0.64, y: -0.64}
-      - {x: 0.34880832, y: -0.7036762}
-  m_VertexDistance: 0.0005
 --- !u!50 &1529515140
 Rigidbody2D:
   serializedVersion: 4
@@ -1256,7 +1059,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1270,7 +1073,6 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.63996506, y: -0.63997746}
-      - {x: 0.3488083, y: -0.7036762}
       - {x: -0.64, y: -0.64}
       - {x: 0.64, y: -0.64}
       - {x: 0.64, y: 0.64}
@@ -3070,72 +2872,13 @@ GameObject:
   - component: {fileID: 2034093198}
   - component: {fileID: 2034093197}
   - component: {fileID: 2034093196}
-  - component: {fileID: 2034093195}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tile 3-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!66 &2034093195
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2034093194}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2034093197}
-    m_ColliderPaths:
-    - - X: -19227180
-        Y: 6399841
-      - X: -19227562
-        Y: 6398172
-      - X: -19247436
-        Y: 6369037
-      - X: -19199448
-        Y: -6400470
-      - X: -4715614
-        Y: -6402244
-      - X: -1868515
-        Y: -6079550
-      - X: -1799999
-        Y: -2900000
-      - X: -2400000
-        Y: -3299999
-      - X: -3200000
-        Y: -3899999
-      - X: -5299999
-        Y: -5299999
-      - X: -6400000
-        Y: -6100000
-      - X: -6400000
-        Y: -6400000
-      - X: 6400000
-        Y: -6400000
-      - X: -12799721
-        Y: 6399841
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -0.4695815, y: -0.64}
-      - {x: 0.64, y: -0.64}
-      - {x: -1.2799721, y: 0.63998413}
-      - {x: -1.922718, y: 0.63998413}
-      - {x: -1.9227562, y: 0.6398172}
-      - {x: -1.9247437, y: 0.6369037}
-      - {x: -1.9199448, y: -0.640047}
-      - {x: -0.4715614, y: -0.6402244}
-  m_VertexDistance: 0.0005
 --- !u!50 &2034093196
 Rigidbody2D:
   serializedVersion: 4
@@ -3167,7 +2910,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3184,14 +2927,6 @@ PolygonCollider2D:
       - {x: -1.9227562, y: 0.63981724}
       - {x: -1.9247437, y: 0.63690376}
       - {x: -1.9199448, y: -0.6400471}
-      - {x: -0.47156143, y: -0.64022446}
-      - {x: -0.1868515, y: -0.607955}
-      - {x: -0.17999999, y: -0.29}
-      - {x: -0.24, y: -0.32999998}
-      - {x: -0.32, y: -0.39}
-      - {x: -0.53, y: -0.53}
-      - {x: -0.64, y: -0.61}
-      - {x: -0.64, y: -0.64}
       - {x: 0.64, y: -0.64}
       - {x: -1.2799721, y: 0.63998413}
 --- !u!212 &2034093198
@@ -3262,7 +2997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054058267}
   - component: {fileID: 2054058266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tile 3-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,5 +12,11 @@ public class JumpButton : MonoBehaviour, IPointerDownHandler
 	public void OnPointerDown(PointerEventData ped)
 	{
 		playerScript.Jump();
+
+		if (playerScript.isTouching)
+		{
+			playerScript.exitLadder = true;
+		}
 	}
+	
 }
