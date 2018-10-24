@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class JumpButton : MonoBehaviour, IPointerDownHandler
 {
 
-	public Player playerScript;
+	public Player_subslope playerScript;
 
 
 	public void OnPointerDown(PointerEventData ped)

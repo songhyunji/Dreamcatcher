@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
 	public Vector2 direction;
 	
 	private bool isGround = true;
-	private Rigidbody2D rd2D;
+	private Rigidbody2D rb2D;
 	private Transform transform;
 	private bool isMovingHorizental = false;
 	private bool isMovingVertical = false;
@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
 	
 	void Start ()
 	{
-		rd2D = GetComponent<Rigidbody2D>();
+		rb2D = GetComponent<Rigidbody2D>();
 		transform = GetComponent<Transform>();
 	}
 
@@ -32,13 +32,13 @@ public class PlayerMove : MonoBehaviour
 	{
 		if (goUpside)
 		{
-			rd2D.gravityScale = 0;
+			rb2D.gravityScale = 0;
 			MoveVertical();
 			
 		}
 		else
 		{
-			rd2D.gravityScale = 2;
+			rb2D.gravityScale = 2;
 			MoveHorizental();
 		}
 	}
@@ -47,11 +47,11 @@ public class PlayerMove : MonoBehaviour
 	{
 		if (isMovingHorizental)
 		{
-			rd2D.AddForce(dir * transform.right * speed * Time.deltaTime);
+			rb2D.AddForce(dir * transform.right * speed * Time.deltaTime);
 		}
 		else if (isMovingVertical)
 		{
-			rd2D.AddForce(dir * transform.up* speed_up * Time.deltaTime);
+			rb2D.AddForce(dir * transform.up* speed_up * Time.deltaTime);
 		}
 		
 		/* if(Input.GetKey(KeyCode.D))
@@ -69,7 +69,7 @@ public class PlayerMove : MonoBehaviour
 		if (isGround)
 		{
 			isGround = false;
-			rd2D.AddForce(transform.up * jumpForce);
+			rb2D.AddForce(transform.up * jumpForce);
 		}
 	}
 

@@ -47,9 +47,12 @@
           </e>
           <e p="Test" t="Include">
             <e p="Canvas_Keep.cs" t="Include" />
-            <e p="Controller2D.cs" t="Include" />
             <e p="JumpButton.cs" t="Include" />
-            <e p="Player.cs" t="Include" />
+            <e p="old" t="Include">
+              <e p="Controller2D.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+            </e>
+            <e p="Player_subslope.cs" t="Include" />
           </e>
           <e p="touch" t="Include">
             <e p="PlayerMove.cs" t="Include" />
