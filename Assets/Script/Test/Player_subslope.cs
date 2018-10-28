@@ -45,7 +45,14 @@ public class Player_subslope : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		Walk();
+		if (onLadder)
+		{
+			Climb();
+		}
+		else
+		{
+			Walk();
+		}
 		
 		if (isGround)
 		{
@@ -133,39 +140,42 @@ public class Player_subslope : MonoBehaviour {
 
 			if (touch.position.x <= Screen.width / 2)
 			{
-				switch (touch.phase)
+				if (touch.phase == TouchPhase.Began)
 				{
-					case TouchPhase.Began:
-						startPos = touch.position;
-						break;
-
-					case TouchPhase.Moved:
-						isTouching = true;
-						direction = touch.position - startPos;
-						if (direction.y > 0)
-						{
-							//animator.SetBool("isWalking", true);
-							rb2D.AddForce(1 * transform.up * speed * Time.deltaTime);
-						}
-						else if (direction.y < 0)
-						{
-							//animator.SetBool("isWalking", true);
-							rb2D.AddForce(1 * transform.up * speed * Time.deltaTime);
-						}
-						
-						if (exitLadder&&onLadder)
-						{
-							rb2D.AddForce(dir * transform.right * speed * Time.deltaTime);
-							onLadder = false;
-						}
-
-						break;
-
-					case TouchPhase.Ended:
-						//animator.SetBool("isWalking", false);
-						isTouching = false;
-						break;
+					startPos = touch.position;
 				}
+				else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+				{
+					direction = touch.position - startPos;
+					if (direction.y > 0)
+					{
+						//animator.SetBool("isWalking", true);
+						//spriteRenderer.flipX = false;
+						dir = 1;
+						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
+					}
+					else if (direction.y < 0)
+					{
+						//animator.SetBool("isWalking", true);
+						//spriteRenderer.flipX = true;
+						dir = -1;
+						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
+					}
+
+					
+					if (exitLadder&&onLadder)
+					{
+						rb2D.AddForce(Vector2.left * speed * Time.deltaTime);
+						onLadder = false;
+					}
+						
+
+				}
+				else if (touch.phase == TouchPhase.Ended)
+				{
+					//animator.SetBool("isWalking", false);
+				}
+				
 			}
 			
 		}
