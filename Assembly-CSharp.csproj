@@ -79,6 +79,7 @@
     <Compile Include="Assets\Script\Test\old\Controller2D.cs" />
     <Compile Include="Assets\Script\Test\old\Player.cs" />
     <Compile Include="Assets\Script\Test\Player_subslope.cs" />
+    <Compile Include="Assets\Script\Test\SpawnButton.cs" />
     <Compile Include="Assets\Script\touch\PlayerMove.cs" />
     <Compile Include="Assets\Script\VcamSceneLoad.cs" />
     <Reference Include="Cinemachine">
