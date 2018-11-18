@@ -8,6 +8,7 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 
 	public GameObject player;
 	public GameObject wolf;
+	public Player_subslope playerScript;
 
 	private Renderer player_renderer;
 	private GameObject wolf_clone;
@@ -20,18 +21,24 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 
 	public void OnPointerDown(PointerEventData ped)
 	{
-		if (!isSpawned)
+		Debug.Log("spawn 버튼 눌렸음여");
+		if (playerScript.isGround||playerScript.isTouching)
 		{
-			wolf_clone = Instantiate(wolf, player_renderer.bounds.center, Quaternion.identity);
-			isSpawned = true;
-
+			if (!isSpawned)
+			{
+				wolf_clone = Instantiate(wolf, player_renderer.bounds.center, Quaternion.identity);
+				isSpawned = true;
+			
+			}
+			else
+			{
+				Destroy(wolf_clone);
+				isSpawned = false;
+			}
 		}
-		else
-		{
-			Destroy(wolf_clone);
-			isSpawned = false;
 
-		}
+
 	}
+	
 	
 }

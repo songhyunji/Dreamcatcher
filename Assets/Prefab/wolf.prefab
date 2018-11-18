@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212034131008628764}
   - component: {fileID: 61628146858090562}
   - component: {fileID: 251523031948812746}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: wolf
-  m_TagString: Ground
+  m_TagString: Foothold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

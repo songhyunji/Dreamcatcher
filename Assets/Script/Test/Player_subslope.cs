@@ -7,7 +7,6 @@ using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using Debug = UnityEngine.Debug;
 
-[RequireComponent (typeof (Controller2D))]
 public class Player_subslope : MonoBehaviour {
 
 	public bool isJumping = false;
@@ -61,12 +60,29 @@ public class Player_subslope : MonoBehaviour {
 	}
 	
 	private void OnCollisionEnter2D(Collision2D other)
+     {
+     	if (other.collider.CompareTag("Ground") || other.contacts[0].normal.x != 0)
+     	{
+     		isGround = true;
+     		onLadder = false;
+     		Debug.Log("착지");
+     	}
+	    else if (other.collider.CompareTag("Foothold"))
+	     {
+		     isTouching = true;
+		     isJumping = false;
+		     animator.SetBool("isJumping",false);
+		     Debug.Log("발판 위에 착지");
+	     }
+     }
+	
+	private void OnCollisionExit2D(Collision2D other)
 	{
-		if (other.contacts[0].normal.y > 0.9f || other.contacts[0].normal.x != 0)
+		if (other.collider.CompareTag("Foothold"))
 		{
-			isGround = true;
-			onLadder = false;
-			Debug.Log("착지");
+			isTouching = false;
+			animator.SetBool("isJumping",true);
+			Debug.Log("공중에 떠있음");
 		}
 	}
 
@@ -119,14 +135,12 @@ public class Player_subslope : MonoBehaviour {
 	
 	public void Jump()
 	{			
-		
 		if (isGround)
 		{
 			isJumping = true;
             animator.SetBool("isJumping", true);
 			isGround = false;
 			rb2D.AddForce(Vector3.up * jumpspeed , ForceMode2D.Impulse);
-			animator.SetBool(("isJumping"), true);
 			isJumping = false;
         }
         

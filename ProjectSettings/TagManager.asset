@@ -7,7 +7,7 @@ TagManager:
   - Ground
   - Trap
   - Ladder
-  - Frog
+  - Foothold
   layers:
   - Default
   - TransparentFX

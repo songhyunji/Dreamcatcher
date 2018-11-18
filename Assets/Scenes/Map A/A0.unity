@@ -427,7 +427,6 @@ GameObject:
   - component: {fileID: 127116257}
   - component: {fileID: 127116254}
   - component: {fileID: 127116256}
-  - component: {fileID: 127116255}
   m_Layer: 8
   m_Name: TestPlayer
   m_TagString: Player
@@ -453,22 +452,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &127116255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 127116253}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ae0c3d7722a4bc0b743f08432e661a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
-  horizontalRayCount: 4
-  verticalRayCount: 4
 --- !u!114 &127116256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +685,10 @@ Prefab:
         type: 2}
       propertyPath: m_Offset.x
       value: -0.05684629
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502735325488586, guid: 998890ba09002994c9bb0b61a79934a0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 998890ba09002994c9bb0b61a79934a0, type: 2}
@@ -1980,6 +1967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 127116253}
   wolf: {fileID: 1716948099867424, guid: 2a907c26b7507294ab4d09fdde355700, type: 2}
+  playerScript: {fileID: 127116256}
 --- !u!1 &770083902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,7 +2663,7 @@ Prefab:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -35.579662
+      value: -35.412296
       objectReference: {fileID: 0}
     - target: {fileID: 4829397357965862, guid: db868f80c49cc4846ad7c621a925b411, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4907,7 +4895,7 @@ GameObject:
   - component: {fileID: 1475080856}
   m_Layer: 12
   m_Name: Apple
-  m_TagString: Ground
+  m_TagString: Foothold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
