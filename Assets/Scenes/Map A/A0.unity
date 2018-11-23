@@ -2663,7 +2663,7 @@ Prefab:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -35.412296
+      value: -32.246788
       objectReference: {fileID: 0}
     - target: {fileID: 4829397357965862, guid: db868f80c49cc4846ad7c621a925b411, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5684,6 +5684,27 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56ebbd4fa25f78343958aec2a6b173de, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1818975346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1105128479462714, guid: 56ebbd4fa25f78343958aec2a6b173de,
+    type: 2}
+  m_PrefabInternal: {fileID: 1818975345}
+--- !u!114 &1818975347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818975346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702309508fdc5454b811055c45eaac3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 127116253}
+  playerScript: {fileID: 127116256}
+  Dor: {fileID: 0}
+  Dor1: {fileID: 0}
+  Dor2: {fileID: 0}
 --- !u!1 &1838187804
 GameObject:
   m_ObjectHideFlags: 0
