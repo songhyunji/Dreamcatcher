@@ -13,7 +13,10 @@ public class Player_subslope : MonoBehaviour {
 	public bool isGround = false;
 	public bool onLadder = false;
 	public bool exitLadder = true;
-	public bool isTouching = false;
+	public bool onFoothold = false;
+	public bool touchedPulley = false;
+	public bool touchedHeavyFoolhold = false;
+	public bool isInteracting = false;
 	public float dir;
 	public float speed;
 	public float jumpspeed;
@@ -23,6 +26,8 @@ public class Player_subslope : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 	private Animator animator;
 	private Rigidbody2D rb2D;
+	
+	ContactPoint2D[] contactPoint = new ContactPoint2D[16];
 	
 	
 	void Awake () 
@@ -44,6 +49,7 @@ public class Player_subslope : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+
 		if (onLadder)
 		{
 			Climb();
@@ -61,18 +67,31 @@ public class Player_subslope : MonoBehaviour {
 	
 	private void OnCollisionEnter2D(Collision2D other)
      {
-     	if (other.collider.CompareTag("Ground") || other.contacts[0].normal.x != 0)
+	    // Debug.Log(contactPoint[0].normal.y);
+	    // Debug.Log(contactPoint[0].normal.x);
+	     
+     	if (other.collider.CompareTag("Ground") )
      	{
+		    
      		isGround = true;
      		onLadder = false;
-     		Debug.Log("착지");
+     		//Debug.Log("착지");
      	}
-	    else if (other.collider.CompareTag("Foothold"))
+	    else if (other.collider.CompareTag("Foothold")||other.collider.CompareTag("HeavyFoothold"))
 	     {
-		     isTouching = true;
+		     isGround = true;
+		     onFoothold = true;
 		     isJumping = false;
 		     animator.SetBool("isJumping",false);
-		     Debug.Log("발판 위에 착지");
+		     //Debug.Log("발판 위에 착지");
+	     }
+	     else if (other.collider.CompareTag("pulley")) // 도르래
+	     {
+		     touchedPulley = true;
+	     }
+	     else if (other.collider.CompareTag("HeavyFoothold"))
+	     {
+		     touchedHeavyFoolhold = true;
 	     }
      }
 	
@@ -80,9 +99,17 @@ public class Player_subslope : MonoBehaviour {
 	{
 		if (other.collider.CompareTag("Foothold"))
 		{
-			isTouching = false;
+			onFoothold = false;
 			animator.SetBool("isJumping",true);
 			Debug.Log("공중에 떠있음");
+		}
+		else if (other.collider.CompareTag("pulley")) // 도르래
+		{
+			touchedPulley = false;
+		}
+		else if (other.collider.CompareTag("HeavyFoothold"))
+		{
+			touchedHeavyFoolhold = false;
 		}
 	}
 
@@ -104,14 +131,14 @@ public class Player_subslope : MonoBehaviour {
 					if (direction.x > 0)
 					{
 						animator.SetBool("isWalking", true);
-						spriteRenderer.flipX = false;
+						transform.localScale = new Vector3(2, 2, 1);
 						dir = 1;
 
 					}
 					else if (direction.x < 0)
 					{
 						animator.SetBool("isWalking", true);
-						spriteRenderer.flipX = true;
+						transform.localScale = new Vector3(-2, 2, 1);
 						dir = -1;
 					}
 						

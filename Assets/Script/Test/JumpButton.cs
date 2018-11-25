@@ -13,10 +13,10 @@ public class JumpButton : MonoBehaviour, IPointerDownHandler
 	{
 		playerScript.Jump();
 
-		if (playerScript.isTouching)
-		{
-			playerScript.exitLadder = true;
-		}
+		//if (playerScript.isTouching)
+		//{
+		//	playerScript.exitLadder = true;
+		//}
 	}
 	
 }
