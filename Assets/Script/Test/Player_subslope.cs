@@ -85,14 +85,14 @@ public class Player_subslope : MonoBehaviour {
 		     animator.SetBool("isJumping",false);
 		     //Debug.Log("발판 위에 착지");
 	     }
-	     else if (other.collider.CompareTag("pulley")) // 도르래
-	     {
-		     touchedPulley = true;
-	     }
 	     else if (other.collider.CompareTag("HeavyFoothold"))
 	     {
 		     touchedHeavyFoolhold = true;
 	     }
+	     /*else if (other.collider.CompareTag("pulley")) // 도르래
+	     {
+		     touchedPulley = true;
+	     }*/
      }
 	
 	private void OnCollisionExit2D(Collision2D other)
@@ -103,14 +103,15 @@ public class Player_subslope : MonoBehaviour {
 			animator.SetBool("isJumping",true);
 			Debug.Log("공중에 떠있음");
 		}
-		else if (other.collider.CompareTag("pulley")) // 도르래
-		{
-			touchedPulley = false;
-		}
 		else if (other.collider.CompareTag("HeavyFoothold"))
 		{
 			touchedHeavyFoolhold = false;
 		}
+		/*else if (other.collider.CompareTag("pulley")) // 도르래
+		{
+			touchedPulley = false;
+		}*/
+
 	}
 
 	public void Walk()

@@ -10,6 +10,7 @@ public class Apple : MonoBehaviour {
 
 	public bool isTouch;
 	public bool isAttatch;
+	public int playerPosX = 35;
 
 	private void Start()
 	{
@@ -22,7 +23,7 @@ public class Apple : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		
-		if (pos.position.x >= 35)
+		if (pos.position.x >= playerPosX)
 		{
 			rb2D.gravityScale = 1;
 		}
