@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PhysicsObject.cs" />
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PlayerPlatformerController.cs" />
+    <Compile Include="Assets\Collider_test.cs" />
     <Compile Include="Assets\Script\Animator\AnimatorWalk.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Inventory\Database.cs" />

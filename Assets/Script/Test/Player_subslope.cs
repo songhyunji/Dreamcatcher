@@ -23,11 +23,8 @@ public class Player_subslope : MonoBehaviour {
 	public Vector2 startPos;			
 	public Vector2 direction;
 
-	private SpriteRenderer spriteRenderer;
 	private Animator animator;
 	private Rigidbody2D rb2D;
-	
-	ContactPoint2D[] contactPoint = new ContactPoint2D[16];
 	
 	
 	void Awake () 
@@ -43,8 +40,8 @@ public class Player_subslope : MonoBehaviour {
 	void Start() {
 		
         animator = GetComponent<Animator>();
-		spriteRenderer = GetComponent<SpriteRenderer>();
 		rb2D = GetComponent<Rigidbody2D>();
+		
 	}
 
 	void FixedUpdate()
@@ -67,9 +64,6 @@ public class Player_subslope : MonoBehaviour {
 	
 	private void OnCollisionEnter2D(Collision2D other)
      {
-	    // Debug.Log(contactPoint[0].normal.y);
-	    // Debug.Log(contactPoint[0].normal.x);
-	     
      	if (other.collider.CompareTag("Ground") )
      	{
 		    

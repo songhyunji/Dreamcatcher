@@ -40,8 +40,11 @@ public class HeavyApple : MonoBehaviour {
 		if (other.collider.CompareTag("Player"))
 		{
 			isTouch = false;
-			Destroy(SpawnButtonscript.wolf_clone);
-			SpawnButtonscript.isSpawned = false;
+			if (isAttatch)
+			{
+				Destroy(SpawnButtonscript.wolf_clone);
+				SpawnButtonscript.isSpawned = false;
+			}
 			rb2D.bodyType = RigidbodyType2D.Static;
 		}
 	}

@@ -13,6 +13,7 @@
             </e>
           </e>
         </e>
+        <e p="Collider_test.cs" t="Include" />
         <e p="Script" t="Include">
           <e p="Animator" t="Include">
             <e p="AnimatorWalk.cs" t="Include" />
