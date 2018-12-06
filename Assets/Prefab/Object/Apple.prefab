@@ -9,20 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1168262867285316}
+  m_RootGameObject: {fileID: 1695250512643438}
   m_IsPrefabAsset: 1
---- !u!1 &1168262867285316
+--- !u!1 &1695250512643438
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4129497621967390}
-  - component: {fileID: 212258759870004084}
-  - component: {fileID: 61587923829346152}
-  - component: {fileID: 50517288779434838}
-  - component: {fileID: 114643038537704692}
+  - component: {fileID: 4773041711591774}
+  - component: {fileID: 212993059438199638}
+  - component: {fileID: 61217452499577950}
+  - component: {fileID: 50999366397739304}
+  - component: {fileID: 114412858200936208}
+  - component: {fileID: 114203028732378360}
   m_Layer: 12
   m_Name: Apple
   m_TagString: Foothold
@@ -30,12 +31,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4129497621967390
+--- !u!4 &4773041711591774
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168262867285316}
+  m_GameObject: {fileID: 1695250512643438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.81, y: 8.03, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
@@ -43,13 +44,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50517288779434838
+--- !u!50 &50999366397739304
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168262867285316}
+  m_GameObject: {fileID: 1695250512643438}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!61 &61587923829346152
+--- !u!61 &61217452499577950
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168262867285316}
+  m_GameObject: {fileID: 1695250512643438}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -88,12 +89,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.139061, y: 0.9876361}
   m_EdgeRadius: 0
---- !u!114 &114643038537704692
+--- !u!114 &114203028732378360
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168262867285316}
+  m_GameObject: {fileID: 1695250512643438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a6a0666e2e38d4dadac9f316a6fc6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appleScript: {fileID: 114412858200936208}
+--- !u!114 &114412858200936208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695250512643438}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f61da03ad0a1d1449b624463637033da, type: 3}
@@ -102,12 +115,13 @@ MonoBehaviour:
   player: {fileID: 0}
   isTouch: 0
   isAttatch: 0
---- !u!212 &212258759870004084
+  playerPosX: 35
+--- !u!212 &212993059438199638
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168262867285316}
+  m_GameObject: {fileID: 1695250512643438}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

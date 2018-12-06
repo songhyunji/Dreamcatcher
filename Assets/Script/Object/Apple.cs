@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Apple : MonoBehaviour {
 	
@@ -10,7 +11,8 @@ public class Apple : MonoBehaviour {
 
 	public bool isTouch;
 	public bool isAttatch;
-	public int playerPosX = 35;
+	public float playerPosX = 35;
+	
 
 	private void Start()
 	{
@@ -18,6 +20,7 @@ public class Apple : MonoBehaviour {
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
 		rb2D.isKinematic = false;
+
 	}
 
 	private void FixedUpdate()
@@ -63,6 +66,8 @@ public class Apple : MonoBehaviour {
 		}
 		else if(isAttatch)
 		{
+			GameObject newGO = new GameObject();
+			this.transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
 			transform.SetParent(null);
 			rb2D.isKinematic = false;
 			isAttatch = false;

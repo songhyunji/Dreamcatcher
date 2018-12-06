@@ -31,6 +31,8 @@
           <e p="LoadScene.cs" t="Include" />
           <e p="Object" t="Include">
             <e p="Apple.cs" t="Include" />
+            <e p="AppleSceneLoad.cs" t="Include" />
+            <e p="BtnSceneLoad.cs" t="Include" />
             <e p="HeavyApple.cs" t="Include" />
             <e p="movingPlatform.cs" t="Include" />
           </e>

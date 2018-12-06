@@ -67,6 +67,8 @@
     <Compile Include="Assets\Script\Inventory\ValueChangeTest.cs" />
     <Compile Include="Assets\Script\LoadScene.cs" />
     <Compile Include="Assets\Script\Object\Apple.cs" />
+    <Compile Include="Assets\Script\Object\AppleSceneLoad.cs" />
+    <Compile Include="Assets\Script\Object\BtnSceneLoad.cs" />
     <Compile Include="Assets\Script\Object\HeavyApple.cs" />
     <Compile Include="Assets\Script\Object\MovingPlatform.cs" />
     <Compile Include="Assets\Script\Scene1\ButtonControl.cs" />
@@ -347,6 +349,26 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor\Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
