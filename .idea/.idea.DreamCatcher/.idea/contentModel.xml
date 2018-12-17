@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\hyunji\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_DreamCatcher.438980891.00" t="ExcludeRecursive" />
-    <e p="C:\Users\hyunji\Documents\GitHub\DreamCatcher" t="IncludeRecursive">
+    <e p="C:\Users\Administrator\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_DreamCatcher.-1838170365.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Administrator\Documents\GitHub\DreamCatcher" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Asset" t="Include">
@@ -15,6 +16,36 @@
         </e>
         <e p="Collider_test.cs" t="Include" />
         <e p="Script" t="Include">
+          <e p="_Main" t="Include">
+            <e p="BtnManager.cs" t="Include" />
+          </e>
+          <e p="_Object" t="Include">
+            <e p="Apple.cs" t="Include" />
+            <e p="AppleSceneLoad.cs" t="Include" />
+            <e p="HeavyApple.cs" t="Include" />
+            <e p="movingPlatform.cs" t="Include" />
+          </e>
+          <e p="_Player" t="Include">
+            <e p="Canvas_Keep.cs" t="Include" />
+            <e p="InteractButton.cs" t="Include" />
+            <e p="JumpBtnSceneLoad.cs" t="Include" />
+            <e p="JumpButton.cs" t="Include" />
+            <e p="old" t="Include">
+              <e p="Controller2D.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+            </e>
+            <e p="Player_subslope.cs" t="Include" />
+            <e p="SpawnBtnSceneLoad.cs" t="Include" />
+            <e p="SpawnButton.cs" t="Include" />
+          </e>
+          <e p="_Scene" t="Include">
+            <e p="LoadScene.cs" t="Include" />
+            <e p="VcamSceneLoad.cs" t="Include" />
+          </e>
+          <e p="_UI" t="Include">
+            <e p="SettingBtn.cs" t="Include" />
+            <e p="SettingBtnSceneLoad.cs" t="Include" />
+          </e>
           <e p="Animator" t="Include">
             <e p="AnimatorWalk.cs" t="Include" />
           </e>
@@ -27,14 +58,6 @@
             <e p="Item.cs" t="Include" />
             <e p="JsonManager.cs" t="Include" />
             <e p="ValueChangeTest.cs" t="Include" />
-          </e>
-          <e p="LoadScene.cs" t="Include" />
-          <e p="Object" t="Include">
-            <e p="Apple.cs" t="Include" />
-            <e p="AppleSceneLoad.cs" t="Include" />
-            <e p="BtnSceneLoad.cs" t="Include" />
-            <e p="HeavyApple.cs" t="Include" />
-            <e p="movingPlatform.cs" t="Include" />
           </e>
           <e p="Scene1" t="Include">
             <e p="ButtonControl.cs" t="Include" />
@@ -52,21 +75,9 @@
           <e p="Select" t="Include">
             <e p="HomeManager.cs" t="Include" />
           </e>
-          <e p="Test" t="Include">
-            <e p="Canvas_Keep.cs" t="Include" />
-            <e p="InteractButton.cs" t="Include" />
-            <e p="JumpButton.cs" t="Include" />
-            <e p="old" t="Include">
-              <e p="Controller2D.cs" t="Include" />
-              <e p="Player.cs" t="Include" />
-            </e>
-            <e p="Player_subslope.cs" t="Include" />
-            <e p="SpawnButton.cs" t="Include" />
-          </e>
           <e p="touch" t="Include">
             <e p="PlayerMove.cs" t="Include" />
           </e>
-          <e p="VcamSceneLoad.cs" t="Include" />
         </e>
       </e>
       <e p="DreamCatcher.sln" t="IncludeFlat" />

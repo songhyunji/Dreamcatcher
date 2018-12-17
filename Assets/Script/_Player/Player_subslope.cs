@@ -9,10 +9,12 @@ using Debug = UnityEngine.Debug;
 
 public class Player_subslope : MonoBehaviour {
 
+	
+	public GameObject testCollider;
+	
 	public bool isJumping = false;
 	public bool isGround = false;
 	public bool onLadder = false;
-	public bool exitLadder = true;
 	public bool onFoothold = false;
 	public bool touchedPulley = false;
 	public bool touchedHeavyFoolhold = false;
@@ -23,7 +25,7 @@ public class Player_subslope : MonoBehaviour {
 	public Vector2 startPos;			
 	public Vector2 direction;
 
-	private Animator animator;
+	public Animator animator;
 	private Rigidbody2D rb2D;
 	
 	
@@ -46,7 +48,6 @@ public class Player_subslope : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-
 		if (onLadder)
 		{
 			Climb();
@@ -64,25 +65,7 @@ public class Player_subslope : MonoBehaviour {
 	
 	private void OnCollisionEnter2D(Collision2D other)
      {
-     	if (other.collider.CompareTag("Ground") )
-     	{
-		    
-     		isGround = true;
-     		onLadder = false;
-     		//Debug.Log("착지");
-     	}
-	    else if (other.collider.CompareTag("Foothold")||other.collider.CompareTag("HeavyFoothold"))
-	     {
-		     isGround = true;
-		     onFoothold = true;
-		     isJumping = false;
-		     animator.SetBool("isJumping",false);
-		     //Debug.Log("발판 위에 착지");
-	     }
-	     else if (other.collider.CompareTag("HeavyFoothold"))
-	     {
-		     touchedHeavyFoolhold = true;
-	     }
+
 	     /*else if (other.collider.CompareTag("pulley")) // 도르래
 	     {
 		     touchedPulley = true;
@@ -91,16 +74,6 @@ public class Player_subslope : MonoBehaviour {
 	
 	private void OnCollisionExit2D(Collision2D other)
 	{
-		if (other.collider.CompareTag("Foothold"))
-		{
-			onFoothold = false;
-			animator.SetBool("isJumping",true);
-			Debug.Log("공중에 떠있음");
-		}
-		else if (other.collider.CompareTag("HeavyFoothold"))
-		{
-			touchedHeavyFoolhold = false;
-		}
 		/*else if (other.collider.CompareTag("pulley")) // 도르래
 		{
 			touchedPulley = false;
@@ -110,7 +83,7 @@ public class Player_subslope : MonoBehaviour {
 
 	public void Walk()
 	{
-		if (Input.touchCount > 0 && !onLadder)
+		if (Input.touchCount > 0)
 		{
 			Touch touch = Input.GetTouch(0);
 
@@ -154,23 +127,10 @@ public class Player_subslope : MonoBehaviour {
 			animator.SetBool("isWalking", false);
 		}
 	}
-	
-	public void Jump()
-	{			
-		if (isGround)
-		{
-			isJumping = true;
-            animator.SetBool("isJumping", true);
-			isGround = false;
-			rb2D.AddForce(Vector3.up * jumpspeed , ForceMode2D.Impulse);
-			isJumping = false;
-        }
-        
-	}
 
 	public void Climb()
 	{
-		if (Input.touchCount > 0 && onLadder)
+		if (Input.touchCount > 0)
 		{
 			Touch touch = Input.GetTouch(0);
 
@@ -186,25 +146,15 @@ public class Player_subslope : MonoBehaviour {
 					if (direction.y > 0)
 					{
 						//animator.SetBool("isWalking", true);
-						//spriteRenderer.flipX = false;
 						dir = 1;
 						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
 					}
 					else if (direction.y < 0)
 					{
 						//animator.SetBool("isWalking", true);
-						//spriteRenderer.flipX = true;
 						dir = -1;
 						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
 					}
-
-					
-					if (exitLadder&&onLadder)
-					{
-						rb2D.AddForce(Vector2.left * speed * Time.deltaTime);
-						onLadder = false;
-					}
-						
 
 				}
 				else if (touch.phase == TouchPhase.Ended)
@@ -216,6 +166,37 @@ public class Player_subslope : MonoBehaviour {
 			
 		}
 	}
+	
+	public void Jump()
+	{			
+		if (isGround)
+		{
+			isJumping = true;
+			animator.SetBool("isJumping", true);
+			isGround = false;
+			rb2D.AddForce(Vector3.up * jumpspeed , ForceMode2D.Impulse);
+			isJumping = false;
+		}
+		else if (onLadder)
+		{
+			if (direction.x > 0)
+			{
+				animator.SetBool("isWalking", true);
+				transform.localScale = new Vector3(2, 2, 1);
+				dir = 1;
+			}
+			else if (direction.x < 0)
+			{
+				animator.SetBool("isWalking", true);
+				transform.localScale = new Vector3(-2, 2, 1);
+				dir = -1;
+			}
+
+			rb2D.AddForce(dir*Vector2.right * speed * Time.deltaTime);
+			onLadder = false;
+		}
+        
+	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -224,11 +205,11 @@ public class Player_subslope : MonoBehaviour {
 			Debug.Log("사다리 탐");
 			Vector3 otherPos = other.GetComponent<Transform>().position;
 			transform.position = new Vector3(otherPos.x, transform.position.y, transform.position.z);
-
 			rb2D.gravityScale = 0;
 			isJumping = false;
+			isGround = false;
 			onLadder = true;
-			exitLadder = false;
+			testCollider.SetActive(false);
 		}
 	}
 
@@ -236,10 +217,9 @@ public class Player_subslope : MonoBehaviour {
 	{
 		if (other.CompareTag("Ladder"))
 		{
-			rb2D.gravityScale = 1;
-			
+			rb2D.gravityScale = 5;
 			onLadder = false;
-			exitLadder = true;
+			testCollider.SetActive(true);
 
 		}
 	}

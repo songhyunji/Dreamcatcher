@@ -10,8 +10,8 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 	public GameObject wolf;
 	public Player_subslope playerScript;
 
-	public HeavyApple heavyAppleScript;
-	public GameObject heavyApple;
+	//public HeavyApple heavyAppleScript;
+	//public GameObject heavyApple;
 
 	private Renderer player_renderer;
 	[HideInInspector]
@@ -40,10 +40,10 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 				isSpawned = false;
 			}
 
-			if (heavyAppleScript.isTouch && heavyAppleScript.isAttatch)
+			/*if (heavyAppleScript.isTouch && heavyAppleScript.isAttatch)
 			{
 				heavyApple.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-			}
+			}*/
 		}
 
 	}
