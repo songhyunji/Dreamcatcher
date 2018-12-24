@@ -26,7 +26,7 @@ public class Player_subslope : MonoBehaviour {
 	public Vector2 direction;
 
 	public Animator animator;
-	private Rigidbody2D rb2D;
+	public Rigidbody2D rb2D;
 	
 	
 	void Awake () 
@@ -198,29 +198,4 @@ public class Player_subslope : MonoBehaviour {
         
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag("Ladder"))
-		{
-			Debug.Log("사다리 탐");
-			Vector3 otherPos = other.GetComponent<Transform>().position;
-			transform.position = new Vector3(otherPos.x, transform.position.y, transform.position.z);
-			rb2D.gravityScale = 0;
-			isJumping = false;
-			isGround = false;
-			onLadder = true;
-			testCollider.SetActive(false);
-		}
-	}
-
-	private void OnTriggerExit2D(Collider2D other)
-	{
-		if (other.CompareTag("Ladder"))
-		{
-			rb2D.gravityScale = 5;
-			onLadder = false;
-			testCollider.SetActive(true);
-
-		}
-	}
 }
