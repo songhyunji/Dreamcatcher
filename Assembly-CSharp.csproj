@@ -64,10 +64,12 @@
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PhysicsObject.cs" />
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PlayerPlatformerController.cs" />
     <Compile Include="Assets\Script\_Main\BtnManager.cs" />
-    <Compile Include="Assets\Script\_Object\Apple.cs" />
-    <Compile Include="Assets\Script\_Object\AppleSceneLoad.cs" />
-    <Compile Include="Assets\Script\_Object\HeavyApple.cs" />
-    <Compile Include="Assets\Script\_Object\MovingPlatform.cs" />
+    <Compile Include="Assets\Script\_Object\Apple\Apple.cs" />
+    <Compile Include="Assets\Script\_Object\Apple\AppleSceneLoad.cs" />
+    <Compile Include="Assets\Script\_Object\Flytrap\Flytrap.cs" />
+    <Compile Include="Assets\Script\_Object\Flytrap\FlytrapSceneLoad.cs" />
+    <Compile Include="Assets\Script\_Object\Heavy Apple\HeavyApple.cs" />
+    <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform.cs" />
     <Compile Include="Assets\Script\_Player\Canvas_Keep.cs" />
     <Compile Include="Assets\Script\_Player\Collider_test.cs" />
     <Compile Include="Assets\Script\_Player\InteractButton.cs" />

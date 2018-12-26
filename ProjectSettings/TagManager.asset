@@ -9,6 +9,7 @@ TagManager:
   - Ladder
   - Foothold
   - HeavyFoothold
+  - Flytrap
   layers:
   - Default
   - TransparentFX
