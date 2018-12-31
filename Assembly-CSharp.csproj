@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PhysicsObject.cs" />
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PlayerPlatformerController.cs" />
+    <Compile Include="Assets\DebugText.cs" />
     <Compile Include="Assets\Script\_Main\BtnManager.cs" />
     <Compile Include="Assets\Script\_Object\Apple\Apple.cs" />
     <Compile Include="Assets\Script\_Object\Apple\AppleSceneLoad.cs" />
@@ -86,22 +87,12 @@
     <Compile Include="Assets\Script\_Scene\VcamSceneLoad.cs" />
     <Compile Include="Assets\Script\_UI\SettingBtn.cs" />
     <Compile Include="Assets\Script\_UI\SettingBtnSceneLoad.cs" />
-    <Compile Include="Assets\Script\Animator\AnimatorWalk.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Inventory\Database.cs" />
     <Compile Include="Assets\Script\Inventory\Inventory.cs" />
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Inventory\JsonManager.cs" />
     <Compile Include="Assets\Script\Inventory\ValueChangeTest.cs" />
-    <Compile Include="Assets\Script\Scene1\ButtonControl.cs" />
-    <Compile Include="Assets\Script\Scene1\HomeLoad.cs" />
-    <Compile Include="Assets\Script\Scene1\Joystick.cs" />
-    <Compile Include="Assets\Script\Scene1\PlayerControllerScript.cs" />
-    <Compile Include="Assets\Script\Scene2\ButtonControl_1.cs" />
-    <Compile Include="Assets\Script\Scene2\PlayerControllerScript_1.cs" />
-    <Compile Include="Assets\Script\Scene4\ButtonControl_2.cs" />
-    <Compile Include="Assets\Script\Select\HomeManager.cs" />
-    <Compile Include="Assets\Script\touch\PlayerMove.cs" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

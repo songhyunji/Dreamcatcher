@@ -10,6 +10,7 @@ public class SpawnBtnSceneLoad : MonoBehaviour
 	void Start ()
 	{
 		spawnBtnScript.player = GameObject.Find("TestPlayer");
+
 		spawnBtnScript.playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
 
 	}
