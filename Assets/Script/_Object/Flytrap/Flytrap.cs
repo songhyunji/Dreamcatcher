@@ -17,30 +17,18 @@ public class Flytrap : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
-    IEnumerator CannotEat()
-    {
-        symbol.SetActive(true);
-        canEat = false;
-        yield return null;
-    }
-
-    IEnumerator CanEat()
-    {
-        symbol.SetActive(false);
-        canEat = true;
-        yield return null;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player")&&canEat)
         {
             Debug.Log("Eat");
+            canEat = false;
             StartCoroutine("Eat");
         }
         else if (collision.CompareTag("Foothold"))
         {
-            Debug.Log("Can not eat");
+            symbol.SetActive(true);
+            canEat = false;
             StartCoroutine("CannotEat");
         }
 
@@ -52,10 +40,13 @@ public class Flytrap : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Out");
+            canEat = true;
+            StopCoroutine("Eat");
         }
         else if (collision.CompareTag("Foothold"))
         {
-            Debug.Log("Can eat");
+            symbol.SetActive(false);
+            canEat = true;
             StartCoroutine("CanEat");
         }
     }

@@ -10,7 +10,7 @@ public class BtnManager : MonoBehaviour {
 	public GameObject errorPopupStageC;
 
 
-	public void StageABtnPress()
+	public void StartBtnPress()
 	{
 		SceneManager.LoadScene("A0");
 	}
@@ -34,5 +34,10 @@ public class BtnManager : MonoBehaviour {
 	{
 		errorPopupStageC.SetActive(false);
 	}
+
+    public void BtnPress()
+    {
+        SceneManager.LoadScene("Object Test");
+    }
 
 }

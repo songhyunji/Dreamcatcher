@@ -75,7 +75,8 @@
     <Compile Include="Assets\Script\_Player\InteractButton.cs" />
     <Compile Include="Assets\Script\_Player\JumpBtnSceneLoad.cs" />
     <Compile Include="Assets\Script\_Player\JumpButton.cs" />
-    <Compile Include="Assets\Script\_Player\Ladder_test.cs" />
+    <Compile Include="Assets\Script\_Player\Ladder\Ladder_test.cs" />
+    <Compile Include="Assets\Script\_Player\Ladder\LadderSceneLoad.cs" />
     <Compile Include="Assets\Script\_Player\old\Controller2D.cs" />
     <Compile Include="Assets\Script\_Player\old\Player.cs" />
     <Compile Include="Assets\Script\_Player\Player_subslope.cs" />

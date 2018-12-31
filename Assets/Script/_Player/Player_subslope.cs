@@ -99,14 +99,14 @@ public class Player_subslope : MonoBehaviour {
 					if (direction.x > 0)
 					{
 						animator.SetBool("isWalking", true);
-						transform.localScale = new Vector3(2, 2, 1);
+						transform.localScale = new Vector3(1, 1, 1);
 						dir = 1;
 
 					}
 					else if (direction.x < 0)
 					{
 						animator.SetBool("isWalking", true);
-						transform.localScale = new Vector3(-2, 2, 1);
+						transform.localScale = new Vector3(-1, 1, 1);
 						dir = -1;
 					}
 						
@@ -182,13 +182,13 @@ public class Player_subslope : MonoBehaviour {
 			if (direction.x > 0)
 			{
 				animator.SetBool("isWalking", true);
-				transform.localScale = new Vector3(2, 2, 1);
+				transform.localScale = new Vector3(1, 1, 1);
 				dir = 1;
 			}
 			else if (direction.x < 0)
 			{
 				animator.SetBool("isWalking", true);
-				transform.localScale = new Vector3(-2, 2, 1);
+				transform.localScale = new Vector3(-1, 1, 1);
 				dir = -1;
 			}
 
