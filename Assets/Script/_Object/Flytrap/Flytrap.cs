@@ -6,13 +6,22 @@ using UnityEngine.SceneManagement;
 public class Flytrap : MonoBehaviour
 {
     public bool canEat = true;
-    public GameObject symbol;
     public GameObject player;
 
-    IEnumerator Eat()
-    {        
-        yield return new WaitForSeconds(5);
-        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+    private void FixedUpdate()
+    {
+        if(!canEat)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        }
+        if(canEat)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.4f);
+        }
+    }
+
+    private void Eat()
+    {
         player.transform.position = new Vector2(-2,-3.6f);
         SceneManager.LoadScene(4);
     }
@@ -23,31 +32,8 @@ public class Flytrap : MonoBehaviour
         {
             Debug.Log("Eat");
             canEat = false;
-            StartCoroutine("Eat");
+            Eat();
         }
-        else if (collision.CompareTag("Foothold"))
-        {
-            symbol.SetActive(true);
-            canEat = false;
-            StartCoroutine("CannotEat");
-        }
-
     }
     
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Debug.Log("Out");
-            canEat = true;
-            StopCoroutine("Eat");
-        }
-        else if (collision.CompareTag("Foothold"))
-        {
-            symbol.SetActive(false);
-            canEat = true;
-            StartCoroutine("CanEat");
-        }
-    }
 }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\_Object\Apple\AppleSceneLoad.cs" />
     <Compile Include="Assets\Script\_Object\Flytrap\Flytrap.cs" />
     <Compile Include="Assets\Script\_Object\Flytrap\FlytrapSceneLoad.cs" />
+    <Compile Include="Assets\Script\_Object\Flytrap\FlytrapTrigger.cs" />
     <Compile Include="Assets\Script\_Object\Heavy Apple\HeavyApple.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform.cs" />
     <Compile Include="Assets\Script\_Player\Canvas_Keep.cs" />
