@@ -6,7 +6,7 @@ public class Rune : MonoBehaviour
 {
     public GameObject player;
 
-    public bool isTouch;
+    public bool isTouch = false;
 
     public Sprite Runeoff, Runeon; // 룬 꺼짐, 룬 켜짐
     public SpriteRenderer Runeimg;
@@ -31,34 +31,39 @@ public class Rune : MonoBehaviour
     }
 
     // 인터랙션 버튼을 누르면
-    public void OnPressInterBtn()
+    public void PressInteractBtn()
     {
         if (isTouch == true)
         {
-            Runeimg.sprite = Runeoff;
-            RuneSwitch = false;
-            Debug.Log("룬 꺼짐");
+            Debug.Log("인터랙션 버튼 누름");
+
+            if (RuneSwitch) // 룬이 켜져 있음
+            {
+                Runeimg.sprite = Runeoff;
+                RuneSwitch = false;
+                Debug.Log("룬 꺼짐");
+
+            } else // 룬이 꺼져 있음
+            {
+                Runeimg.sprite = Runeon;
+                RuneSwitch = true;
+                Debug.Log("룬 켜짐");
+            }
         } // + 포인트 라이트도 끄기
-
-        else
-        {
-            Runeimg.sprite = Runeon;
-            RuneSwitch = true;
-            Debug.Log("룬 켜짐");
-        }
-
     }
 
-    public void OnTriggerEnter2D(Collider other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("룬과 충돌");
 
         // 룬이 플레이어와 닿았을 때
         if (other.gameObject == player)
         {
+            Debug.Log("룬과 충돌");
+
+            isTouch = !isTouch;
             // 인터랙트 버튼을 누르면
             // 룬이 꺼짐
-            if (isTouch == true)
+/*            if (isTouch == true)
             {
                 Runeimg.sprite = Runeoff;
                 RuneSwitch = false;
@@ -70,7 +75,7 @@ public class Rune : MonoBehaviour
                 Runeimg.sprite = Runeon;
                 RuneSwitch = true;
                 Debug.Log("룬 켜짐");
-            }
+            } */
         }
 
     }
