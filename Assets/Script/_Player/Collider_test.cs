@@ -18,7 +18,7 @@ public class Collider_test : MonoBehaviour
 		{
 			playerScript.isGround = true;
 			//playerScript.onLadder = false;
-			Debug.Log("is Ground true");
+			//Debug.Log("is Ground true");
 		}
 		
 		if (other.CompareTag("Foothold")||other.CompareTag("HeavyFoothold"))
@@ -27,7 +27,7 @@ public class Collider_test : MonoBehaviour
 			playerScript.onFoothold = true;
 			playerScript.isJumping = false;
 			playerScript.animator.SetBool("isJumping",false);
-			Debug.Log("발판 위에 착지");
+			//Debug.Log("발판 위에 착지");
 		}
 		
 		if (other.CompareTag("HeavyFoothold"))
@@ -41,14 +41,14 @@ public class Collider_test : MonoBehaviour
 		if (other.CompareTag("Ground"))
 		{
 			playerScript.isGround = false;
-			Debug.Log("is Ground false");
+			//Debug.Log("is Ground false");
 		}
 		
 		if (other.CompareTag("Foothold"))
 		{
 			playerScript.onFoothold = false;
 			playerScript.animator.SetBool("isJumping",true);
-			Debug.Log("공중에 떠있음");
+			//Debug.Log("공중에 떠있음");
 		}
 		
 		if (other.CompareTag("HeavyFoothold"))

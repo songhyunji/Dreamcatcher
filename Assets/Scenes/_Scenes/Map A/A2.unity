@@ -515,6 +515,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114723106798628298, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
+    - {fileID: 114413338718237228, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
+    - {fileID: 114768559281950012, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
+    - {fileID: 114340580015642074, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
 --- !u!1 &715824550
 GameObject:
@@ -1117,6 +1120,7 @@ MonoBehaviour:
   sceneName: A
   sceneNum: 1
   vcam: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &847785217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1655,6 +1659,7 @@ MonoBehaviour:
   sceneName: A
   sceneNum: 1
   vcam: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &999588378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2892,7 +2897,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
 --- !u!114 &1430414647 stripped
 MonoBehaviour:

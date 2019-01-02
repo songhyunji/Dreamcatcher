@@ -155,7 +155,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
 --- !u!114 &161908558 stripped
 MonoBehaviour:
@@ -487,6 +488,7 @@ MonoBehaviour:
   sceneName: A
   sceneNum: 2
   vcam: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &663428159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -707,6 +709,7 @@ MonoBehaviour:
   sceneName: A
   sceneNum: 2
   vcam: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &791143364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -885,7 +888,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114340580015642074, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
+    - {fileID: 114768559281950012, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
+    - {fileID: 114413338718237228, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
 --- !u!1 &910029084
 GameObject:
@@ -1691,7 +1697,6 @@ GameObject:
   - component: {fileID: 1626727691}
   - component: {fileID: 1626727690}
   - component: {fileID: 1626727694}
-  - component: {fileID: 1626727693}
   - component: {fileID: 1626727692}
   m_Layer: 12
   m_Name: Rune
@@ -1788,19 +1793,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &1626727693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626727689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d3aa02be53c3a14d99fad0e668107b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runeScript: {fileID: 1626727694}
 --- !u!114 &1626727694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,6 +1858,7 @@ MonoBehaviour:
   sceneName: A
   sceneNum: 0
   vcam: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &1672302945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3751,7 +3744,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
 --- !u!114 &2096088388 stripped
 MonoBehaviour:

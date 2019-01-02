@@ -8,6 +8,11 @@ public class Flytrap : MonoBehaviour
     public bool canEat = true;
     public GameObject player;
 
+    private void Start()
+    {
+        player = GameObject.Find("TestPlayer");
+    }
+
     private void FixedUpdate()
     {
         if(!canEat)

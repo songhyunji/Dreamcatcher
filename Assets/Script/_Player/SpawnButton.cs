@@ -20,12 +20,15 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 
 	private void Start()
 	{
-		player_renderer = player.GetComponent<Renderer>();
+
+        player = GameObject.Find("TestPlayer");
+        playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
+        player_renderer = player.GetComponent<Renderer>();
 	}
 
 	public void OnPointerDown(PointerEventData ped)
 	{
-		Debug.Log("spawn 버튼 눌렸음여");
+		Debug.Log("spawn 버튼 눌렸음");
 		if (playerScript.isGround||playerScript.onFoothold)
 		{
 			if (!isSpawned)

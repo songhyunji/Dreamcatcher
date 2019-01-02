@@ -14,7 +14,8 @@ public class HeavyApple : MonoBehaviour {
 
 	private void Start()
 	{
-		rb2D = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("TestPlayer");
+        rb2D = GetComponent<Rigidbody2D>();
 	}
 
 	private void Update()

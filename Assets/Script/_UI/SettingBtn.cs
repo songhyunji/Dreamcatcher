@@ -7,19 +7,30 @@ public class SettingBtn : MonoBehaviour {
 
 	public GameObject settingPanel;
 	public GameObject errorPopupCat;
-	public GameObject errorPopupDog;
+	public GameObject errorRestartPopup;
 	public GameObject player;
 
-	public void SettingBtnPress()
+    private float playerposX;
+    private float playerposY;
+    private string loadSceneName = "";
+
+
+    void Start()
+    {
+        player = GameObject.Find("TestPlayer");
+
+    }
+
+    public void SettingBtnPress()
 	{
 		settingPanel.SetActive(true);
 	}
 
 	public void HomeBtnPress()
 	{
-		GameObject newGO = new GameObject();
+		/*GameObject newGO = new GameObject();
 		player.transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-		transform.SetParent(null);
+		transform.SetParent(null);*/
 		SceneManager.LoadScene("Main");
 	}
 
@@ -28,19 +39,31 @@ public class SettingBtn : MonoBehaviour {
 		errorPopupCat.SetActive(true);
 	}
 
-	public void DogBtnPress()
+	public void RestartBtnPress()
 	{
-		errorPopupDog.SetActive(true);
-	}
+        playerposX = PlayerPrefs.GetFloat("posX");
+        playerposY = PlayerPrefs.GetFloat("posY");
+        loadSceneName = PlayerPrefs.GetString("SaveStage");
+
+        if (loadSceneName.Length == 0)
+        {
+            errorRestartPopup.SetActive(true);
+        }
+        else
+        {
+            SceneManager.LoadScene(loadSceneName);
+            player.transform.position = new Vector3(playerposX, playerposY);
+        }
+    }
 
 	public void ExitPopupCat()
 	{
 		errorPopupCat.SetActive(false);
 	}
 
-	public void ExitPopupDog()
+	public void ExiterrorRestartPopup()
 	{
-		errorPopupDog.SetActive(false);
+        errorRestartPopup.SetActive(false);
 	}
 
 	public void ExitSettingPanel()

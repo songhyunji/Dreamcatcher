@@ -16,7 +16,8 @@ public class Apple : MonoBehaviour {
 
 	private void Start()
 	{
-		rb2D = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("TestPlayer");
+        rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
 		rb2D.isKinematic = false;

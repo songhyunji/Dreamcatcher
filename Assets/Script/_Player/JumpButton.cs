@@ -8,8 +8,14 @@ public class JumpButton : MonoBehaviour, IPointerDownHandler
 
 	public Player_subslope playerScript;
 
+    void Start()
+    {
+        playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
 
-	public void OnPointerDown(PointerEventData ped)
+    }
+
+
+    public void OnPointerDown(PointerEventData ped)
 	{
 		playerScript.Jump();
 
