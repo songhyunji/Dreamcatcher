@@ -51,19 +51,28 @@ public class Rune : MonoBehaviour
                 Debug.Log("룬 켜짐");
             }
 
-            isTouch = false;
-
         } // + 포인트 라이트도 끄기
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         // 룬이 플레이어와 닿았을 때
-        if (other.gameObject == player)
+        if (other.CompareTag("player"))
         {
             Debug.Log("룬과 충돌");
 
             isTouch = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        // 룬이 플레이어와 닿았을 때
+        if (other.CompareTag("player"))
+        {
+            Debug.Log("룬과 충돌 안 함");
+
+            isTouch = false;
         }
     }
 
