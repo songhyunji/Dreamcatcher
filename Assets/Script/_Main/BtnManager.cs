@@ -64,6 +64,11 @@ public class BtnManager : MonoBehaviour {
 		OptionPopup.SetActive(true);
 	}
 
+    public void ExitBtnPress()
+    {
+        Application.Quit();
+    }
+
 	public void ExitLoadPopup()
 	{
 		errorLoadPopup.SetActive(false);
