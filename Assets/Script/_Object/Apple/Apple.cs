@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 public class Apple : MonoBehaviour {
 	
 	public GameObject player;
-	private Rigidbody2D rb2D;
+    public GameObject jumpBtn;
+    public GameObject spawnBtn;
+
+    private Rigidbody2D rb2D;
 	private Transform pos;
+    private Collider2D playerCollider;
 
 	public bool isTouch;
 	public bool isAttatch;
@@ -17,6 +21,7 @@ public class Apple : MonoBehaviour {
 	private void Start()
 	{
         player = GameObject.Find("TestPlayer");
+        playerCollider = player.GetComponent<Collider2D>();
         rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
@@ -57,20 +62,32 @@ public class Apple : MonoBehaviour {
 	}
 	
 	public void PressInteractBtn()
-	{
+    { 
 		if (isTouch&&!isAttatch)
 		{
-			transform.SetParent(player.transform);
-			transform.Translate(0, 0.5f, 0);
-			rb2D.isKinematic = true;
-			isAttatch = true;
-		}
+            jumpBtn = GameObject.Find("JumpBtn");
+            jumpBtn.GetComponent<JumpButton>().enabled = false;
+
+            spawnBtn = GameObject.Find("SpawnBtn");
+            spawnBtn.GetComponent<SpawnButton>().enabled = false;
+
+
+            transform.Translate(0, playerCollider.bounds.center.y - transform.position.y, 0);
+            transform.SetParent(player.transform);
+
+            rb2D.isKinematic = true;
+            isAttatch = true;
+            
+        }
 		else if(isAttatch)
 		{
-			GameObject newGO = new GameObject();
+            jumpBtn.GetComponent<JumpButton>().enabled = true;
+            spawnBtn.GetComponent<SpawnButton>().enabled = true;
+
+            GameObject newGO = new GameObject();
 			this.transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
 			transform.SetParent(null);
-			rb2D.isKinematic = false;
+            rb2D.isKinematic = false;
 			isAttatch = false;
 		}
 	}

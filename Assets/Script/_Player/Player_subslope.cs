@@ -102,7 +102,7 @@ public class Player_subslope : MonoBehaviour {
 						transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
 						dir = 1;
 
-					}
+                    }
 					else if (direction.x < 0)
 					{
 						animator.SetBool("isWalking", true);
@@ -120,12 +120,12 @@ public class Player_subslope : MonoBehaviour {
 			else
 			{
 				animator.SetBool("isWalking", false);
-			}
+            }
 		}
 		else
 		{
 			animator.SetBool("isWalking", false);
-		}
+        }
 	}
 
 	public void Climb()

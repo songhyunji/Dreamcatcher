@@ -22,6 +22,7 @@ public class Ladder_test : MonoBehaviour
         if (other.CompareTag("Ladder"))
         {
             Debug.Log("사다리 탐");
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             Vector3 otherPos = other.GetComponent<Transform>().position;
             playerScript.transform.position = new Vector3(otherPos.x, transform.position.y, transform.position.z);
             rb2D.gravityScale = 0;
