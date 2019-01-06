@@ -14,11 +14,15 @@ public class SettingBtn : MonoBehaviour {
     private float playerposY;
     private string loadSceneName = "";
 
-
+    private List<GameObject> footholds = new List<GameObject>();
     void Start()
     {
         player = GameObject.Find("TestPlayer");
-
+        var foothold = GameObject.FindGameObjectsWithTag("Foothold");
+        foreach(var c in foothold)
+        {
+            footholds.Add(c);
+        }
     }
 
     public void SettingBtnPress()
@@ -51,9 +55,21 @@ public class SettingBtn : MonoBehaviour {
         }
         else
         {
+            GameObject newGO = new GameObject();
+
+            for (int i = 0; i < footholds.Count; i++)
+            {
+                footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
+                transform.SetParent(null);
+                Destroy(newGO);
+
+            }
+
             SceneManager.LoadScene(loadSceneName);
             player.transform.position = new Vector3(playerposX, playerposY);
         }
+
+
     }
 
 	public void ExitPopupCat()

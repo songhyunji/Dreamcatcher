@@ -87,6 +87,7 @@ public class Apple : MonoBehaviour {
             GameObject newGO = new GameObject();
 			this.transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
 			transform.SetParent(null);
+            Destroy(newGO);
             rb2D.isKinematic = false;
 			isAttatch = false;
 		}
