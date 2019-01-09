@@ -10,6 +10,7 @@ TagManager:
   - Foothold
   - HeavyFoothold
   - Flytrap
+  - DeathGround
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,8 @@ public class Apple : MonoBehaviour {
     private Collider2D playerCollider;
 
 	public bool isTouch;
-	public bool isAttatch;
+    public bool isAttatch;
+    public bool isGround;
 	public float playerPosX = 35;
 	
 
@@ -25,16 +26,16 @@ public class Apple : MonoBehaviour {
         rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
-		rb2D.isKinematic = false;
 
 	}
 
 	private void FixedUpdate()
 	{
 		
-		if (pos.position.x >= playerPosX)
+		if (pos.position.x >= playerPosX && !isGround)
 		{
 			rb2D.gravityScale = 1;
+            isGround = true;
 		}
 
 	}
@@ -46,11 +47,6 @@ public class Apple : MonoBehaviour {
 			isTouch = true;
 		}
 
-		if (other.collider.CompareTag("Ground"))
-		{
-			Debug.Log("땅에 닿음");
-		}
-		
 	}
 	
 	private void OnCollisionExit2D(Collision2D other)
@@ -72,10 +68,10 @@ public class Apple : MonoBehaviour {
             spawnBtn.GetComponent<SpawnButton>().enabled = false;
 
 
-            transform.Translate(0, playerCollider.bounds.center.y - transform.position.y, 0);
+            transform.Translate(0, playerCollider.bounds.center.y - transform.position.y + 0.3f, 0);
             transform.SetParent(player.transform);
 
-            rb2D.isKinematic = true;
+            rb2D.gravityScale = 0;
             isAttatch = true;
             
         }
@@ -88,7 +84,7 @@ public class Apple : MonoBehaviour {
 			this.transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
 			transform.SetParent(null);
             Destroy(newGO);
-            rb2D.isKinematic = false;
+            rb2D.gravityScale = 1;
 			isAttatch = false;
 		}
 	}

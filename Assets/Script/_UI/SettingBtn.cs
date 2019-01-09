@@ -15,6 +15,7 @@ public class SettingBtn : MonoBehaviour {
     private string loadSceneName = "";
 
     private List<GameObject> footholds = new List<GameObject>();
+
     void Start()
     {
         player = GameObject.Find("TestPlayer");
@@ -45,6 +46,26 @@ public class SettingBtn : MonoBehaviour {
 
 	public void RestartBtnPress()
 	{
+        RestartSceneFunc();
+    }
+
+	public void ExitPopupCat()
+	{
+		errorPopupCat.SetActive(false);
+	}
+
+	public void ExiterrorRestartPopup()
+	{
+        errorRestartPopup.SetActive(false);
+	}
+
+	public void ExitSettingPanel()
+	{
+		settingPanel.SetActive(false);
+	}
+
+    private void RestartSceneFunc()
+    {
         playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
         loadSceneName = PlayerPrefs.GetString("SaveStage");
@@ -68,22 +89,5 @@ public class SettingBtn : MonoBehaviour {
             SceneManager.LoadScene(loadSceneName);
             player.transform.position = new Vector3(playerposX, playerposY);
         }
-
-
     }
-
-	public void ExitPopupCat()
-	{
-		errorPopupCat.SetActive(false);
-	}
-
-	public void ExiterrorRestartPopup()
-	{
-        errorRestartPopup.SetActive(false);
-	}
-
-	public void ExitSettingPanel()
-	{
-		settingPanel.SetActive(false);
-	}
 }

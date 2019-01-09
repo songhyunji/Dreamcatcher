@@ -65,6 +65,7 @@
     <Compile Include="Assets\Asset\PennyPixel\Scripts\PlayerPlatformerController.cs" />
     <Compile Include="Assets\Script\_Main\BtnManager.cs" />
     <Compile Include="Assets\Script\_Object\Apple\Apple.cs" />
+    <Compile Include="Assets\Script\_Object\Apple\Apple1.cs" />
     <Compile Include="Assets\Script\_Object\Flytrap\Flytrap.cs" />
     <Compile Include="Assets\Script\_Object\Flytrap\FlytrapTrigger.cs" />
     <Compile Include="Assets\Script\_Object\Heavy Apple\HeavyApple.cs" />
