@@ -5,6 +5,10 @@ using UnityEngine;
 public class Rune : MonoBehaviour
 {
     public GameObject player;
+    public GameObject lightParticle;
+
+    public Enterence enterenceScript;
+    public MovingPlatform movingPlatformScript;
 
     public bool isTouch = false;
 
@@ -43,22 +47,24 @@ public class Rune : MonoBehaviour
                 Runeimg.sprite = Runeoff;
                 RuneSwitch = false;
                 Debug.Log("룬 꺼짐");
-
+                lightParticle.SetActive(false); // 포인트 라이트도 끄기
+                enterenceScript.EnterenceOpen();
+                movingPlatformScript.isWork = true;
             }
-            else // 룬이 꺼져 있음
+            else // 룬이 꺼져 있음 -> 룬이 다시 켜지지 않음
             {
-                Runeimg.sprite = Runeon;
-                RuneSwitch = true;
-                Debug.Log("룬 켜짐");
+                //Runeimg.sprite = Runeon;
+                //RuneSwitch = true;
+                //Debug.Log("룬 켜짐");
             }
 
-        } // + 포인트 라이트도 끄기
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         // 룬이 플레이어와 닿았을 때
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("룬과 충돌");
 
@@ -69,7 +75,7 @@ public class Rune : MonoBehaviour
     public void OnTriggerExit2D(Collider2D other)
     {
         // 룬이 플레이어와 닿았을 때
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("룬과 충돌 안 함");
 

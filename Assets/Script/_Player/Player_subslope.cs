@@ -12,7 +12,8 @@ public class Player_subslope : MonoBehaviour {
 
 	
 	public GameObject testCollider;
-	
+
+    public bool isLeft;
 	public bool isJumping = false;
 	public bool isGround = false;
 	public bool onLadder = false;
@@ -110,6 +111,7 @@ public class Player_subslope : MonoBehaviour {
 						animator.SetBool("isWalking", true);
 						transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
 						dir = 1;
+                        isLeft = false;
 
                     }
 					else if (direction.x < 0)
@@ -117,6 +119,7 @@ public class Player_subslope : MonoBehaviour {
 						animator.SetBool("isWalking", true);
 						transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
 						dir = -1;
+                        isLeft = true;
 					}
 						
 					transform.Translate(dir * Vector3.right * speed * Time.deltaTime);
@@ -220,21 +223,19 @@ public class Player_subslope : MonoBehaviour {
 
     private void RestartSceneFunc()
     {
-        playerposX = PlayerPrefs.GetFloat("posX");
-        playerposY = PlayerPrefs.GetFloat("posY");
-        loadSceneName = PlayerPrefs.GetString("SaveStage");
-
         GameObject newGO = new GameObject();
 
         for (int i = 0; i < footholds.Count; i++)
         {
-            Debug.Log(footholds[i]);
-            /*footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
+            footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
             transform.SetParent(null);
-            Destroy(newGO);*/
+            Destroy(newGO);
 
         }
 
+        playerposX = PlayerPrefs.GetFloat("posX");
+        playerposY = PlayerPrefs.GetFloat("posY");
+        loadSceneName = PlayerPrefs.GetString("SaveStage");
         SceneManager.LoadScene(loadSceneName);
         transform.position = new Vector3(playerposX, playerposY);
     }

@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\_Object\Apple\Apple1.cs" />
     <Compile Include="Assets\Script\_Object\Flytrap\Flytrap.cs" />
     <Compile Include="Assets\Script\_Object\Flytrap\FlytrapTrigger.cs" />
+    <Compile Include="Assets\Script\_Object\Forest Enterence\Enterence.cs" />
     <Compile Include="Assets\Script\_Object\Heavy Apple\HeavyApple.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform.cs" />
     <Compile Include="Assets\Script\_Object\Rune\Rune.cs" />

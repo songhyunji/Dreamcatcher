@@ -3060,6 +3060,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114412858200936208, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: boundX
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
       propertyPath: m_CollisionDetection

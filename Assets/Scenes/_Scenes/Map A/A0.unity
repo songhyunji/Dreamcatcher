@@ -4405,6 +4405,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1351915195}
+    - target: {fileID: 114412858200936208, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: boundX
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -4413,7 +4418,7 @@ PrefabInstance:
     - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
@@ -6179,6 +6184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.22996789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105719358701829451, guid: 0ea4c765b1fb2c040a08cc543368cf38,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea4c765b1fb2c040a08cc543368cf38, type: 3}

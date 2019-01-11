@@ -25,7 +25,7 @@ public class BtnManager : MonoBehaviour {
         player.transform.position = new Vector3(-2.11f, -1.5f);
         PlayerPrefs.DeleteAll();
 
-        /*
+        
             PlayerPrefs.SetFloat("posX", -2.11f);
             PlayerPrefs.SetFloat("posY", -1.5f);
             PlayerPrefs.SetString("SaveStage", "A0");
@@ -37,7 +37,7 @@ public class BtnManager : MonoBehaviour {
             Debug.Log(PlayerPrefs.GetFloat("posY"));
             Debug.Log("Scene Name");
             Debug.Log(PlayerPrefs.GetString("SaveStage"));
-        */
+        
 
     }
 

@@ -33,9 +33,7 @@ public class SettingBtn : MonoBehaviour {
 
 	public void HomeBtnPress()
 	{
-		/*GameObject newGO = new GameObject();
-		player.transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-		transform.SetParent(null);*/
+        RemoveObject();
 		SceneManager.LoadScene("Main");
 	}
 
@@ -76,18 +74,22 @@ public class SettingBtn : MonoBehaviour {
         }
         else
         {
-            GameObject newGO = new GameObject();
-
-            for (int i = 0; i < footholds.Count; i++)
-            {
-                footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-                transform.SetParent(null);
-                Destroy(newGO);
-
-            }
+            RemoveObject();
 
             SceneManager.LoadScene(loadSceneName);
             player.transform.position = new Vector3(playerposX, playerposY);
+        }
+    }
+
+    private void RemoveObject()
+    {
+        GameObject newGO = new GameObject();
+
+        for (int i = 0; i < footholds.Count; i++)
+        {
+            footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
+            transform.SetParent(null);
+            Destroy(newGO);
         }
     }
 }
