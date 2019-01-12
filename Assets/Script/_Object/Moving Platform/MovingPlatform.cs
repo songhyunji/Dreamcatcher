@@ -9,6 +9,7 @@ public class MovingPlatform : MonoBehaviour
 	public float minY;
 	public float speed;
     public bool isWork = false;
+    public Rune runeScript;
 
 	private Transform pos;
 	private float posY;
@@ -21,6 +22,11 @@ public class MovingPlatform : MonoBehaviour
 
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        if(runeScript.RuneSwitch==false)
+        {
+            isWork = true;
+        }
 
         if(isWork)
         {

@@ -48,8 +48,6 @@ public class Rune : MonoBehaviour
                 RuneSwitch = false;
                 Debug.Log("룬 꺼짐");
                 lightParticle.SetActive(false); // 포인트 라이트도 끄기
-                enterenceScript.EnterenceOpen();
-                movingPlatformScript.isWork = true;
             }
             else // 룬이 꺼져 있음 -> 룬이 다시 켜지지 않음
             {
