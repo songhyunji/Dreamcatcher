@@ -8,7 +8,6 @@ public class LoadScene : MonoBehaviour {
 
     public string sceneName;
     public int sceneNum;
-    public CinemachineVirtualCamera vcam;
     public GameObject player;
     public Player_subslope playerScript;
 

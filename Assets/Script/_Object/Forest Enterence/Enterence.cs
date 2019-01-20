@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enterence : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class Enterence : MonoBehaviour
 
     public Rune runeScript;
 
-    public float blinkSpeed;
+	public GameObject player;
+
+	public float blinkSpeed;
 
     private bool playerin;
     private bool enterenceOpen = false;
@@ -18,13 +21,15 @@ public class Enterence : MonoBehaviour
     private SpriteRenderer enterenceSptireRenderer;
     private Animator animator;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
-        enterenceSptireRenderer = GetComponent<SpriteRenderer>();
+		player = GameObject.Find("TestPlayer");
+		enterenceSptireRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        
-    }
+
+
+	}
 
     private void Update()
     {
@@ -47,7 +52,7 @@ public class Enterence : MonoBehaviour
         {
             if(enterenceOpen)
             {
-                Debug.Log("다음 스테이지로 이동");
+				LoadScene();
             }
             else
             {
@@ -90,5 +95,14 @@ public class Enterence : MonoBehaviour
         yield return new WaitForSeconds(1);
         animator.SetBool("playerInteract", false);
     }
+
+	private void LoadScene()
+	{
+		SceneManager.LoadScene("B1");
+
+		PlayerPrefs.SetFloat("posX", player.transform.position.x);
+		PlayerPrefs.SetFloat("posY", player.transform.position.y);
+		PlayerPrefs.SetString("SaveStage", "B1");
+	}
 
 }

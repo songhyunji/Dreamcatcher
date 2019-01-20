@@ -167,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.854004
+      value: 7.4356995
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3588,15 +3588,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rune
       objectReference: {fileID: 0}
+    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
+        type: 3}
+      propertyPath: movingPlatformScript
+      value: 
+      objectReference: {fileID: 1692316859}
     - target: {fileID: 711137272146441499, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 87.78209
+      value: 69.243
       objectReference: {fileID: 0}
     - target: {fileID: 711137272146441499, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 8.66
       objectReference: {fileID: 0}
     - target: {fileID: 711137272146441499, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
@@ -3643,11 +3648,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
+    - target: {fileID: 711137272146441498, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
-      propertyPath: movingPlatformScript
-      value: 
-      objectReference: {fileID: 1692316859}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 398aa80bf8536ff4f9711cd65e5698a2, type: 3}
 --- !u!114 &1827218799 stripped
