@@ -2575,6 +2575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 1738011385992562, guid: 81fb5cc32af4278418853ebb413f3e90, type: 3}
+      propertyPath: m_TagString
+      value: Foothold
+      objectReference: {fileID: 0}
     - target: {fileID: 4954318817511554, guid: 81fb5cc32af4278418853ebb413f3e90, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.722
@@ -4576,6 +4580,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rune
       objectReference: {fileID: 0}
+    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
+        type: 3}
+      propertyPath: enterenceScript
+      value: 
+      objectReference: {fileID: 524114405}
+    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
+        type: 3}
+      propertyPath: movingPlatformScript
+      value: 
+      objectReference: {fileID: 1737354212}
     - target: {fileID: 711137272146441499, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4631,15 +4645,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
-        type: 3}
-      propertyPath: enterenceScript
-      value: 
-      objectReference: {fileID: 524114405}
-    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
-        type: 3}
-      propertyPath: movingPlatformScript
-      value: 
-      objectReference: {fileID: 1737354212}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 398aa80bf8536ff4f9711cd65e5698a2, type: 3}

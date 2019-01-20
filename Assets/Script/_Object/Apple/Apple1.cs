@@ -82,7 +82,7 @@ public class Apple1 : MonoBehaviour {
             jumpBtn.GetComponent<JumpButton>().enabled = true;
             spawnBtn.GetComponent<SpawnButton>().enabled = true;
 
-            rb2D.gravityScale = 1;
+            rb2D.gravityScale = 5;
 			isAttatch = false;
 		}
 	}
