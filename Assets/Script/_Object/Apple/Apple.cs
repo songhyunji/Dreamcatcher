@@ -23,8 +23,8 @@ public class Apple : MonoBehaviour {
 
 	private void Start()
 	{
-        player = GameObject.Find("TestPlayer");
-        playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
+        player = GameObject.Find("TestPlayer(Clone)");
+        playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
         playerCollider = player.GetComponent<Collider2D>();
         rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();

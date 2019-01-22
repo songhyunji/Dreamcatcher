@@ -10,7 +10,7 @@ public class JumpButton : MonoBehaviour, IPointerDownHandler
 
     void Start()
     {
-        playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
+        playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
 
     }
 

@@ -15,8 +15,8 @@ public class LoadScene : MonoBehaviour {
 
     void Start()
     {
-        player = GameObject.Find("TestPlayer");
-        playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
+        player = GameObject.Find("TestPlayer(Clone)");
+        playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

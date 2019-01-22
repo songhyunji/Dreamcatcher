@@ -11,8 +11,8 @@ public class Ladder_test : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("TestPlayer");
-        playerScript = GameObject.Find("TestPlayer").GetComponent<Player_subslope>();
+        player = GameObject.Find("TestPlayer(Clone)");
+        playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
         rb2D = player.GetComponent<Rigidbody2D>();
     }
 

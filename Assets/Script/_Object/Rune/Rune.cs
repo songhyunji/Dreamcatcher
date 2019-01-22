@@ -7,9 +7,6 @@ public class Rune : MonoBehaviour
     public GameObject player;
     public GameObject lightParticle;
 
-    public Enterence enterenceScript;
-    public MovingPlatform movingPlatformScript;
-
     public bool isTouch = false;
 
     public Sprite Runeoff, Runeon; // 룬 꺼짐, 룬 켜짐

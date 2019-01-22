@@ -18,7 +18,7 @@ public class SettingBtn : MonoBehaviour {
 
     void Start()
     {
-        player = GameObject.Find("TestPlayer");
+        player = GameObject.Find("TestPlayer(Clone)");
         var foothold = GameObject.FindGameObjectsWithTag("Foothold");
         foreach(var c in foothold)
         {
@@ -33,6 +33,7 @@ public class SettingBtn : MonoBehaviour {
 
 	public void HomeBtnPress()
 	{
+		Destroy(player);
         RemoveObject();
 		SceneManager.LoadScene("Main");
 	}

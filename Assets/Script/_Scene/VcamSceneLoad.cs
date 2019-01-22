@@ -8,6 +8,6 @@ public class VcamSceneLoad : MonoBehaviour {
 
 	void Start () {
         vcam = GameObject.Find("Camera").transform.GetChild(1).GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        vcam.Follow = GameObject.Find("TestPlayer").transform;
+        vcam.Follow = GameObject.Find("TestPlayer(Clone)").transform;
     }
 }

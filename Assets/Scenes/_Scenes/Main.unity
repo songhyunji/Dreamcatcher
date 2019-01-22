@@ -377,7 +377,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   errorLoadPopup: {fileID: 354565251}
   OptionPopup: {fileID: 2051604095}
-  player: {fileID: 0}
+  player: {fileID: 2527893753061853202, guid: c1c9ede6345e6b14bbcdeb7fdfe3c862, type: 3}
+  player_object: {fileID: 0}
 --- !u!4 &275760105
 Transform:
   m_ObjectHideFlags: 0

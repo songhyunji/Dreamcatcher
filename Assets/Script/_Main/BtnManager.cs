@@ -9,20 +9,23 @@ public class BtnManager : MonoBehaviour {
 	public GameObject errorLoadPopup;
 	public GameObject OptionPopup;
     public GameObject player;
-    private float playerposX;
+	[HideInInspector]
+	public GameObject player_object;
+	private float playerposX;
     private float playerposY;
     private string loadSceneName = "";
 
 
     private void Start()
     {
-        player = GameObject.Find("TestPlayer");
+
     }
 
     public void StartBtnPress()
 	{
+		CreatePlayer(new Vector3(-2.11f, -1.5f));
 		SceneManager.LoadScene("A0");
-        player.transform.position = new Vector3(-2.11f, -1.5f);
+        //player.transform.position = new Vector3(-2.11f, -1.5f);
         PlayerPrefs.DeleteAll();
 
         
@@ -54,8 +57,9 @@ public class BtnManager : MonoBehaviour {
         }
         else
         {
-            SceneManager.LoadScene(loadSceneName);
-            player.transform.position = new Vector3(playerposX, playerposY);
+			CreatePlayer(new Vector3(playerposX, playerposY));
+			SceneManager.LoadScene(loadSceneName);
+            //player.transform.position = new Vector3(playerposX, playerposY);
         }
     }
 
@@ -77,6 +81,11 @@ public class BtnManager : MonoBehaviour {
 	public void ExitOptionPopup()
 	{
         OptionPopup.SetActive(false);
+	}
+
+	public void CreatePlayer(Vector3 playerPosition)
+	{
+		player_object = Instantiate(player, playerPosition, Quaternion.identity);
 	}
 
 }
