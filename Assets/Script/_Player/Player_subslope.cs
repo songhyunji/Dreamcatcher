@@ -158,13 +158,13 @@ public class Player_subslope : MonoBehaviour {
 					direction = touch.position - startPos;
 					if (direction.y > 0)
 					{
-						//animator.SetBool("isWalking", true);
+						animator.SetBool("isClimbing", true);
 						dir = 1;
 						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
 					}
 					else if (direction.y < 0)
 					{
-						//animator.SetBool("isWalking", true);
+						animator.SetBool("isClimbing", true);
 						dir = -1;
 						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
 					}
@@ -172,7 +172,7 @@ public class Player_subslope : MonoBehaviour {
 				}
 				else if (touch.phase == TouchPhase.Ended)
 				{
-					//animator.SetBool("isWalking", false);
+					animator.SetBool("isClimbing", false);
 				}
 				
 			}
@@ -206,7 +206,7 @@ public class Player_subslope : MonoBehaviour {
 			}
 
 			rb2D.AddForce(dir*Vector2.right * speed * Time.deltaTime);
-			onLadder = false;
+			//onLadder = false;
 		}
         
 	}

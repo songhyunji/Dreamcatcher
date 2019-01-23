@@ -8,12 +8,17 @@ public class Ladder_test : MonoBehaviour
 
     private Rigidbody2D rb2D;
     public GameObject player;
+	public Sprite playerOnLadder;
+	public SpriteRenderer playerSpriteRenderer;
+	public Animator animator;
 
-    private void Start()
+	private void Start()
     {
         player = GameObject.Find("TestPlayer(Clone)");
         playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
         rb2D = player.GetComponent<Rigidbody2D>();
+		animator = player.GetComponent<Animator>();
+		playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
     }
 
 
@@ -22,7 +27,10 @@ public class Ladder_test : MonoBehaviour
         if (other.CompareTag("Ladder"))
         {
             Debug.Log("사다리 탐");
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+			animator.SetBool("isOnLadder", true);
+			animator.SetBool("isWalking", false);
+			animator.SetBool("isJumping", false);
+			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             Vector3 otherPos = other.GetComponent<Transform>().position;
             player.transform.position = new Vector3(otherPos.x, transform.position.y, transform.position.z);
             rb2D.gravityScale = 0;
@@ -30,17 +38,20 @@ public class Ladder_test : MonoBehaviour
             playerScript.isGround = false;
             playerScript.onLadder = true;
             playerScript.testCollider.SetActive(false);
-        }
+
+		}
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Ladder"))
         {
-            rb2D.gravityScale = 5;
+			animator.SetBool("isOnLadder", false);
+			animator.SetBool("isClimbing", false);
+			rb2D.gravityScale = 5;
             playerScript.onLadder = false;
             playerScript.testCollider.SetActive(true);
 
-        }
+		}
     }
 }
