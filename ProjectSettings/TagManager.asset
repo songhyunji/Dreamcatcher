@@ -11,6 +11,9 @@ TagManager:
   - HeavyFoothold
   - Flytrap
   - DeathGround
+  - NPC
+  - key
+  - locked_door
   layers:
   - Default
   - TransparentFX

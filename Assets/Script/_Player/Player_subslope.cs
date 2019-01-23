@@ -21,6 +21,7 @@ public class Player_subslope : MonoBehaviour {
 	public bool touchedPulley = false;
 	public bool touchedHeavyFoolhold = false;
 	public bool isInteracting = false;
+	public bool hasKey = false;
 	public float dir;
 	public float speed;
 	public float jumpspeed;

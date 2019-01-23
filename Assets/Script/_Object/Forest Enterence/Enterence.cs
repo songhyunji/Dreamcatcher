@@ -24,7 +24,7 @@ public class Enterence : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		player = GameObject.Find("TestPlayer");
+		player = GameObject.Find("TestPlayer(Clone)");
 		enterenceSptireRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
@@ -98,11 +98,11 @@ public class Enterence : MonoBehaviour
 
 	private void LoadScene()
 	{
-		SceneManager.LoadScene("B1");
-
 		PlayerPrefs.SetFloat("posX", player.transform.position.x);
 		PlayerPrefs.SetFloat("posY", player.transform.position.y);
 		PlayerPrefs.SetString("SaveStage", "B1");
+
+		SceneManager.LoadScene("B1");
 	}
 
 }

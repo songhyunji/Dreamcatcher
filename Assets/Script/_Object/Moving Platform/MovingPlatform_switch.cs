@@ -8,6 +8,8 @@ public class MovingPlatform_switch : MonoBehaviour
 	public float maxY;
 	public float minY;
 	public float speed;
+	public bool updown;
+	public bool downup;
     public Button buttonScript;
 
 	private Transform pos;
@@ -24,11 +26,26 @@ public class MovingPlatform_switch : MonoBehaviour
 
         if(buttonScript.isOn == true)
         {
-			MoveUp();
+			if(updown)
+			{
+				MoveUp();
+			}
+			else if(downup)
+			{
+				MoveDown();
+			}
+			
         }
 		else
 		{
-			MoveDown();
+			if (updown)
+			{
+				MoveDown();
+			}
+			else if (downup)
+			{
+				MoveUp();
+			}
 		}
 
 	}

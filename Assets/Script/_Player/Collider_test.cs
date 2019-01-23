@@ -29,9 +29,6 @@ public class Collider_test : MonoBehaviour
 			playerScript.onFoothold = true;
 			playerScript.isJumping = false;
 			playerScript.animator.SetBool("isJumping",false);
-
-            InteractBtn = GameObject.Find("InteractBtn");
-            InteractBtn.GetComponent<Button>().enabled = false;
 			//Debug.Log("발판 위에 착지");
 		}
 		
@@ -54,14 +51,11 @@ public class Collider_test : MonoBehaviour
 			playerScript.onFoothold = false;
 			playerScript.animator.SetBool("isJumping",true);
             //Debug.Log("공중에 떠있음");
-
-            InteractBtn.GetComponent<Button>().enabled = true;
         }
 		
 		if (other.CompareTag("HeavyFoothold"))
 		{
 			playerScript.touchedHeavyFoolhold = false;
-            InteractBtn.GetComponent<Button>().enabled = true;
         }
 	}
 }
