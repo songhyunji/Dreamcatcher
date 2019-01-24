@@ -8,9 +8,13 @@ public class Flytrap : MonoBehaviour
     public bool canEat = true;
     public GameObject player;
 
-    private void Start()
+	private float playerposX;
+	private float playerposY;
+	private string loadSceneName = "";
+
+	private void Start()
     {
-        player = GameObject.Find("TestPlayer");
+        player = GameObject.Find("TestPlayer(Clone)");
     }
 
     private void FixedUpdate()
@@ -27,9 +31,14 @@ public class Flytrap : MonoBehaviour
 
     private void Eat()
     {
-        player.transform.position = new Vector2(-2,-3.6f);
-        SceneManager.LoadScene(4);
-    }
+		playerposX = PlayerPrefs.GetFloat("posX");
+		playerposY = PlayerPrefs.GetFloat("posY");
+		loadSceneName = PlayerPrefs.GetString("SaveStage");
+
+		player.transform.position = new Vector3(playerposX, playerposY);
+		SceneManager.LoadScene(loadSceneName);
+
+	}
 
     private void OnTriggerStay2D(Collider2D collision)
     {

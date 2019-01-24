@@ -24,25 +24,23 @@ public class BtnManager : MonoBehaviour {
     public void StartBtnPress()
 	{
 		CreatePlayer(new Vector3(-2.11f, -1.5f));
-		SceneManager.LoadScene("A0");
-        //player.transform.position = new Vector3(-2.11f, -1.5f);
+
         PlayerPrefs.DeleteAll();
 
-        
-            PlayerPrefs.SetFloat("posX", -2.11f);
-            PlayerPrefs.SetFloat("posY", -1.5f);
-            PlayerPrefs.SetString("SaveStage", "A0");
-            Debug.Log("저장");
+        PlayerPrefs.SetFloat("posX", -2.11f);
+		PlayerPrefs.SetFloat("posY", -1.5f);
+		PlayerPrefs.SetString("SaveStage", "A0");
+		Debug.Log("저장");
 
-            Debug.Log("posX");
-            Debug.Log(PlayerPrefs.GetFloat("posX"));
-            Debug.Log("posY");
-            Debug.Log(PlayerPrefs.GetFloat("posY"));
-            Debug.Log("Scene Name");
-            Debug.Log(PlayerPrefs.GetString("SaveStage"));
-        
+		Debug.Log("posX");
+		Debug.Log(PlayerPrefs.GetFloat("posX"));
+		Debug.Log("posY");
+		Debug.Log(PlayerPrefs.GetFloat("posY"));
+		Debug.Log("Scene Name");
+		Debug.Log(PlayerPrefs.GetString("SaveStage"));
 
-    }
+		SceneManager.LoadScene("A0");
+	}
 
 	public void LoadBtnPress()
 	{
