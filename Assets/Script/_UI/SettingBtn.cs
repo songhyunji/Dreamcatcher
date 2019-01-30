@@ -2,31 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SettingBtn : MonoBehaviour {
+public class SettingBtn : MonoBehaviour
+{
 
 	public GameObject settingPanel;
 	public GameObject errorPopupCat;
 	public GameObject errorRestartPopup;
 	public GameObject player;
 
-    private float playerposX;
-    private float playerposY;
-    private string loadSceneName = "";
+	public Image img;
 
-    private List<GameObject> footholds = new List<GameObject>();
+	private float playerposX;
+	private float playerposY;
+	private string loadSceneName = "";
 
-    void Start()
-    {
-        player = GameObject.Find("TestPlayer(Clone)");
-        var foothold = GameObject.FindGameObjectsWithTag("Foothold");
-        foreach(var c in foothold)
-        {
-            footholds.Add(c);
-        }
-    }
+	private List<GameObject> footholds = new List<GameObject>();
 
-    public void SettingBtnPress()
+	void Start()
+	{
+		player = GameObject.Find("TestPlayer(Clone)");
+		var foothold = GameObject.FindGameObjectsWithTag("Foothold");
+		foreach (var c in foothold)
+		{
+			footholds.Add(c);
+		}
+	}
+
+	public void SettingBtnPress()
 	{
 		settingPanel.SetActive(true);
 	}
@@ -34,7 +38,7 @@ public class SettingBtn : MonoBehaviour {
 	public void HomeBtnPress()
 	{
 		Destroy(player);
-        RemoveObject();
+		//RemoveObject();
 		SceneManager.LoadScene("Main");
 	}
 
@@ -45,8 +49,8 @@ public class SettingBtn : MonoBehaviour {
 
 	public void RestartBtnPress()
 	{
-        RestartSceneFunc();
-    }
+		RestartSceneFunc();
+	}
 
 	public void ExitPopupCat()
 	{
@@ -55,7 +59,7 @@ public class SettingBtn : MonoBehaviour {
 
 	public void ExiterrorRestartPopup()
 	{
-        errorRestartPopup.SetActive(false);
+		errorRestartPopup.SetActive(false);
 	}
 
 	public void ExitSettingPanel()
@@ -63,34 +67,62 @@ public class SettingBtn : MonoBehaviour {
 		settingPanel.SetActive(false);
 	}
 
-    private void RestartSceneFunc()
-    {
-        playerposX = PlayerPrefs.GetFloat("posX");
-        playerposY = PlayerPrefs.GetFloat("posY");
-        loadSceneName = PlayerPrefs.GetString("SaveStage");
+	private void RestartSceneFunc()
+	{
+		playerposX = PlayerPrefs.GetFloat("posX");
+		playerposY = PlayerPrefs.GetFloat("posY");
+		loadSceneName = PlayerPrefs.GetString("SaveStage");
 
-        if (loadSceneName.Length == 0)
-        {
-            errorRestartPopup.SetActive(true);
-        }
-        else
-        {
-            RemoveObject();
+		if (loadSceneName.Length == 0)
+		{
+			errorRestartPopup.SetActive(true);
+		}
+		else
+		{
+			img.gameObject.SetActive(true);
+			//RemoveObject();
+			StartCoroutine(FadeImage(false));
+		}
+	}
 
-            SceneManager.LoadScene(loadSceneName);
-            player.transform.position = new Vector3(playerposX, playerposY);
-        }
-    }
+	private void RemoveObject()
+	{
+		GameObject newGO = new GameObject();
 
-    private void RemoveObject()
-    {
-        GameObject newGO = new GameObject();
+		for (int i = 0; i < footholds.Count; i++)
+		{
+			footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
+			transform.SetParent(null);
+			Destroy(newGO);
+		}
+	}
 
-        for (int i = 0; i < footholds.Count; i++)
-        {
-            footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-            transform.SetParent(null);
-            Destroy(newGO);
-        }
-    }
+	IEnumerator FadeImage(bool fadeAway)
+	{
+		if (fadeAway)
+		{
+			for (float i = 1; i >= 0; i -= Time.deltaTime)
+			{
+				img.color = new Color(1, 1, 1, i);
+				yield return null;
+			}
+
+		}
+		else
+		{
+			for (float i = 0; i <= 1; i += Time.deltaTime)
+			{
+				img.color = new Color(0, 0, 0, i);
+				yield return null;
+			}
+			player.transform.position = new Vector3(playerposX, playerposY);
+			SceneManager.LoadScene(loadSceneName);
+		}
+	}
+
+	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+	{
+		img.gameObject.SetActive(false);
+	}
+
 }

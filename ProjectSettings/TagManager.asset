@@ -15,6 +15,9 @@ TagManager:
   - key
   - locked_door
   - Flytrap Trigger
+  - SpawnBtn
+  - InteractBtn
+  - Fade
   layers:
   - Default
   - TransparentFX

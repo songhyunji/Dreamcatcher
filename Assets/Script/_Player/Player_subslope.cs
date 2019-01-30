@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class Player_subslope : MonoBehaviour {
@@ -23,6 +24,7 @@ public class Player_subslope : MonoBehaviour {
 	public bool isInteracting = false;
 	public bool hasKey = false;
 	public float dir;
+	public float jumpDir;
 	public float speed;
 	public float jumpspeed;
 	public Vector2 startPos;			
@@ -30,8 +32,9 @@ public class Player_subslope : MonoBehaviour {
 
 	public Animator animator;
 	public Rigidbody2D rb2D;
+	public Image img;
 
-    private float playerposX;
+	private float playerposX;
     private float playerposY;
     private string loadSceneName = "";
 
@@ -57,6 +60,7 @@ public class Player_subslope : MonoBehaviour {
 	{
 		if (onLadder)
 		{
+			animator.SetBool("isOnLadder", true);
 			Climb();
 		}
 		else
@@ -67,6 +71,8 @@ public class Player_subslope : MonoBehaviour {
 		if (isGround)
 		{
 			animator.SetBool(("isJumping"), false);
+			animator.SetBool("isOnLadder", false);
+			animator.SetBool("isClimbing", false);
 		}
 	}
 	
@@ -127,6 +133,7 @@ public class Player_subslope : MonoBehaviour {
 				}
 				else if (touch.phase == TouchPhase.Ended)
 				{
+					dir = 0;
 					animator.SetBool("isWalking", false);
 				}
 			}
@@ -169,14 +176,33 @@ public class Player_subslope : MonoBehaviour {
 						transform.Translate(dir * Vector3.up * speed * Time.deltaTime);
 					}
 
+					if (direction.x > 0)
+					{
+						jumpDir = 1;
+						transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+					}
+					else if (direction.x < 0)
+					{
+						jumpDir = -1;
+						transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
+					}
+
 				}
 				else if (touch.phase == TouchPhase.Ended)
 				{
+					dir = 0;
+					jumpDir = 0;
 					animator.SetBool("isClimbing", false);
 				}
 				
 			}
 			
+		}
+		else
+		{
+			dir = 0;
+			jumpDir = 0;
+			animator.SetBool("isClimbing", false);
 		}
 	}
 	
@@ -192,20 +218,7 @@ public class Player_subslope : MonoBehaviour {
 		}
 		else if (onLadder)
 		{
-			if (direction.x > 0)
-			{
-				animator.SetBool("isWalking", true);
-				transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-				dir = 1;
-			}
-			else if (direction.x < 0)
-			{
-				animator.SetBool("isWalking", true);
-				transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
-				dir = -1;
-			}
-
-			rb2D.AddForce(dir*Vector2.right * speed * Time.deltaTime);
+			rb2D.AddForce(jumpDir * Vector2.right * speed * Time.deltaTime);
 			//onLadder = false;
 		}
         
@@ -224,23 +237,22 @@ public class Player_subslope : MonoBehaviour {
 
     private void RestartSceneFunc()
     {
-        GameObject newGO = new GameObject();
+       /* GameObject newGO = new GameObject();
 
         for (int i = 0; i < footholds.Count; i++)
         {
             footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
             transform.SetParent(null);
             Destroy(newGO);
+        }*/
 
-        }
-
-        playerposX = PlayerPrefs.GetFloat("posX");
+		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
         loadSceneName = PlayerPrefs.GetString("SaveStage");
-        SceneManager.LoadScene(loadSceneName);
-        transform.position = new Vector3(playerposX, playerposY);
-    }
+		img.gameObject.SetActive(true);
+		StartCoroutine(FadeImage(false));
 
+    }
 
     void OnEnable()
     {
@@ -249,12 +261,42 @@ public class Player_subslope : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SearchObject();
-    }
+        //SearchObject();
+		if (img == null)
+		{
+			img = GameObject.FindWithTag("Fade").GetComponent<Image>();
+			img.gameObject.SetActive(false);
+		}
+	}
 
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+	IEnumerator FadeImage(bool fadeAway)
+	{
+		if (fadeAway)
+		{
+			for (float i = 1; i >= 0; i -= Time.deltaTime)
+			{
+				img.color = new Color(1, 1, 1, i);
+				yield return null;
+			}
+
+		}
+		else
+		{
+			for (float i = 0; i <= 1; i += Time.deltaTime)
+			{
+				img.color = new Color(0, 0, 0, i);
+				yield return null;
+			}
+			transform.position = new Vector3(playerposX, playerposY);
+			SceneManager.LoadScene(loadSceneName);
+		}
+	}
+
+
 
 }

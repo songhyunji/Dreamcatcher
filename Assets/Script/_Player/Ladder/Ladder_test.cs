@@ -46,12 +46,13 @@ public class Ladder_test : MonoBehaviour
     {
         if (other.CompareTag("Ladder"))
         {
-			animator.SetBool("isOnLadder", false);
+			Debug.Log("사다리 벗어남");
+
 			animator.SetBool("isClimbing", false);
+			animator.SetBool("isOnLadder", false);
 			rb2D.gravityScale = 5;
             playerScript.onLadder = false;
             playerScript.testCollider.SetActive(true);
-
 		}
     }
 }

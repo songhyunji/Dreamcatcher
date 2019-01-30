@@ -80,11 +80,12 @@ public class Apple : MonoBehaviour {
             jumpBtn = GameObject.Find("JumpBtn");
             jumpBtn.GetComponent<JumpButton>().enabled = false;
 
-            spawnBtn = GameObject.Find("SpawnBtn");
-            spawnBtn.GetComponent<SpawnButton>().enabled = false;
+			if (spawnBtn != null)
+			{
+				spawnBtn.GetComponent<SpawnButton>().enabled = false;
+			}
 
-
-            transform.Translate(0, playerCollider.bounds.center.y - transform.position.y + 0.3f, 0);
+			transform.Translate(0, playerCollider.bounds.center.y - transform.position.y + 0.3f, 0);
 
             rb2D.gravityScale = 0;
             isAttatch = true;
@@ -93,9 +94,12 @@ public class Apple : MonoBehaviour {
 		else if(isAttatch)
 		{
             jumpBtn.GetComponent<JumpButton>().enabled = true;
-            spawnBtn.GetComponent<SpawnButton>().enabled = true;
+			if (spawnBtn != null)
+			{
+				spawnBtn.GetComponent<SpawnButton>().enabled = true;
+			}
 
-            rb2D.gravityScale = 1;
+			rb2D.gravityScale = 1;
 			isAttatch = false;
 		}
 	}

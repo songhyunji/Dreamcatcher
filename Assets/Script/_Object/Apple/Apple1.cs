@@ -24,7 +24,8 @@ public class Apple1 : MonoBehaviour {
 	{
         player = GameObject.Find("TestPlayer(Clone)");
         playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
-        playerCollider = player.GetComponent<Collider2D>();
+		spawnBtn = GameObject.Find("SpawnBtn");
+		playerCollider = player.GetComponent<Collider2D>();
         rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
@@ -70,17 +71,22 @@ public class Apple1 : MonoBehaviour {
             jumpBtn = GameObject.Find("JumpBtn");
             jumpBtn.GetComponent<JumpButton>().enabled = false;
 
-            spawnBtn = GameObject.Find("SpawnBtn");
-            spawnBtn.GetComponent<SpawnButton>().enabled = false;
+			if (spawnBtn != null)
+			{
+				spawnBtn.GetComponent<SpawnButton>().enabled = false;
+			}
 
-            rb2D.gravityScale = 0;
+			rb2D.gravityScale = 0;
             isAttatch = true;
             
         }
 		else if(isAttatch)
 		{
             jumpBtn.GetComponent<JumpButton>().enabled = true;
-            spawnBtn.GetComponent<SpawnButton>().enabled = true;
+			if (spawnBtn != null)
+			{
+				spawnBtn.GetComponent<SpawnButton>().enabled = true;
+			}
 
             rb2D.gravityScale = 5;
 			isAttatch = false;
