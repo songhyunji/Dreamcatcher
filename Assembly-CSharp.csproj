@@ -75,8 +75,10 @@
     <Compile Include="Assets\Script\_Object\Moving Platform\Button.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform_switch.cs" />
+    <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform_switch_horizontal.cs" />
     <Compile Include="Assets\Script\_Object\Nettle\Nettle.cs" />
     <Compile Include="Assets\Script\_Object\Nettle\Nettle_Key.cs" />
+    <Compile Include="Assets\Script\_Object\Nettle\Nettle_key_button.cs" />
     <Compile Include="Assets\Script\_Object\NPC\NPC_Wolf.cs" />
     <Compile Include="Assets\Script\_Object\Rune\Rune.cs" />
     <Compile Include="Assets\Script\_Player\Canvas_Keep.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Inventory\JsonManager.cs" />
     <Compile Include="Assets\Script\Inventory\ValueChangeTest.cs" />
+    <Compile Include="Assets\Script\NPCDialogue.cs" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

@@ -68,8 +68,8 @@ public class Apple1 : MonoBehaviour {
     { 
 		if (isTouch&&!isAttatch)
 		{
-            jumpBtn = GameObject.Find("JumpBtn");
-            jumpBtn.GetComponent<JumpButton>().enabled = false;
+            //jumpBtn = GameObject.Find("JumpBtn");
+            //jumpBtn.GetComponent<JumpButton>().enabled = false;
 
 			if (spawnBtn != null)
 			{
@@ -82,7 +82,7 @@ public class Apple1 : MonoBehaviour {
         }
 		else if(isAttatch)
 		{
-            jumpBtn.GetComponent<JumpButton>().enabled = true;
+            //jumpBtn.GetComponent<JumpButton>().enabled = true;
 			if (spawnBtn != null)
 			{
 				spawnBtn.GetComponent<SpawnButton>().enabled = true;
