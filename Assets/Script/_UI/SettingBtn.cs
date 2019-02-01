@@ -69,6 +69,7 @@ public class SettingBtn : MonoBehaviour
 
 	private void RestartSceneFunc()
 	{
+		player.GetComponent<Player_subslope>().hasKey = false;
 		playerposX = PlayerPrefs.GetFloat("posX");
 		playerposY = PlayerPrefs.GetFloat("posY");
 		loadSceneName = PlayerPrefs.GetString("SaveStage");

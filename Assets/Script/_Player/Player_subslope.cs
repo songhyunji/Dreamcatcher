@@ -38,6 +38,10 @@ public class Player_subslope : MonoBehaviour {
     private float playerposY;
     private string loadSceneName = "";
 
+	private AudioSource _audioSource;
+	public AudioClip[] _audio = new AudioClip[5];
+	private AudioClip _audioClip;
+
     private List<GameObject> footholds = new List<GameObject>();
 
     void Awake () 
@@ -54,7 +58,8 @@ public class Player_subslope : MonoBehaviour {
 		
         animator = GetComponent<Animator>();
 		rb2D = GetComponent<Rigidbody2D>();
-    }
+		_audioSource = GetComponent<AudioSource>();
+	}
 
 	void FixedUpdate()
 	{
@@ -112,6 +117,13 @@ public class Player_subslope : MonoBehaviour {
 				}
 				else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
 				{
+					if (!_audioSource.isPlaying)
+					{
+						int index = Random.Range(0, _audio.Length);
+						_audioClip = _audio[index];
+						_audioSource.clip = _audioClip;
+						_audioSource.Play();
+					}
 					direction = touch.position - startPos;
 					if (direction.x > 0)
 					{
@@ -207,7 +219,7 @@ public class Player_subslope : MonoBehaviour {
 	}
 	
 	public void Jump()
-	{			
+	{
 		if (isGround)
 		{
 			isJumping = true;
@@ -237,15 +249,16 @@ public class Player_subslope : MonoBehaviour {
 
     private void RestartSceneFunc()
     {
-       /* GameObject newGO = new GameObject();
+		/* GameObject newGO = new GameObject();
 
-        for (int i = 0; i < footholds.Count; i++)
-        {
-            footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-            transform.SetParent(null);
-            Destroy(newGO);
-        }*/
+		 for (int i = 0; i < footholds.Count; i++)
+		 {
+			 footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
+			 transform.SetParent(null);
+			 Destroy(newGO);
+		 }*/
 
+		hasKey = false;
 		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
         loadSceneName = PlayerPrefs.GetString("SaveStage");
@@ -267,6 +280,8 @@ public class Player_subslope : MonoBehaviour {
 			img = GameObject.FindWithTag("Fade").GetComponent<Image>();
 			img.gameObject.SetActive(false);
 		}
+
+		hasKey = false;
 	}
 
     void OnDisable()
@@ -296,7 +311,4 @@ public class Player_subslope : MonoBehaviour {
 			SceneManager.LoadScene(loadSceneName);
 		}
 	}
-
-
-
 }
