@@ -124,10 +124,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nettle_key
       objectReference: {fileID: 0}
+    - target: {fileID: 1413333421117854531, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1413333421117854526, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 144.37357
+      value: 140.13
       objectReference: {fileID: 0}
     - target: {fileID: 1413333421117854526, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
         type: 3}
@@ -181,6 +186,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c8a159857c8ff44b0fb4a1668cbc7a, type: 3}
+--- !u!1 &99155248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1413333421117854531, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 99155247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &204949765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,7 +283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &250788932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1081,6 +1092,8 @@ MonoBehaviour:
   - "\uB291\uB300\u3150\u3150\uC560\uC575\uC560\uC560\u3150\u3150"
   - "\uC591\uC544\u314F\uC559\uC544\u314F!"
   _text: {fileID: 412246452}
+  img: {fileID: 250788931}
+  key: {fileID: 99155248}
 --- !u!1 &987190594
 GameObject:
   m_ObjectHideFlags: 0

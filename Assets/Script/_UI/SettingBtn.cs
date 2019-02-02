@@ -8,7 +8,6 @@ public class SettingBtn : MonoBehaviour
 {
 
 	public GameObject settingPanel;
-	public GameObject errorPopupCat;
 	public GameObject errorRestartPopup;
 	public GameObject player;
 
@@ -32,6 +31,7 @@ public class SettingBtn : MonoBehaviour
 
 	public void SettingBtnPress()
 	{
+		Time.timeScale = 0;
 		settingPanel.SetActive(true);
 	}
 
@@ -42,21 +42,10 @@ public class SettingBtn : MonoBehaviour
 		SceneManager.LoadScene("Main");
 	}
 
-	public void CatBtnPress()
-	{
-		errorPopupCat.SetActive(true);
-	}
-
 	public void RestartBtnPress()
 	{
 		RestartSceneFunc();
 	}
-
-	public void ExitPopupCat()
-	{
-		errorPopupCat.SetActive(false);
-	}
-
 	public void ExiterrorRestartPopup()
 	{
 		errorRestartPopup.SetActive(false);
@@ -64,6 +53,7 @@ public class SettingBtn : MonoBehaviour
 
 	public void ExitSettingPanel()
 	{
+		Time.timeScale = 1;
 		settingPanel.SetActive(false);
 	}
 
