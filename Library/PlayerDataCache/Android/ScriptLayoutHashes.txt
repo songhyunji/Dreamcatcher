@@ -169,6 +169,7 @@ dc59088a32f860a453dc355aac3b6cd8 Cinemachine.dll:Cinemachine.CinemachineComposer
 204ea02909ea3f738dafe3ff633d2a93 Cinemachine.dll:Cinemachine.CinemachineTrackedDolly
 3ab77e28b8959654695230047ab17be7 Assembly-CSharp.dll:.MovingPlatform
 71bb6a6b6c8f052f948db64c7dd3ca4f Cinemachine.dll:Cinemachine.CinemachinePipeline
+af34a1d2f8f9849d9b8e71008bf651e0 Assembly-CSharp.dll:.BackgroundSound
 694d20920c0e41f567e119f7159a3644 Cinemachine.dll:Cinemachine.CinemachinePath
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 56df1fa7cea034df9863fe5a24200a32 Cinemachine.dll:Cinemachine.CinemachineTargetGroup
@@ -245,4 +246,3 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 2792936179724025482dc04d68a47ca7 Cinemachine.dll:Cinemachine.CinemachineClearShot
 a23c10b6560b6d717ebac27dc7af56e8 Assembly-CSharp.dll:.HeavyApple
 07df0ff4655fee3f5e57fee4648dfed0 Assembly-CSharp.dll:.LoadScene
-af34a1d2f8f9849d9b8e71008bf651e0 Assembly-CSharp.dll:.BackgroundSound

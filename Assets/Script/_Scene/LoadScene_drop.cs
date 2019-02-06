@@ -26,6 +26,7 @@ public class LoadScene_drop : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+			Time.timeScale = 0;
 			player.transform.position = new Vector2(120, 9);
 			img.gameObject.SetActive(true);
 			StartCoroutine(FadeImage(false));
