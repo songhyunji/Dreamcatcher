@@ -96,6 +96,7 @@
     <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />
     <Compile Include="Assets\Script\_Scene\VcamSceneLoad.cs" />
     <Compile Include="Assets\Script\_UI\SettingBtn.cs" />
+    <Compile Include="Assets\Script\BGM\BackgroundSound.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Inventory\Database.cs" />
     <Compile Include="Assets\Script\Inventory\Inventory.cs" />

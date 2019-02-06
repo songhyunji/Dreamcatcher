@@ -110,6 +110,8 @@ public class SettingBtn : MonoBehaviour
 					Time.timeScale = 1;
 					img.gameObject.SetActive(false);
 					break;
+				default:
+					break;
 
 			}
 
@@ -127,21 +129,20 @@ public class SettingBtn : MonoBehaviour
 			switch(num)
 			{
 				case 1:
+					Debug.Log("home btn");
 					Destroy(player);
 					//RemoveObject();
 					SceneManager.LoadScene("Main");
 					break;
 				case 2:
+					Debug.Log("restart btn");
 					player.transform.position = new Vector3(playerposX, playerposY);
 					//RemoveObject();
 					SceneManager.LoadScene(loadSceneName);
 					break;
-				case 3:
-
+				default:
 					break;
-			}
-			//num 으로 switch case 문 만들어서 버튼 fade 제어
-				
+			}				
 
 		}
 	}

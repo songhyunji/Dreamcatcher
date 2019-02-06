@@ -124,6 +124,19 @@ public class StageSelectManager : MonoBehaviour
 		SceneManager.LoadScene("B5");
 	}
 
+	public void StageB6BtnPress()
+	{
+		CreatePlayer(new Vector3(123, 15));
+		PlayerPrefs.DeleteAll();
+
+		PlayerPrefs.SetFloat("posX", 123);
+		PlayerPrefs.SetFloat("posY", 15);
+		PlayerPrefs.SetString("SaveStage", "B6");
+		Debug.Log("저장");
+
+		SceneManager.LoadScene("B6");
+	}
+
 	public void CreatePlayer(Vector3 playerPosition)
 	{
 		player_object = Instantiate(player, playerPosition, Quaternion.identity);

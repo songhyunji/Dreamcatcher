@@ -12,6 +12,9 @@ public class Flytrap : MonoBehaviour
 	private float playerposY;
 	private string loadSceneName = "";
 
+	public Sprite flytrapOff;
+	public Sprite flytrapOn;
+
 	private void Start()
     {
         player = GameObject.Find("TestPlayer(Clone)");
@@ -21,11 +24,11 @@ public class Flytrap : MonoBehaviour
     {
         if(!canEat)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+			GetComponent<SpriteRenderer>().sprite = flytrapOn;
         }
         if(canEat)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.4f);
+			GetComponent<SpriteRenderer>().sprite = flytrapOff;
         }
     }
 
