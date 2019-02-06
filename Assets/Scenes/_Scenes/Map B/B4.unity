@@ -601,14 +601,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  jumpBtn: {fileID: 862298025}
   spawnBtn: {fileID: 862298024}
   playerScript: {fileID: 0}
   isHanging: 1
   isTouch: 0
   isAttatch: 0
   isGround: 0
-  boundX: 1.2
+  boundX: 1.3
 --- !u!1001 &721237817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,12 +1234,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 862298023}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &862298025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3587730149225678261, guid: 9becc2746b8215f45b162609a996ed8b,
-    type: 3}
-  m_PrefabInstance: {fileID: 862298023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &862298026 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3587730148185906862, guid: 9becc2746b8215f45b162609a996ed8b,
@@ -1796,6 +1789,7 @@ MonoBehaviour:
   sceneNum: 6
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1190452441}
 --- !u!61 &1253082642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5296,6 +5290,7 @@ MonoBehaviour:
   sceneNum: 3
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1190452441}
 --- !u!61 &2109873442
 BoxCollider2D:
   m_ObjectHideFlags: 0

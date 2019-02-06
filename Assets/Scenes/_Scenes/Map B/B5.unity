@@ -429,6 +429,7 @@ MonoBehaviour:
   sceneNum: 7
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1363705559}
 --- !u!61 &571711265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -764,11 +765,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SpawnBtn
       objectReference: {fileID: 0}
-    - target: {fileID: 3587730148185906862, guid: 9becc2746b8215f45b162609a996ed8b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3587730148356896845, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: img
@@ -1068,6 +1064,11 @@ PrefabInstance:
     - target: {fileID: 224799041892821620, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587730148185906862, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1973,6 +1974,7 @@ MonoBehaviour:
   sceneNum: 3
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1363705559}
 --- !u!61 &1331275455
 BoxCollider2D:
   m_ObjectHideFlags: 0

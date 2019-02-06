@@ -275,11 +275,6 @@ public class Player_subslope : MonoBehaviour {
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //SearchObject();
-		if (img == null)
-		{
-			img = GameObject.FindWithTag("Fade").GetComponent<Image>();
-			img.gameObject.SetActive(false);
-		}
 
 		hasKey = false;
 	}

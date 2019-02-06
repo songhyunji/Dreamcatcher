@@ -944,11 +944,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SpawnBtn
       objectReference: {fileID: 0}
-    - target: {fileID: 3587730148892390611, guid: 9becc2746b8215f45b162609a996ed8b,
-        type: 3}
-      propertyPath: m_TagString
-      value: InteractBtn
-      objectReference: {fileID: 0}
     - target: {fileID: 3587730148356896845, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: img
@@ -1250,6 +1245,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3587730148892390611, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_TagString
+      value: InteractBtn
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114340580015642074, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
     - {fileID: 114768559281950012, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
@@ -1456,6 +1456,7 @@ MonoBehaviour:
   sceneNum: 5
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1733308258}
 --- !u!61 &1331275455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1530,6 +1531,7 @@ MonoBehaviour:
   sceneNum: 2
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1733308258}
 --- !u!61 &1398703879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5714,6 +5716,7 @@ MonoBehaviour:
   sceneNum: 4
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1733308258}
 --- !u!61 &2109873442
 BoxCollider2D:
   m_ObjectHideFlags: 0

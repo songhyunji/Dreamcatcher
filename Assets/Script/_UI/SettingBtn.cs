@@ -19,6 +19,11 @@ public class SettingBtn : MonoBehaviour
 
 	private List<GameObject> footholds = new List<GameObject>();
 
+	private void Awake()
+	{
+		StartCoroutine(FadeImage(true, 0));
+	}
+
 	void Start()
 	{
 		player = GameObject.Find("TestPlayer(Clone)");
@@ -37,13 +42,14 @@ public class SettingBtn : MonoBehaviour
 
 	public void HomeBtnPress()
 	{
-		Destroy(player);
-		//RemoveObject();
-		SceneManager.LoadScene("Main");
+		Time.timeScale = 1;
+		StartCoroutine(FadeImage(false, 1));
+
 	}
 
 	public void RestartBtnPress()
 	{
+		Time.timeScale = 1;
 		RestartSceneFunc();
 	}
 	public void ExiterrorRestartPopup()
@@ -71,8 +77,8 @@ public class SettingBtn : MonoBehaviour
 		else
 		{
 			img.gameObject.SetActive(true);
-			//RemoveObject();
-			StartCoroutine(FadeImage(false));
+			StartCoroutine(FadeImage(false, 2));
+
 		}
 	}
 
@@ -88,32 +94,56 @@ public class SettingBtn : MonoBehaviour
 		}
 	}
 
-	IEnumerator FadeImage(bool fadeAway)
+	IEnumerator FadeImage(bool fadeAway,int num)
 	{
 		if (fadeAway)
 		{
 			for (float i = 1; i >= 0; i -= Time.deltaTime)
 			{
-				img.color = new Color(1, 1, 1, i);
+				img.color = new Color(0, 0, 0, i);
 				yield return null;
 			}
+
+			switch(num)
+			{
+				case 0:
+					Time.timeScale = 1;
+					img.gameObject.SetActive(false);
+					break;
+
+			}
+
 
 		}
 		else
 		{
+			img.gameObject.SetActive(true);
 			for (float i = 0; i <= 1; i += Time.deltaTime)
 			{
 				img.color = new Color(0, 0, 0, i);
 				yield return null;
 			}
-			player.transform.position = new Vector3(playerposX, playerposY);
-			SceneManager.LoadScene(loadSceneName);
-		}
-	}
+			
+			switch(num)
+			{
+				case 1:
+					Destroy(player);
+					//RemoveObject();
+					SceneManager.LoadScene("Main");
+					break;
+				case 2:
+					player.transform.position = new Vector3(playerposX, playerposY);
+					//RemoveObject();
+					SceneManager.LoadScene(loadSceneName);
+					break;
+				case 3:
 
-	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-	{
-		img.gameObject.SetActive(false);
+					break;
+			}
+			//num 으로 switch case 문 만들어서 버튼 fade 제어
+				
+
+		}
 	}
 
 }

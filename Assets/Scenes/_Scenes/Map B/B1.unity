@@ -488,6 +488,7 @@ MonoBehaviour:
   updown: 0
   downup: 1
   buttonScript: {fileID: 562269703}
+  posY: 0
 --- !u!251 &305819033
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1319,7 +1320,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: d2830b0524c497844afa656a2783013a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4472891bbc6e37041bdcf420f3403ea7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1338,8 +1339,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770083902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.4819, y: 2.555, z: 0}
-  m_LocalScale: {x: 3.9974303, y: -3.5563078, z: 1}
+  m_LocalPosition: {x: 20.485, y: 2.5578, z: 0}
+  m_LocalScale: {x: 1.0241439, y: 1.0237392, z: 1}
   m_Children: []
   m_Father: {fileID: 1225555125}
   m_RootOrder: 2
@@ -1361,7 +1362,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8, y: 7.2}
+    oldSize: {x: 50, y: 25}
     newSize: {x: 12.8, y: 7.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2717,6 +2718,7 @@ MonoBehaviour:
   sceneNum: 2
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1060130901}
 --- !u!61 &1672302945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3040,6 +3042,7 @@ MonoBehaviour:
   updown: 0
   downup: 1
   buttonScript: {fileID: 144787816}
+  posY: 0
 --- !u!251 &1769007430
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6307,11 +6310,11 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.104446
+      value: 31.873447
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.432341
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
@@ -6394,6 +6397,7 @@ MonoBehaviour:
   updown: 1
   downup: 0
   buttonScript: {fileID: 1733092081}
+  posY: 0
 --- !u!212 &2767178892094338827
 SpriteRenderer:
   m_ObjectHideFlags: 0

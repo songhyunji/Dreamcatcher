@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class LoadScene_drop : MonoBehaviour {
 
@@ -11,7 +12,9 @@ public class LoadScene_drop : MonoBehaviour {
     public GameObject player;
     public Player_subslope playerScript;
 
-    private Vector3 playerPos;
+	public Image img;
+
+	private Vector3 playerPos;
 
     void Start()
     {
@@ -24,12 +27,14 @@ public class LoadScene_drop : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
 			player.transform.position = new Vector2(120, 9);
+			img.gameObject.SetActive(true);
+			StartCoroutine(FadeImage(false));
             //Debug.Log("Touch Load Scene Collider");
-            SceneManager.LoadScene(sceneName + sceneNum);
+            /*SceneManager.LoadScene(sceneName + sceneNum);
 
             PlayerPrefs.SetFloat("posX", player.transform.position.x);
             PlayerPrefs.SetFloat("posY", player.transform.position.y);
-            PlayerPrefs.SetString("SaveStage", sceneName + sceneNum);
+            PlayerPrefs.SetString("SaveStage", sceneName + sceneNum);*/
             //Debug.Log("저장");
 
             //Debug.Log("posX");
@@ -50,4 +55,30 @@ public class LoadScene_drop : MonoBehaviour {
             playerScript.SearchObject();
         }
     }
+
+	IEnumerator FadeImage(bool fadeAway)
+	{
+		if (fadeAway)
+		{
+			for (float i = 1; i >= 0; i -= Time.deltaTime)
+			{
+				img.color = new Color(1, 1, 1, i);
+				yield return null;
+			}
+
+		}
+		else
+		{
+			for (float i = 0; i <= 1; i += Time.deltaTime)
+			{
+				img.color = new Color(0, 0, 0, i);
+				yield return null;
+			}
+			SceneManager.LoadScene(sceneName + sceneNum);
+
+			PlayerPrefs.SetFloat("posX", player.transform.position.x);
+			PlayerPrefs.SetFloat("posY", player.transform.position.y);
+			PlayerPrefs.SetString("SaveStage", sceneName + sceneNum);
+		}
+	}
 }

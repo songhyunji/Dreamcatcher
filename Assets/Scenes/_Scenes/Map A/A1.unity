@@ -192,14 +192,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  jumpBtn: {fileID: 862298025}
   spawnBtn: {fileID: 862298024}
   playerScript: {fileID: 0}
   isHanging: 1
   isTouch: 0
   isAttatch: 0
   isGround: 0
-  boundX: 1.2
+  boundX: 1.3
 --- !u!1 &327652479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1041,7 @@ MonoBehaviour:
   sceneNum: 2
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1141463750}
 --- !u!61 &663428159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1225,6 +1225,7 @@ MonoBehaviour:
   sceneNum: 2
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1141463750}
 --- !u!61 &791143364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1544,16 +1545,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExiterrorRestartPopup
       objectReference: {fileID: 0}
-    - target: {fileID: 3587730149388267169, guid: 9becc2746b8215f45b162609a996ed8b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3587730149464902116, guid: 9becc2746b8215f45b162609a996ed8b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224799041892821620, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1647,6 +1638,16 @@ PrefabInstance:
     - target: {fileID: 224799041892821620, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587730149388267169, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587730149464902116, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -2649,6 +2650,7 @@ MonoBehaviour:
   sceneNum: 0
   player: {fileID: 0}
   playerScript: {fileID: 0}
+  img: {fileID: 1141463750}
 --- !u!61 &1672302945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4606,14 +4608,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  jumpBtn: {fileID: 862298025}
   spawnBtn: {fileID: 862298024}
   playerScript: {fileID: 0}
   isHanging: 1
   isTouch: 0
   isAttatch: 0
   isGround: 0
-  boundX: 1.2
+  boundX: 1.3
 --- !u!1001 &2131314011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4665,11 +4666,11 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.377243
+      value: 11.415878
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0000054836273
+      value: 0.000004053116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
