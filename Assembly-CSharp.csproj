@@ -72,6 +72,7 @@
     <Compile Include="Assets\Script\_Object\Flytrap\FlytrapTrigger.cs" />
     <Compile Include="Assets\Script\_Object\Forest Enterence\Enterence.cs" />
     <Compile Include="Assets\Script\_Object\Heavy Apple\HeavyApple.cs" />
+    <Compile Include="Assets\Script\_Object\Lily\Lily.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\Button.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform.cs" />
     <Compile Include="Assets\Script\_Object\Moving Platform\MovingPlatform_switch.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Script\_Object\Nettle\Nettle_Key.cs" />
     <Compile Include="Assets\Script\_Object\Nettle\Nettle_key_button.cs" />
     <Compile Include="Assets\Script\_Object\NPC\NPC_Wolf.cs" />
+    <Compile Include="Assets\Script\_Object\NPC\NPCDialogue.cs" />
     <Compile Include="Assets\Script\_Object\Rune\Rune.cs" />
     <Compile Include="Assets\Script\_Player\Canvas_Keep.cs" />
     <Compile Include="Assets\Script\_Player\Collider_test.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Assets\Script\_Player\Player_subslope.cs" />
     <Compile Include="Assets\Script\_Player\SpawnButton.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene.cs" />
+    <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />
     <Compile Include="Assets\Script\_Scene\VcamSceneLoad.cs" />
     <Compile Include="Assets\Script\_UI\SettingBtn.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
@@ -99,7 +102,6 @@
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Inventory\JsonManager.cs" />
     <Compile Include="Assets\Script\Inventory\ValueChangeTest.cs" />
-    <Compile Include="Assets\Script\NPCDialogue.cs" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

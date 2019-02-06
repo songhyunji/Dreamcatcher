@@ -12,7 +12,9 @@ public class MovingPlatform_switch_horizontal : MonoBehaviour
 	public bool leftright;
     public Button buttonScript;
 
+	[SerializeField]
 	private Transform pos;
+	[SerializeField]
 	private float posX;
 	private bool goDown = false;
 	

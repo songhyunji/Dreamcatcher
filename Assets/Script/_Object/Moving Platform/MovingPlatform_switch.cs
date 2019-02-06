@@ -13,6 +13,7 @@ public class MovingPlatform_switch : MonoBehaviour
     public Button buttonScript;
 
 	private Transform pos;
+	[SerializeField]
 	private float posY;
 	private bool goDown = false;
 	

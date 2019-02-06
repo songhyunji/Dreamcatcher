@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Apple1 : MonoBehaviour {
 	
 	public GameObject player;
-    public GameObject jumpBtn;
     public GameObject spawnBtn;
     public Player_subslope playerScript;
 
