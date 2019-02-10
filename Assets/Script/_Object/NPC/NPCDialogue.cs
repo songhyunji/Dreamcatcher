@@ -9,7 +9,7 @@ public class NPCDialogue : MonoBehaviour
 	private bool isSpeaking;
 	private bool playerIn;
 
-	public string[] dialogues = new string[4];
+	public string[] dialogues = new string[6];
 	public Text _text;
 	public GameObject img;
 	public GameObject key;
@@ -34,20 +34,35 @@ public class NPCDialogue : MonoBehaviour
 
 	IEnumerator npcDialogue()
 	{
-		firstMeet = false;
-		foreach (string dialogue in dialogues)
+		if(firstMeet)
 		{
-			_text.text = dialogue;
-			yield return new WaitForSeconds(3);
-		}
-		_text.text = "";
-		img.SetActive(false);
-		isSpeaking = false;
+			firstMeet = false;
+			foreach (string dialogue in dialogues)
+			{
+				_text.text = dialogue;
+				yield return new WaitForSeconds(3);
+			}
+			_text.text = "";
+			img.SetActive(false);
+			isSpeaking = false;
 
-		if(key!=null)
-		{
-			key.SetActive(true);
+			if (key != null)
+			{
+				key.SetActive(true);
+			}
 		}
+		else
+		{
+			for(int i=4;i<=5; i++)
+			{
+				_text.text = dialogues[i];
+				yield return new WaitForSeconds(3);
+			}
+			_text.text = "";
+			img.SetActive(false);
+			isSpeaking = false;
+		}
+
 	}
 	
 	public void PressInteractBtn()

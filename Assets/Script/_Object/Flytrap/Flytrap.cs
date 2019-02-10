@@ -7,6 +7,7 @@ public class Flytrap : MonoBehaviour
 {
     public bool canEat = true;
     public GameObject player;
+	public Player_subslope playerScript;
 
 	private float playerposX;
 	private float playerposY;
@@ -18,7 +19,8 @@ public class Flytrap : MonoBehaviour
 	private void Start()
     {
         player = GameObject.Find("TestPlayer(Clone)");
-    }
+		playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
+	}
 
     private void FixedUpdate()
     {
@@ -34,12 +36,7 @@ public class Flytrap : MonoBehaviour
 
     private void Eat()
     {
-		playerposX = PlayerPrefs.GetFloat("posX");
-		playerposY = PlayerPrefs.GetFloat("posY");
-		loadSceneName = PlayerPrefs.GetString("SaveStage");
-
-		player.transform.position = new Vector3(playerposX, playerposY);
-		SceneManager.LoadScene(loadSceneName);
+		playerScript.Die();
 
 	}
 

@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/songh/Desktop/dreamcatcher_v05_20190207.apk
+C:/Users/songh/Desktop/dreamcatcher_Line_Submission.apk
 SceneListBegin?
 Assets/Scenes/_Scenes/Main.unity
 Assets/Scenes/_Scenes/Map A/A0.unity
@@ -234,7 +234,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 f971ba5d21446428a427a0e1182df100 Assembly-CSharp.dll:.Controller2D
 b246a3bbb9747b470bb3fa559c6b2807 Assembly-CSharp.dll:.Apple1
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-6d5c9fedc06384701d80e49a3969525e Assembly-CSharp.dll:.Player_subslope
+67801f11e9bf505ea576e5962b50f346 Assembly-CSharp.dll:.Player_subslope
 7944c4e49bfba9f744741021f2f4eac3 Assembly-CSharp.dll:.Player
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient

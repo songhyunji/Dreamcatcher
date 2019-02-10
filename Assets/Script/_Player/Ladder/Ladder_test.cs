@@ -37,6 +37,7 @@ public class Ladder_test : MonoBehaviour
 			animator.SetBool("isOnLadder", true);
 			animator.SetBool("isWalking", false);
 			animator.SetBool("isJumping", false);
+			player.transform.Translate(0 * Vector3.right);
 			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			Vector3 otherPos = other.GetComponent<Transform>().position;
 			player.transform.position = new Vector3(otherPos.x, transform.position.y, transform.position.z);

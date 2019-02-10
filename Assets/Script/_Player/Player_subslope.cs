@@ -11,7 +11,6 @@ using Debug = UnityEngine.Debug;
 
 public class Player_subslope : MonoBehaviour {
 
-	
 	public GameObject testCollider;
 
     public bool isLeft;
@@ -19,10 +18,9 @@ public class Player_subslope : MonoBehaviour {
 	public bool isGround = false;
 	public bool onLadder = false;
 	public bool onFoothold = false;
-	public bool touchedPulley = false;
 	public bool touchedHeavyFoolhold = false;
-	public bool isInteracting = false;
 	public bool hasKey = false;
+	public bool isDie = false;
 	public float dir;
 	public float jumpDir;
 	public float speed;
@@ -33,7 +31,12 @@ public class Player_subslope : MonoBehaviour {
 	public Animator animator;
 	public Rigidbody2D rb2D;
 	public Image img;
-
+	public Text text1;
+	public Text text2;
+	public GameObject fade;
+	public GameObject fadeText1;
+	public GameObject fadeText2;
+	
 	private float playerposX;
     private float playerposY;
     private string loadSceneName = "";
@@ -41,10 +44,9 @@ public class Player_subslope : MonoBehaviour {
 	private AudioSource _audioSource;
 	public AudioClip[] _audio = new AudioClip[5];
 	private AudioClip _audioClip;
+	private float targetTime = 0;
 
-    private List<GameObject> footholds = new List<GameObject>();
-
-    void Awake () 
+	void Awake () 
 	{
 		DontDestroyOnLoad(this);
 		
@@ -79,29 +81,28 @@ public class Player_subslope : MonoBehaviour {
 			animator.SetBool("isOnLadder", false);
 			animator.SetBool("isClimbing", false);
 		}
+
+		if (isDie)
+		{
+			targetTime += Time.deltaTime;
+
+			if (Input.touchCount > 0 || targetTime>=5) // 자동 재시작 시간 현재 5초
+			{
+				transform.position = new Vector3(playerposX, playerposY);
+				SceneManager.LoadScene(loadSceneName);
+
+			}
+		}
 	}
 	
 	private void OnCollisionEnter2D(Collision2D other)
      {
         if(other.collider.CompareTag("DeathGround"))
         {
-            RestartSceneFunc();
+			Debug.Log("die");
+            Die();
         }
-
-	     /*else if (other.collider.CompareTag("pulley")) // 도르래
-	     {
-		     touchedPulley = true;
-	     }*/
      }
-	
-	private void OnCollisionExit2D(Collision2D other)
-	{
-		/*else if (other.collider.CompareTag("pulley")) // 도르래
-		{
-			touchedPulley = false;
-		}*/
-
-	}
 
 	public void Walk()
 	{
@@ -236,28 +237,8 @@ public class Player_subslope : MonoBehaviour {
         
 	}
 
-    public void SearchObject()
+    public void Die()
     {
-        footholds.Clear();
-        Debug.Log("작동했음");
-        var foothold = GameObject.FindGameObjectsWithTag("Foothold");
-        foreach (var c in foothold)
-        {
-            footholds.Add(c);
-        }
-    }
-
-    private void RestartSceneFunc()
-    {
-		/* GameObject newGO = new GameObject();
-
-		 for (int i = 0; i < footholds.Count; i++)
-		 {
-			 footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-			 transform.SetParent(null);
-			 Destroy(newGO);
-		 }*/
-
 		hasKey = false;
 		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
@@ -274,9 +255,14 @@ public class Player_subslope : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //SearchObject();
-
+		fade = GameObject.Find("GameoverFade");
+		fadeText1 = GameObject.Find("FadeText1");
+		fadeText2 = GameObject.Find("FadeText2");
+		img = fade.GetComponent<Image>();
+		text1 = fadeText1.GetComponent<Text>();
+		text2 = fadeText2.GetComponent<Text>();
 		hasKey = false;
+		isDie = false;
 	}
 
     void OnDisable()
@@ -299,11 +285,13 @@ public class Player_subslope : MonoBehaviour {
 		{
 			for (float i = 0; i <= 1; i += Time.deltaTime)
 			{
-				img.color = new Color(0, 0, 0, i);
+				img.color = new Color(1, 0, 0, i);
+				text1.color = new Color(1, 1, 1, i);
+				text2.color = new Color(1, 1, 1, i);
 				yield return null;
 			}
-			transform.position = new Vector3(playerposX, playerposY);
-			SceneManager.LoadScene(loadSceneName);
+			isDie = true;
+			//Time.timeScale = 0;
 		}
 	}
 }

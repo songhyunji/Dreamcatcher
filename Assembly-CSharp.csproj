@@ -103,6 +103,7 @@
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Inventory\JsonManager.cs" />
     <Compile Include="Assets\Script\Inventory\ValueChangeTest.cs" />
+    <None Include="Assets\Shader\Background.shader" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

@@ -36,7 +36,7 @@ public class InteractButton : MonoBehaviour , IPointerDownHandler
 		    symbolOn = true;
 	    }
 	    
-	    if (playerScript.touchedPulley) // 플레이어가 도르래와 닿아있는 상태라면
+	    if (true)//playerScript.touchedPulley) // 플레이어가 도르래와 닿아있는 상태라면
 	    {
 		    Debug.Log("인터랙트");
 

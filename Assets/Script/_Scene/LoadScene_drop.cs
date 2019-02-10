@@ -26,7 +26,6 @@ public class LoadScene_drop : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-			Time.timeScale = 0;
 			player.transform.position = new Vector2(120, 9);
 			img.gameObject.SetActive(true);
 			StartCoroutine(FadeImage(false));
@@ -51,10 +50,6 @@ public class LoadScene_drop : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
-        {
-            playerScript.SearchObject();
-        }
     }
 
 	IEnumerator FadeImage(bool fadeAway)

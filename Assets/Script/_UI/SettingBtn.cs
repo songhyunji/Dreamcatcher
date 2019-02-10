@@ -17,8 +17,6 @@ public class SettingBtn : MonoBehaviour
 	private float playerposY;
 	private string loadSceneName = "";
 
-	private List<GameObject> footholds = new List<GameObject>();
-
 	private void Awake()
 	{
 		StartCoroutine(FadeImage(true, 0));
@@ -27,11 +25,6 @@ public class SettingBtn : MonoBehaviour
 	void Start()
 	{
 		player = GameObject.Find("TestPlayer(Clone)");
-		var foothold = GameObject.FindGameObjectsWithTag("Foothold");
-		foreach (var c in foothold)
-		{
-			footholds.Add(c);
-		}
 	}
 
 	public void SettingBtnPress()
@@ -82,18 +75,6 @@ public class SettingBtn : MonoBehaviour
 		}
 	}
 
-	private void RemoveObject()
-	{
-		GameObject newGO = new GameObject();
-
-		for (int i = 0; i < footholds.Count; i++)
-		{
-			footholds[i].transform.parent = newGO.transform; // NO longer DontDestroyOnLoad();
-			transform.SetParent(null);
-			Destroy(newGO);
-		}
-	}
-
 	IEnumerator FadeImage(bool fadeAway,int num)
 	{
 		if (fadeAway)
@@ -131,13 +112,11 @@ public class SettingBtn : MonoBehaviour
 				case 1:
 					Debug.Log("home btn");
 					Destroy(player);
-					//RemoveObject();
 					SceneManager.LoadScene("Main");
 					break;
 				case 2:
 					Debug.Log("restart btn");
 					player.transform.position = new Vector3(playerposX, playerposY);
-					//RemoveObject();
 					SceneManager.LoadScene(loadSceneName);
 					break;
 				default:
