@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/songh/Desktop/dreamcatcher_Line_Submission.apk
+C:/Users/songh/Desktop/dreamcatcher_v06_20190213.apk
 SceneListBegin?
 Assets/Scenes/_Scenes/Main.unity
 Assets/Scenes/_Scenes/Map A/A0.unity
@@ -161,7 +161,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 07df0ff4655fee3f5e57fee4648dfed0 Assembly-CSharp.dll:.LoadScene_drop
 68ab7276019207d3f463a08f9ff97ff5 Cinemachine.dll:Cinemachine.CinemachineTriggerAction
 dc59088a32f860a453dc355aac3b6cd8 Cinemachine.dll:Cinemachine.CinemachineComposer
-075f3ad9eac95111256263a9271ab36f Assembly-CSharp.dll:.Flytrap
+a874ca428defec1cc1a3883268eac17c Assembly-CSharp.dll:.Flytrap
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.NPC_Wolf
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 15882a52798c275361cd0a3ada984ec5 Cinemachine.dll:Cinemachine.CinemachineDollyCart
@@ -234,7 +234,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 f971ba5d21446428a427a0e1182df100 Assembly-CSharp.dll:.Controller2D
 b246a3bbb9747b470bb3fa559c6b2807 Assembly-CSharp.dll:.Apple1
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-67801f11e9bf505ea576e5962b50f346 Assembly-CSharp.dll:.Player_subslope
+5c978692632f9fd8915b2a1b9b8e8fae Assembly-CSharp.dll:.Player_subslope
 7944c4e49bfba9f744741021f2f4eac3 Assembly-CSharp.dll:.Player
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient

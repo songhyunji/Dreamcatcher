@@ -40,6 +40,7 @@ public class Player_subslope : MonoBehaviour {
 	private float playerposX;
     private float playerposY;
     private string loadSceneName = "";
+	private ContactPoint2D[] contactPoint = new ContactPoint2D[16];
 
 	private AudioSource _audioSource;
 	public AudioClip[] _audio = new AudioClip[5];

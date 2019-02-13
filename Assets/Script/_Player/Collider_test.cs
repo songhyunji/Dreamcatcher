@@ -8,6 +8,7 @@ public class Collider_test : MonoBehaviour
 {
 	public Player_subslope playerScript;
 	public Animator animator;
+	private Rigidbody2D rb2D;
 
 	[SerializeField]
 	private GameObject spawnBtn;
@@ -15,6 +16,7 @@ public class Collider_test : MonoBehaviour
 	void Start() {
 		
 		animator = playerScript.GetComponent<Animator>();
+		rb2D = GetComponent<Rigidbody2D>();
     }
 	
 	private void OnTriggerStay2D(Collider2D other)
@@ -23,6 +25,7 @@ public class Collider_test : MonoBehaviour
 		{
 			playerScript.isGround = true;
 			playerScript.onLadder = false;
+			rb2D.velocity = new Vector2(0, 0);
 			//Debug.Log("is Ground true");
 		}
 		
