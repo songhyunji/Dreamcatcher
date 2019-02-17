@@ -30,11 +30,11 @@ public class prologue_text : MonoBehaviour
 				StopAllCoroutines();
 				if(i==3)
 				{
-					text.text = "어느날 숲으로 들어간 아버지가\n<color=red>사라져버리기</color> 전까진 말이죠.";
+					text.text = "어느날 숲으로 들어간 아버지가\n\n<color=red>사라져버리기</color> 전까진 말이죠.";
 				}
 				else if (i == 6)
 				{
-					text.text = "막연한 희망을 품고, 아이는 집을 나섭니다.\n어머니의 유품인 <color=red>붉은 로브</color>를 뒤집어쓰고…";
+					text.text = "막연한 희망을 품고, 아이는 집을 나섭니다.\n\n어머니의 유품인 <color=red>붉은 로브</color>를 뒤집어쓰고. . .";
 				}
 				else
 				{
@@ -75,7 +75,12 @@ public class prologue_text : MonoBehaviour
 					isColor = false;
 				}
 
-				if(isColor)
+				if ((i == 6 && dialogue == '어'))
+				{
+					speed = 0.1f; // 1번 0.1f 2번 0.2f
+				}
+
+				if (isColor)
 				{
 					text.text += "<color=red>" + dialogue + "</color>";
 				}
