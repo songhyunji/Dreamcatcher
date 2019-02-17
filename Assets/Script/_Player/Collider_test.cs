@@ -16,7 +16,6 @@ public class Collider_test : MonoBehaviour
 	void Start() {
 		
 		animator = playerScript.GetComponent<Animator>();
-		rb2D = GetComponent<Rigidbody2D>();
     }
 	
 	private void OnTriggerStay2D(Collider2D other)
@@ -25,7 +24,7 @@ public class Collider_test : MonoBehaviour
 		{
 			playerScript.isGround = true;
 			playerScript.onLadder = false;
-			rb2D.velocity = new Vector2(0, 0);
+			transform.parent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			//Debug.Log("is Ground true");
 		}
 		
