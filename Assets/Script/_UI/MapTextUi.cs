@@ -26,7 +26,7 @@ public class MapTextUi : MonoBehaviour
 
         this.GetComponent<Text>().text = currentmap; // ui text 업데이트
 
-        Debug.Log(this.GetComponent<Text>().color.a);
+//        Debug.Log(this.GetComponent<Text>().color.a);
 
         this.GetComponent<Text>().color = new Color(255, 255, 255, alpha);
         //        this.GetComponent<Text>().color = new Color(255, 255, 255, 1);
@@ -35,7 +35,7 @@ public class MapTextUi : MonoBehaviour
         { // alpha가 1보다 작고 0보다 크면
           //(1.5 : 텍스트 유지되는 시간(1~2초), 1.5에서 1.0으로 바뀌면 점점 사라지기 시작함)
             alpha -= speed;
-            Debug.Log(alpha);
+  //          Debug.Log(alpha);
         }
         else
 //            alpha = 1; // 반복 테스트용
