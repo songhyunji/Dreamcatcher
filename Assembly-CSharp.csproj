@@ -91,6 +91,7 @@
     <Compile Include="Assets\Script\_Player\old\Controller2D.cs" />
     <Compile Include="Assets\Script\_Player\old\Player.cs" />
     <Compile Include="Assets\Script\_Player\Player_subslope.cs" />
+    <Compile Include="Assets\Script\_Player\SpawnBtnControl.cs" />
     <Compile Include="Assets\Script\_Player\SpawnButton.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />

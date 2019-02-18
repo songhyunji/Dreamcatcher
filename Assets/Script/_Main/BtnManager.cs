@@ -27,7 +27,8 @@ public class BtnManager : MonoBehaviour {
 
         PlayerPrefs.DeleteAll();
 
-        PlayerPrefs.SetFloat("posX", -2.11f);
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
+		PlayerPrefs.SetFloat("posX", -2.11f);
 		PlayerPrefs.SetFloat("posY", -1.5f);
 		PlayerPrefs.SetString("SaveStage", "A0");
 		Debug.Log("저장");

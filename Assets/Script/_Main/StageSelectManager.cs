@@ -25,6 +25,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(-2.11f, -1.5f));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", -2.11f);
 		PlayerPrefs.SetFloat("posY", -1.5f);
 		PlayerPrefs.SetString("SaveStage", "A0");
@@ -38,6 +39,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(40, 4));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 40);
 		PlayerPrefs.SetFloat("posY", 4);
 		PlayerPrefs.SetString("SaveStage", "A1");
@@ -51,6 +53,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(64, 3));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 64);
 		PlayerPrefs.SetFloat("posY", 3);
 		PlayerPrefs.SetString("SaveStage", "A2");
@@ -64,6 +67,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(51, -1));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 51);
 		PlayerPrefs.SetFloat("posY", -1);
 		PlayerPrefs.SetString("SaveStage", "B1");
@@ -77,6 +81,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(98, 1));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 98);
 		PlayerPrefs.SetFloat("posY", 1);
 		PlayerPrefs.SetString("SaveStage", "B2");
@@ -90,6 +95,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(161, 3));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 161);
 		PlayerPrefs.SetFloat("posY", 3);
 		PlayerPrefs.SetString("SaveStage", "B3");
@@ -103,6 +109,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(160, 15));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 160);
 		PlayerPrefs.SetFloat("posY", 15);
 		PlayerPrefs.SetString("SaveStage", "B4");
@@ -116,6 +123,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(200, 2.3f));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 200);
 		PlayerPrefs.SetFloat("posY", 2.3f);
 		PlayerPrefs.SetString("SaveStage", "B5");
@@ -129,6 +137,7 @@ public class StageSelectManager : MonoBehaviour
 		CreatePlayer(new Vector3(123, 15));
 		PlayerPrefs.DeleteAll();
 
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
 		PlayerPrefs.SetFloat("posX", 123);
 		PlayerPrefs.SetFloat("posY", 15);
 		PlayerPrefs.SetString("SaveStage", "B6");

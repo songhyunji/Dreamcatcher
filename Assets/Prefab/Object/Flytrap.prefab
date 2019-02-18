@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canEat: 1
   player: {fileID: 0}
+  playerScript: {fileID: 0}
   flytrapOff: {fileID: 21300000, guid: aeef75879cc047c49b0980ae59112024, type: 3}
   flytrapOn: {fileID: 21300000, guid: 56ff588a3ad3c0b4e83fadd448588078, type: 3}
 --- !u!1 &2942316377893920764
@@ -193,7 +194,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b1c1835f1d672af4eb05a286d69ae161, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1d7b92d374d5554899e674c38cd9cd7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -217,7 +218,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.01794234}
+  m_Offset: {x: -0.009112269, y: 0.07973264}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -228,7 +229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.5572255}
+  m_Size: {x: 0.5692411, y: 0.78338015}
   m_EdgeRadius: 0
 --- !u!114 &2942316377893920752
 MonoBehaviour:
@@ -243,8 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flytrapScript: {fileID: 2942316377598486946}
-  flytrapTriggerOn: {fileID: 21300000, guid: f1d7b92d374d5554899e674c38cd9cd7, type: 3}
-  flytrapTriggerOff: {fileID: 21300000, guid: b1c1835f1d672af4eb05a286d69ae161, type: 3}
+  flytrapTriggerOn: {fileID: 21300000, guid: b1c1835f1d672af4eb05a286d69ae161, type: 3}
+  flytrapTriggerOff: {fileID: 21300000, guid: f1d7b92d374d5554899e674c38cd9cd7, type: 3}
 --- !u!1 &2942316378821276114
 GameObject:
   m_ObjectHideFlags: 0

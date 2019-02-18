@@ -26,6 +26,8 @@ public class LoadScene_drop : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+			Debug.Log("wolf end");
+			PlayerPrefs.SetInt("wolfEventEnd", 1); // 1 == true, 0 == false;
 			player.transform.position = new Vector2(120, 9);
 			img.gameObject.SetActive(true);
 			StartCoroutine(FadeImage(false));
