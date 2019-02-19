@@ -1008,6 +1008,8 @@ MonoBehaviour:
   errorLoadPopup: {fileID: 354565251}
   OptionPopup: {fileID: 2051604095}
   player: {fileID: 2527893753061853202, guid: c1c9ede6345e6b14bbcdeb7fdfe3c862, type: 3}
+  inventory: {fileID: 5249957681174201903, guid: 1279b218c6b9fbb4eb0005b2ce35ac76,
+    type: 3}
   player_object: {fileID: 0}
 --- !u!4 &275760105
 Transform:
@@ -5316,6 +5318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stagePanel: {fileID: 583740003}
   player: {fileID: 2527893753061853202, guid: c1c9ede6345e6b14bbcdeb7fdfe3c862, type: 3}
+  inventory: {fileID: 5249957681174201903, guid: 1279b218c6b9fbb4eb0005b2ce35ac76,
+    type: 3}
   player_object: {fileID: 0}
 --- !u!4 &2069049874
 Transform:

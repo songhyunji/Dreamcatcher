@@ -25,6 +25,7 @@ public class Player_subslope : MonoBehaviour {
 	public float jumpDir;
 	public float speed;
 	public float jumpspeed;
+	public float fadeSpeed;
 	public Vector2 startPos;			
 	public Vector2 direction;
 
@@ -34,8 +35,6 @@ public class Player_subslope : MonoBehaviour {
 	public Text text1;
 	public Text text2;
 	public GameObject fade;
-	public GameObject fadeText1;
-	public GameObject fadeText2;
 	
 	private float playerposX;
     private float playerposY;
@@ -83,7 +82,7 @@ public class Player_subslope : MonoBehaviour {
 			animator.SetBool("isClimbing", false);
 		}
 
-		if (isDie)
+		/*if (isDie)
 		{
 			targetTime += Time.deltaTime;
 
@@ -93,7 +92,7 @@ public class Player_subslope : MonoBehaviour {
 				SceneManager.LoadScene(loadSceneName);
 
 			}
-		}
+		}*/
 	}
 	
 	private void OnCollisionEnter2D(Collision2D other)
@@ -246,8 +245,7 @@ public class Player_subslope : MonoBehaviour {
         loadSceneName = PlayerPrefs.GetString("SaveStage");
 		img.gameObject.SetActive(true);
 		StartCoroutine(FadeImage(false));
-
-    }
+	}
 
     void OnEnable()
     {
@@ -257,13 +255,9 @@ public class Player_subslope : MonoBehaviour {
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 		fade = GameObject.Find("GameoverFade");
-		fadeText1 = GameObject.Find("FadeText1");
-		fadeText2 = GameObject.Find("FadeText2");
 		img = fade.GetComponent<Image>();
-		text1 = fadeText1.GetComponent<Text>();
-		text2 = fadeText2.GetComponent<Text>();
 		hasKey = false;
-		isDie = false;
+		//isDie = false;
 	}
 
     void OnDisable()
@@ -275,23 +269,30 @@ public class Player_subslope : MonoBehaviour {
 	{
 		if (fadeAway)
 		{
-			for (float i = 1; i >= 0; i -= Time.deltaTime)
+			for (float i = 1; i >= 0; i -= fadeSpeed)
 			{
-				img.color = new Color(1, 1, 1, i);
+				img.color = new Color(0.6509f, 0.0627f, 0.1176f, i);
 				yield return null;
 			}
+
 
 		}
 		else
 		{
-			for (float i = 0; i <= 1; i += Time.deltaTime)
+			yield return new WaitForSeconds(1);
+			// add player die anim.
+
+			for (float i = 0; i <= 1; i += fadeSpeed)
 			{
-				img.color = new Color(1, 0, 0, i);
-				text1.color = new Color(1, 1, 1, i);
-				text2.color = new Color(1, 1, 1, i);
+				img.color = new Color(0.6509f, 0.0627f, 0.1176f, i);
+				//text1.color = new Color(1, 1, 1, i);
+				//text2.color = new Color(1, 1, 1, i);
 				yield return null;
 			}
-			isDie = true;
+			PlayerPrefs.SetInt("dieRestart", 1); // 1 == true, 0 == die
+			transform.position = new Vector3(playerposX, playerposY);
+			SceneManager.LoadScene(loadSceneName);
+			//isDie = true;
 			//Time.timeScale = 0;
 		}
 	}

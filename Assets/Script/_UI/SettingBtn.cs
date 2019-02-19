@@ -12,14 +12,27 @@ public class SettingBtn : MonoBehaviour
 	public GameObject player;
 
 	public Image img;
+	public Image fadeImg;
 
 	private float playerposX;
 	private float playerposY;
 	private string loadSceneName = "";
+	private int dieRestart; // 0 == false, 1 == true
+	public float fadeSpeed = 0.01f;
 
 	private void Awake()
 	{
-		StartCoroutine(FadeImage(true, 0));
+		dieRestart = PlayerPrefs.GetInt("dieRestart");
+		if(dieRestart==1)
+		{
+			fadeImg.gameObject.SetActive(true);
+			PlayerPrefs.SetInt("dieRestart", 0); //0 == false,1 == true
+			StartCoroutine(DieFade());
+		}
+		else
+		{
+			StartCoroutine(FadeImage(true, 0));
+		}
 	}
 
 	void Start()
@@ -112,6 +125,7 @@ public class SettingBtn : MonoBehaviour
 				case 1:
 					Debug.Log("home btn");
 					Destroy(player);
+					Destroy(GameObject.Find("Inventory(Clone)"));
 					SceneManager.LoadScene("Main");
 					break;
 				case 2:
@@ -124,6 +138,16 @@ public class SettingBtn : MonoBehaviour
 			}				
 
 		}
+	}
+
+	IEnumerator DieFade()
+	{
+		for (float i = 1; i >= -1; i -= 0.1f)
+		{
+			fadeImg.color = new Color(0.6509f, 0.0627f, 0.1176f, i);
+			yield return null;
+		}
+		fadeImg.gameObject.SetActive(false);
 	}
 
 }

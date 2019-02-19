@@ -3233,6 +3233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameoverFade
       objectReference: {fileID: 0}
+    - target: {fileID: 7970010409400096047, guid: e9cec9516fce26842b5223c71ef5336e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7970010409400096044, guid: e9cec9516fce26842b5223c71ef5336e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3346,6 +3351,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1198761395}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198761397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7970010409400096045, guid: e9cec9516fce26842b5223c71ef5336e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1198761395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225555123
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,6 +5731,8 @@ MonoBehaviour:
   errorRestartPopup: {fileID: 3587730147890265054}
   player: {fileID: 0}
   img: {fileID: 148625995}
+  fadeImg: {fileID: 1198761397}
+  fadeSpeed: 0.01
 --- !u!224 &3587730147944169225
 RectTransform:
   m_ObjectHideFlags: 0

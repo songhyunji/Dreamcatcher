@@ -3165,6 +3165,8 @@ MonoBehaviour:
   errorRestartPopup: {fileID: 1299788200}
   player: {fileID: 0}
   img: {fileID: 1669243435}
+  fadeImg: {fileID: 1598828573}
+  fadeSpeed: 0.01
 --- !u!224 &1101510015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4074,12 +4076,20 @@ CompositeCollider2D:
         Y: -51200000
     - - X: 396799968
         Y: 12800000
-      - X: 383999968
-        Y: 12800000
-      - X: 383999968
-        Y: 6400000
       - X: 371200000
-        Y: 6400000
+        Y: 12800000
+      - X: 371200000
+        Y: 0
+      - X: 373900000
+        Y: 0
+      - X: 373900000
+        Y: -500000
+      - X: 375099968
+        Y: -4199999
+      - X: 375000000
+        Y: -6100000
+      - X: 371200000
+        Y: -12199999
       - X: 371200000
         Y: -12800000
       - X: 358400000
@@ -4193,9 +4203,13 @@ CompositeCollider2D:
       - {x: 39.68, y: -5.12}
       - {x: 43.519997, y: -5.12}
     - - {x: 39.679996, y: 1.28}
-      - {x: 38.399998, y: 1.28}
-      - {x: 38.399998, y: 0.64}
-      - {x: 37.12, y: 0.64}
+      - {x: 37.12, y: 1.28}
+      - {x: 37.12, y: 0}
+      - {x: 37.39, y: 0}
+      - {x: 37.39, y: -0.05}
+      - {x: 37.51, y: -0.4199999}
+      - {x: 37.5, y: -0.61}
+      - {x: 37.12, y: -1.2199999}
       - {x: 37.12, y: -1.28}
       - {x: 35.84, y: -1.28}
       - {x: 35.84, y: -5.12}
@@ -5060,8 +5074,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 29, y: -1, z: 0}
     second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 1
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -5105,9 +5119,9 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 29, y: 0, z: 0}
     second:
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
-      m_TileMatrixIndex: 1
+      m_TileIndex: 2
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
@@ -5222,7 +5236,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 58c16718f655a02498b6215b07afc302, type: 2}
+    m_Data: {fileID: 11400000, guid: 9da89af7314a5244db98529354d02e7f, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -5251,9 +5265,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: f50b10db64218d44e94543d21427565c, type: 3}
+    m_Data: {fileID: 21300000, guid: b177d1bc1daad5143bf3a9aa596f6fb8, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 94
+  - m_RefCount: 95
     m_Data:
       e00: 1
       e01: 0
@@ -5271,24 +5285,24 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 1
+  - m_RefCount: 0
     m_Data:
-      e00: 0
-      e01: 1
-      e02: 0
+      e00: 8.789639e-39
+      e01: 4e-44
+      e02: 829.8545
       e03: 0
-      e10: -1
-      e11: 0
-      e12: 0
+      e10: 0
+      e11: NaN
+      e12: 1e-45
       e13: 0
-      e20: 0
+      e20: 1.32554e-40
       e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
+      e22: 8.789617e-39
+      e23: NaN
+      e30: 1
+      e31: 7.34684e-40
       e32: 0
-      e33: 1
+      e33: NaN
   m_TileColorArray:
   - m_RefCount: 95
     m_Data: {r: 1, g: 1, b: 1, a: 1}
@@ -5928,7 +5942,7 @@ GameObject:
   - component: {fileID: 1542886298}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6244,6 +6258,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1598828571}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1598828573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7970010409400096045, guid: e9cec9516fce26842b5223c71ef5336e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1598828571}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1640337187
 GameObject:
   m_ObjectHideFlags: 0

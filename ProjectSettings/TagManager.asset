@@ -18,6 +18,7 @@ TagManager:
   - SpawnBtn
   - InteractBtn
   - Fade
+  - Canvas_DD
   layers:
   - Default
   - TransparentFX
