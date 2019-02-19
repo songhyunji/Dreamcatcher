@@ -96,14 +96,11 @@
     <Compile Include="Assets\Script\_Scene\LoadScene.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />
     <Compile Include="Assets\Script\_Scene\VcamSceneLoad.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Script\_UI\DontDestroy.cs" />
     <Compile Include="Assets\Script\_UI\Inventory_test.cs" />
-    <Compile Include="Assets\Script\_UI\MapTextUi.cs" />
-=======
->>>>>>> 1ef8139666016fa544b07b07b3b9633f571bcdf8
     <Compile Include="Assets\Script\_UI\SettingBtn.cs" />
-    <Compile Include="Assets\Script\_UI\SettingMapText.cs" />
+    <Compile Include="Assets\Script\_UI\SettingCenterText.cs" />
+    <Compile Include="Assets\Script\_UI\SettingLeftText.cs" />
     <Compile Include="Assets\Script\BGM\BackgroundSound.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Prologue\prologue_fade.cs" />
