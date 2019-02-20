@@ -25,7 +25,6 @@ public class BtnManager : MonoBehaviour {
     public void StartBtnPress()
 	{
 		CreatePlayer(new Vector3(-2.11f, -1.5f));
-		CreateInventory();
 
 		PlayerPrefs.DeleteAll();
 
@@ -58,7 +57,6 @@ public class BtnManager : MonoBehaviour {
         else
         {
 			CreatePlayer(new Vector3(playerposX, playerposY));
-			CreateInventory();
 			SceneManager.LoadScene(loadSceneName);
             //player.transform.position = new Vector3(playerposX, playerposY);
         }
@@ -88,10 +86,5 @@ public class BtnManager : MonoBehaviour {
 	{
 		player_object = Instantiate(player, playerPosition, Quaternion.identity);
 	}
-
-	public void CreateInventory()
-	{
-		Instantiate(inventory, new Vector3(35, 25, 0), Quaternion.identity);
-	}
-
+	
 }

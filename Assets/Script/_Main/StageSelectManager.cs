@@ -23,7 +23,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageA0BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(-2.11f, -1.5f));
 
 		PlayerPrefs.DeleteAll();
@@ -39,7 +38,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageA1BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(40, 4));
 		PlayerPrefs.DeleteAll();
 
@@ -54,7 +52,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageA2BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(64, 3));
 		PlayerPrefs.DeleteAll();
 
@@ -69,7 +66,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageB1BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(51, -1));
 		PlayerPrefs.DeleteAll();
 
@@ -84,7 +80,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageB2BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(98, 1));
 		PlayerPrefs.DeleteAll();
 
@@ -99,7 +94,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageB3BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(161, 3));
 		PlayerPrefs.DeleteAll();
 
@@ -114,7 +108,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageB4BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(160, 15));
 		PlayerPrefs.DeleteAll();
 
@@ -129,7 +122,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageB5BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(200, 2.3f));
 		PlayerPrefs.DeleteAll();
 
@@ -144,7 +136,6 @@ public class StageSelectManager : MonoBehaviour
 
 	public void StageB6BtnPress()
 	{
-		CreateInventory();
 		CreatePlayer(new Vector3(123, 15));
 		PlayerPrefs.DeleteAll();
 
@@ -160,9 +151,5 @@ public class StageSelectManager : MonoBehaviour
 	public void CreatePlayer(Vector3 playerPosition)
 	{
 		player_object = Instantiate(player, playerPosition, Quaternion.identity);
-	}
-	public void CreateInventory()
-	{
-		Instantiate(inventory, new Vector3(35, 25, 0), Quaternion.identity);
 	}
 }

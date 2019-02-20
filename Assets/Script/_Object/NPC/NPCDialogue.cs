@@ -14,14 +14,13 @@ public class NPCDialogue : MonoBehaviour
 	public GameObject img;
 	public GameObject key;
 
-	public Inventory_test invenScript;
+	public Inventory invenScript;
 
 	private int wolfEventEnd; // 1 == true, 0 == false;
 
 	private void Start()
 	{
 		_text.text = "";
-		invenScript = GameObject.Find("Inventory").GetComponent<Inventory_test>();
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
@@ -38,7 +37,7 @@ public class NPCDialogue : MonoBehaviour
 
 			if(firstMeet && wolfEventEnd==1) // wolf event end -> wolf btn == true
 			{
-				invenScript.UseLily();
+				invenScript.SaveItem(0);
 				PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
 			}
 

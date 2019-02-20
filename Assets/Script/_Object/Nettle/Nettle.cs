@@ -5,12 +5,11 @@ using UnityEngine;
 public class Nettle : MonoBehaviour
 {
 	public Player_subslope playerScript;
-	public Inventory_test invenScript;
+	public Inventory invenScript;
 
 	private void Start()
 	{
 		playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
-		invenScript = GameObject.Find("Inventory").GetComponent<Inventory_test>();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -19,7 +18,7 @@ public class Nettle : MonoBehaviour
 		{
 			if(playerScript.hasKey==true)
 			{
-				invenScript.UseKey();
+				invenScript.SaveItem(0);
 				playerScript.hasKey = false;
 				Destroy(this.gameObject);
 			}

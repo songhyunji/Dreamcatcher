@@ -97,6 +97,7 @@
     <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />
     <Compile Include="Assets\Script\_Scene\VcamSceneLoad.cs" />
     <Compile Include="Assets\Script\_UI\DontDestroy.cs" />
+    <Compile Include="Assets\Script\_UI\Inventory.cs" />
     <Compile Include="Assets\Script\_UI\Inventory_test.cs" />
     <Compile Include="Assets\Script\_UI\SettingBtn.cs" />
     <Compile Include="Assets\Script\_UI\SettingCenterText.cs" />

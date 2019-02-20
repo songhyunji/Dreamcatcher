@@ -9,10 +9,22 @@ public class Inventory_test : MonoBehaviour
 	public Sprite lily;
 	public Sprite none;
 	private Image invenImg;
+	private int invenObject; // 0 == none, 1 == key, 2 == lily
 
 	private void Start()
 	{
 		invenImg = GetComponent<Image>();
+	}
+
+	private void Update()
+	{
+		
+	}
+
+	public void Restart()
+	{
+		Debug.Log("Restart");
+		invenImg.sprite = none;
 	}
 
 	public void GetKey()

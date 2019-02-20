@@ -125,7 +125,6 @@ public class SettingBtn : MonoBehaviour
 				case 1:
 					Debug.Log("home btn");
 					Destroy(player);
-					Destroy(GameObject.Find("Inventory(Clone)"));
 					SceneManager.LoadScene("Main");
 					break;
 				case 2:
