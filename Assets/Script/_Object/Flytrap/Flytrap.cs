@@ -37,7 +37,6 @@ public class Flytrap : MonoBehaviour
     private void Eat()
     {
 		playerScript.Die();
-
 	}
 
     private void OnTriggerStay2D(Collider2D collision)

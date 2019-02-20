@@ -20,7 +20,6 @@ public class Player_subslope : MonoBehaviour {
 	public bool onFoothold = false;
 	public bool touchedHeavyFoolhold = false;
 	public bool hasKey = false;
-	public bool isDie = false;
 	public float dir;
 	public float jumpDir;
 	public float speed;
@@ -35,7 +34,9 @@ public class Player_subslope : MonoBehaviour {
 	public Text text1;
 	public Text text2;
 	public GameObject fade;
-	
+
+	private bool isDie = false;
+
 	private float playerposX;
     private float playerposY;
     private string loadSceneName = "";
@@ -65,22 +66,26 @@ public class Player_subslope : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if (onLadder)
+		if(!isDie) // can move while player alive
 		{
-			animator.SetBool("isOnLadder", true);
-			Climb();
+			if (onLadder)
+			{
+				animator.SetBool("isOnLadder", true);
+				Climb();
+			}
+			else
+			{
+				Walk();
+			}
+
+			if (isGround)
+			{
+				animator.SetBool(("isJumping"), false);
+				animator.SetBool("isOnLadder", false);
+				animator.SetBool("isClimbing", false);
+			}
 		}
-		else
-		{
-			Walk();
-		}
-		
-		if (isGround)
-		{
-			animator.SetBool(("isJumping"), false);
-			animator.SetBool("isOnLadder", false);
-			animator.SetBool("isClimbing", false);
-		}
+
 
 		/*if (isDie)
 		{
@@ -221,24 +226,27 @@ public class Player_subslope : MonoBehaviour {
 	
 	public void Jump()
 	{
-		if (isGround)
+		if(!isDie) // can jump while player alive
 		{
-			isJumping = true;
-			animator.SetBool("isJumping", true);
-			isGround = false;
-			rb2D.AddForce(Vector3.up * jumpspeed , ForceMode2D.Impulse);
-			isJumping = false;
+			if (isGround)
+			{
+				isJumping = true;
+				animator.SetBool("isJumping", true);
+				isGround = false;
+				rb2D.AddForce(Vector3.up * jumpspeed, ForceMode2D.Impulse);
+				isJumping = false;
+			}
+			else if (onLadder)
+			{
+				rb2D.AddForce(jumpDir * Vector2.right * speed * Time.deltaTime);
+				//onLadder = false;
+			}
 		}
-		else if (onLadder)
-		{
-			rb2D.AddForce(jumpDir * Vector2.right * speed * Time.deltaTime);
-			//onLadder = false;
-		}
-        
 	}
 
     public void Die()
     {
+		isDie = true;
 		hasKey = false;
 		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
@@ -257,7 +265,7 @@ public class Player_subslope : MonoBehaviour {
 		fade = GameObject.Find("GameoverFade");
 		img = fade.GetComponent<Image>();
 		hasKey = false;
-		//isDie = false;
+		isDie = false;
 	}
 
     void OnDisable()
@@ -279,8 +287,8 @@ public class Player_subslope : MonoBehaviour {
 		}
 		else
 		{
-			yield return new WaitForSeconds(1);
 			// add player die anim.
+			yield return new WaitForSeconds(0.5f);
 
 			for (float i = 0; i <= 1; i += fadeSpeed)
 			{
