@@ -673,6 +673,7 @@ MonoBehaviour:
   isAttatch: 0
   isGround: 0
   boundX: 1.3
+  saveName: apple3
 --- !u!1 &181145381
 GameObject:
   m_ObjectHideFlags: 0
@@ -12878,6 +12879,7 @@ MonoBehaviour:
   isAttatch: 0
   isGround: 0
   boundX: 1.3
+  saveName: apple2
 --- !u!1 &2114981022
 GameObject:
   m_ObjectHideFlags: 0
@@ -13087,7 +13089,7 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.182869
+      value: 12.006985
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13129,6 +13131,11 @@ PrefabInstance:
       propertyPath: movingPlatformScript
       value: 
       objectReference: {fileID: 1737354212}
+    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
+        type: 3}
+      propertyPath: saveName
+      value: rune1
+      objectReference: {fileID: 0}
     - target: {fileID: 711137272146441499, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
       propertyPath: m_LocalPosition.x

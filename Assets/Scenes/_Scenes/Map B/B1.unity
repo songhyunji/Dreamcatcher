@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeScript: {fileID: 1425867411}
   speed: 0.01
+  saveName: 
 --- !u!212 &669097897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5792,6 +5793,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rune
       objectReference: {fileID: 0}
+    - target: {fileID: 711137272146441502, guid: 398aa80bf8536ff4f9711cd65e5698a2,
+        type: 3}
+      propertyPath: saveName
+      value: rune3
+      objectReference: {fileID: 0}
     - target: {fileID: 711137272146441499, guid: 398aa80bf8536ff4f9711cd65e5698a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9452,7 +9458,7 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.854492
+      value: 19.678608
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y

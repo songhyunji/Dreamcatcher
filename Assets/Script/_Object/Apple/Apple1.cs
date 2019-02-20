@@ -19,7 +19,9 @@ public class Apple1 : MonoBehaviour {
     public bool isGround;
     public float boundX;
 
-    private void Start()
+	public string saveName;
+
+	private void Start()
 	{
         player = GameObject.Find("TestPlayer(Clone)");
         playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
@@ -28,6 +30,11 @@ public class Apple1 : MonoBehaviour {
         rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
+
+		if (PlayerPrefs.HasKey(saveName))
+		{
+			LoadData();
+		}
 	}
 
     private void FixedUpdate()
@@ -53,6 +60,10 @@ public class Apple1 : MonoBehaviour {
 		{
             isTouch = true;			
 		}
+		else if (other.collider.CompareTag("Ground"))
+		{
+			SaveData();
+		}
 	}
 	
 	private void OnCollisionExit2D(Collision2D other)
@@ -62,7 +73,27 @@ public class Apple1 : MonoBehaviour {
 			isTouch = false;
 		}
 	}
-	
+
+	public void SaveData()
+	{
+		var pos = this.transform.position;
+
+		var posString = "";
+
+		posString += pos.x + "," + pos.y;
+
+		PlayerPrefs.SetString(saveName, posString);
+	}
+
+	public void LoadData()
+	{
+		var posData = PlayerPrefs.GetString(saveName).Split(',');
+
+		var loadedPos = new Vector3(float.Parse(posData[0]), float.Parse(posData[1]), 0);
+
+		this.transform.position = loadedPos;
+	}
+
 	public void PressInteractBtn()
     { 
 		if (isTouch&&!isAttatch)

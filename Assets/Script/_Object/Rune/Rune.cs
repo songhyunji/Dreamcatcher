@@ -13,18 +13,24 @@ public class Rune : MonoBehaviour
     public SpriteRenderer Runeimg;
     public bool RuneSwitch = true; // 룬이 켜지면 1, 룬이 꺼지면 0
 
+	public string saveName;
 
-    // 만약 플레이어가 룬의 위치와 같을 때
-    // 플레이어가 인터랙트 버튼을 누르면 룬 불빛이 켜짐 -> 꺼짐
-    // 켜져 있을 때에는 주변으로 빛이 나온당 (이펙트)
-    // 꺼지면 빛도 꺼진당
+	// 만약 플레이어가 룬의 위치와 같을 때
+	// 플레이어가 인터랙트 버튼을 누르면 룬 불빛이 켜짐 -> 꺼짐
+	// 켜져 있을 때에는 주변으로 빛이 나온당 (이펙트)
+	// 꺼지면 빛도 꺼진당
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
         player = GameObject.Find("TestPlayer");
-        // 전 스테이지에서 넘어오는 플레이어 오브젝트 찾기
-    }
+		// 전 스테이지에서 넘어오는 플레이어 오브젝트 찾기
+
+		if (PlayerPrefs.HasKey(saveName))
+		{
+			LoadData();
+		}
+	}
 
     // Update is called once per frame
     void Update()
@@ -44,8 +50,9 @@ public class Rune : MonoBehaviour
                 Runeimg.sprite = Runeoff;
                 RuneSwitch = false;
                 Debug.Log("룬 꺼짐");
-                lightParticle.SetActive(false); // 포인트 라이트도 끄기
-            }
+				SaveData();
+				// 포인트 라이트도 끄기 lightParticle.SetActive(false); → Destroy(lightParticle); , 코드 위치 이동
+			}
             else // 룬이 꺼져 있음 -> 룬이 다시 켜지지 않음
             {
                 //Runeimg.sprite = Runeon;
@@ -77,5 +84,22 @@ public class Rune : MonoBehaviour
             isTouch = false;
         }
     }
+
+	public void SaveData()
+	{
+		Destroy(lightParticle);
+
+		PlayerPrefs.SetString(saveName, "destroy");
+	}
+
+	public void LoadData()
+	{
+		var data = PlayerPrefs.GetString(saveName);
+
+		if(data == "destroy")
+		{
+			Destroy(lightParticle);
+		}
+	}
 
 }

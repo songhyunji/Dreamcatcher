@@ -1800,6 +1800,11 @@ PrefabInstance:
       propertyPath: boundX
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 114412858200936208, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: saveName
+      value: apple5
+      objectReference: {fileID: 0}
     - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
       propertyPath: m_Mass
@@ -6359,7 +6364,7 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 133.51266
+      value: 132.33679
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6454,6 +6459,11 @@ PrefabInstance:
       propertyPath: invenScript
       value: 
       objectReference: {fileID: 1903963103}
+    - target: {fileID: 1413333421117854527, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
+        type: 3}
+      propertyPath: saveName
+      value: key2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c8a159857c8ff44b0fb4a1668cbc7a, type: 3}
 --- !u!1001 &7496652807222511412
@@ -6538,6 +6548,11 @@ PrefabInstance:
       propertyPath: invenScript
       value: 
       objectReference: {fileID: 1903963103}
+    - target: {fileID: 7496652806262310053, guid: f4fd2a0b6d299fc408795879b117d2a1,
+        type: 3}
+      propertyPath: saveName
+      value: nettle2
+      objectReference: {fileID: 0}
     - target: {fileID: 7496652806262310075, guid: f4fd2a0b6d299fc408795879b117d2a1,
         type: 3}
       propertyPath: m_Sprite

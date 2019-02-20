@@ -18,7 +18,9 @@ public class Apple : MonoBehaviour {
     public bool isGround;
 	public float playerPosX = 35;
     public float boundX;
-	
+
+	public string saveName;
+
 
 	private void Start()
 	{
@@ -29,6 +31,10 @@ public class Apple : MonoBehaviour {
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
 
+		if (PlayerPrefs.HasKey(saveName))
+		{
+			LoadData();
+		}
 	}
 
 	private void FixedUpdate()
@@ -61,7 +67,31 @@ public class Apple : MonoBehaviour {
 		{
 			isTouch = true;
 		}
+		else if(other.collider.CompareTag("Ground"))
+		{
+			SaveData();
+		}
 
+	}
+
+	public void SaveData()
+	{
+		var pos = this.transform.position;
+
+		var posString = "";
+
+		posString += pos.x + "," + pos.y;
+
+		PlayerPrefs.SetString(saveName, posString);
+	}
+
+	public void LoadData()
+	{
+		var posData = PlayerPrefs.GetString(saveName).Split(',');
+
+		var loadedPos = new Vector3(float.Parse(posData[0]), float.Parse(posData[1]), 0);
+
+		this.transform.position = loadedPos;
 	}
 	
 	private void OnCollisionExit2D(Collision2D other)

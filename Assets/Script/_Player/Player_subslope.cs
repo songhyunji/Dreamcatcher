@@ -19,7 +19,6 @@ public class Player_subslope : MonoBehaviour {
 	public bool onLadder = false;
 	public bool onFoothold = false;
 	public bool touchedHeavyFoolhold = false;
-	public bool hasKey = false;
 	public float dir;
 	public float jumpDir;
 	public float speed;
@@ -247,7 +246,6 @@ public class Player_subslope : MonoBehaviour {
     public void Die()
     {
 		isDie = true;
-		hasKey = false;
 		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
         loadSceneName = PlayerPrefs.GetString("SaveStage");
@@ -264,7 +262,6 @@ public class Player_subslope : MonoBehaviour {
     {
 		fade = GameObject.Find("GameoverFade");
 		img = fade.GetComponent<Image>();
-		hasKey = false;
 		isDie = false;
 	}
 

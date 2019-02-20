@@ -106,6 +106,7 @@
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Prologue\prologue_fade.cs" />
     <Compile Include="Assets\Script\Prologue\prologue_text.cs" />
+    <Compile Include="Assets\Script\SaveData.cs" />
     <None Include="Assets\Shader\Background.shader" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>

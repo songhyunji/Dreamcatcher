@@ -42,6 +42,7 @@ public class Inventory_test : MonoBehaviour
 	public void GetKey()
 	{
 		Debug.Log("Get Key.");
+		PlayerPrefs.SetInt("hasKey", 1); // 1 == true, 0 == false
 		PlayerPrefs.SetInt("inventoryNum", 1);
 		invenImg.sprite = key;
 	}
@@ -56,6 +57,7 @@ public class Inventory_test : MonoBehaviour
 	public void UseKey()
 	{
 		Debug.Log("Use Key.");
+		PlayerPrefs.SetInt("hasKey", 0); // 0 == false
 		PlayerPrefs.SetInt("inventoryNum", 0);
 		invenImg.sprite = none;
 	}

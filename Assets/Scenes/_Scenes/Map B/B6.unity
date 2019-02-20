@@ -461,6 +461,11 @@ PrefabInstance:
       propertyPath: spawnBtn
       value: 
       objectReference: {fileID: 1406788486}
+    - target: {fileID: 114412858200936208, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: saveName
+      value: apple8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -681,6 +686,11 @@ PrefabInstance:
       propertyPath: spawnBtn
       value: 
       objectReference: {fileID: 1406788486}
+    - target: {fileID: 114412858200936208, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: saveName
+      value: apple9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -866,6 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lily: {fileID: 1041786377}
   invenScript: {fileID: 560938778}
+  saveName: lily1
 --- !u!61 &697297682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2158,6 +2169,11 @@ PrefabInstance:
       propertyPath: invenScript
       value: 
       objectReference: {fileID: 560938778}
+    - target: {fileID: 7496652806262310053, guid: f4fd2a0b6d299fc408795879b117d2a1,
+        type: 3}
+      propertyPath: saveName
+      value: nettle5
+      objectReference: {fileID: 0}
     - target: {fileID: 7496652806262310075, guid: f4fd2a0b6d299fc408795879b117d2a1,
         type: 3}
       propertyPath: m_Sprite
@@ -4800,7 +4816,7 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.625103
+      value: 55.449223
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4836,6 +4852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 0}
   invenScript: {fileID: 560938778}
+  saveName: key5
 --- !u!1 &1413333421407588033
 GameObject:
   m_ObjectHideFlags: 0

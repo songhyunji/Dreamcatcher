@@ -25,7 +25,8 @@ public class LoadScene : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
+		{
+			PlayerPrefs.Save();
 			img.gameObject.SetActive(true);
 			StartCoroutine(FadeImage(false));
         }

@@ -269,6 +269,11 @@ PrefabInstance:
       propertyPath: invenScript
       value: 
       objectReference: {fileID: 1350525971}
+    - target: {fileID: 7496652806262310053, guid: f4fd2a0b6d299fc408795879b117d2a1,
+        type: 3}
+      propertyPath: saveName
+      value: nettle3
+      objectReference: {fileID: 0}
     - target: {fileID: 7496652806262310075, guid: f4fd2a0b6d299fc408795879b117d2a1,
         type: 3}
       propertyPath: m_Sprite
@@ -457,6 +462,11 @@ PrefabInstance:
       propertyPath: invenScript
       value: 
       objectReference: {fileID: 1350525971}
+    - target: {fileID: 1413333421117854527, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
+        type: 3}
+      propertyPath: saveName
+      value: key3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c8a159857c8ff44b0fb4a1668cbc7a, type: 3}
 --- !u!1001 &684051903
@@ -624,6 +634,7 @@ MonoBehaviour:
   isAttatch: 0
   isGround: 0
   boundX: 1.3
+  saveName: apple6
 --- !u!1001 &721237817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6046,7 +6057,7 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 96.372986
+      value: 95.1971
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
