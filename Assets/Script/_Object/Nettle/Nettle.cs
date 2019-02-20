@@ -5,7 +5,7 @@ using UnityEngine;
 public class Nettle : MonoBehaviour
 {
 	public Player_subslope playerScript;
-	public Inventory invenScript;
+	public Inventory_test invenScript;
 
 	private void Start()
 	{
@@ -18,7 +18,7 @@ public class Nettle : MonoBehaviour
 		{
 			if(playerScript.hasKey==true)
 			{
-				invenScript.SaveItem(0);
+				invenScript.UseKey();
 				playerScript.hasKey = false;
 				Destroy(this.gameObject);
 			}

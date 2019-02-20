@@ -172,7 +172,6 @@ MonoBehaviour:
   onFoothold: 0
   touchedHeavyFoolhold: 0
   hasKey: 0
-  isDie: 0
   dir: 0
   jumpDir: 0
   speed: 4
@@ -186,8 +185,6 @@ MonoBehaviour:
   text1: {fileID: 0}
   text2: {fileID: 0}
   fade: {fileID: 0}
-  fadeText1: {fileID: 0}
-  fadeText2: {fileID: 0}
   _audio:
   - {fileID: 8300000, guid: 5edb062e6256c44459adc6f4cb16b18c, type: 3}
   - {fileID: 8300000, guid: e75c0c671f9dc7f4398edb418dc5f30a, type: 3}

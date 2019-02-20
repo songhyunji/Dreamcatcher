@@ -14,7 +14,7 @@ public class NPCDialogue : MonoBehaviour
 	public GameObject img;
 	public GameObject key;
 
-	public Inventory invenScript;
+	public Inventory_test invenScript;
 
 	private int wolfEventEnd; // 1 == true, 0 == false;
 
@@ -37,7 +37,7 @@ public class NPCDialogue : MonoBehaviour
 
 			if(firstMeet && wolfEventEnd==1) // wolf event end -> wolf btn == true
 			{
-				invenScript.SaveItem(0);
+				invenScript.UseLily();
 				PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
 			}
 

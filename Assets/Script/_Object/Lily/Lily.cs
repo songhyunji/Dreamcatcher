@@ -5,17 +5,13 @@ using UnityEngine;
 public class Lily : MonoBehaviour
 {
 	public GameObject lily;
-	public Inventory invenScript;
-
-	private void Start()
-	{
-	}
+	public Inventory_test invenScript;
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.CompareTag("Player"))
 		{
-			invenScript.SaveItem(2);
+			invenScript.GetLily();
 			Destroy(lily);
 		}
 	}
