@@ -15,6 +15,7 @@ public class Flytrap : MonoBehaviour
 
 	public Sprite flytrapOff;
 	public Sprite flytrapOn;
+	public Sprite flytrapEat;
 
 	private void Start()
     {
@@ -36,12 +37,13 @@ public class Flytrap : MonoBehaviour
 
     private void Eat()
     {
+		GetComponent<SpriteRenderer>().sprite = flytrapEat;
 		playerScript.Die();
 	}
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")&&canEat)
+        if(collision.CompareTag("Player") && canEat)
         {
             Debug.Log("Eat");
             canEat = false;
