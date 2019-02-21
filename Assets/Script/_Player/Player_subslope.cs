@@ -82,6 +82,7 @@ public class Player_subslope : MonoBehaviour {
 				animator.SetBool(("isJumping"), false);
 				animator.SetBool("isOnLadder", false);
 				animator.SetBool("isClimbing", false);
+				animator.SetBool("isDead", false);
 			}
 		}
 
@@ -246,6 +247,7 @@ public class Player_subslope : MonoBehaviour {
     public void Die()
     {
 		isDie = true;
+		animator.SetBool("isDead", true);
 		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
         loadSceneName = PlayerPrefs.GetString("SaveStage");
@@ -284,8 +286,8 @@ public class Player_subslope : MonoBehaviour {
 		}
 		else
 		{
-			// add player die anim.
-			yield return new WaitForSeconds(0.5f);
+			AnimatorStateInfo animStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+			yield return new WaitForSeconds(animStateInfo.normalizedTime);
 
 			for (float i = 0; i <= 1; i += fadeSpeed)
 			{
