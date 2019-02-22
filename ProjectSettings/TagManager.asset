@@ -19,6 +19,8 @@ TagManager:
   - InteractBtn
   - Fade
   - Inventory
+  - Canvas
+  - inTile
   layers:
   - Default
   - TransparentFX

@@ -64,11 +64,11 @@ public class Apple : MonoBehaviour {
 		{
 			if (playerScript.isLeft)
 			{
-				pos.transform.Translate(Vector3.right * Time.deltaTime * 3);
+				pos.transform.Translate(Vector3.right * Time.deltaTime * 5);
 			}
 			else
 			{
-				pos.transform.Translate(Vector3.left * Time.deltaTime * 3);
+				pos.transform.Translate(Vector3.left * Time.deltaTime * 5);
 			}
 
 		}
@@ -84,19 +84,37 @@ public class Apple : MonoBehaviour {
 		}
 		else if(other.collider.CompareTag("Ground"))
 		{
-			if(isAttatch)
-			{
-				Debug.Log("땅에 닿음");
-				inGround = true;
-			}
-			else
+			if(!isAttatch)
 			{
 				Debug.Log("save position");
 				SaveData();
 			}
-
 		}
+	}
 
+	private void OnCollisionExit2D(Collision2D other)
+	{
+		if (other.collider.CompareTag("Player"))
+		{
+			isTouch = false;
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.CompareTag("inTile"))
+		{
+			Debug.Log("땅에 닿음");
+			inGround = true;
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.CompareTag("inTile"))
+		{
+			inGround = false;
+		}
 	}
 
 	public void SaveData()
@@ -119,17 +137,7 @@ public class Apple : MonoBehaviour {
 		this.transform.position = loadedPos;
 	}
 	
-	private void OnCollisionExit2D(Collision2D other)
-	{
-		if (other.collider.CompareTag("Player"))
-		{
-			isTouch = false;
-		}
-		else if(other.collider.CompareTag("Ground"))
-		{
-			inGround = false;
-		}
-	}
+
 	
 	public void PressInteractBtn()
     { 

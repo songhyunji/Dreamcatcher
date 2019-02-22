@@ -87,17 +87,6 @@ public class Player_subslope : MonoBehaviour {
 		}
 
 
-		/*if (isDie)
-		{
-			targetTime += Time.deltaTime;
-
-			if (Input.touchCount > 0 || targetTime>=5) // 자동 재시작 시간 현재 5초
-			{
-				transform.position = new Vector3(playerposX, playerposY);
-				SceneManager.LoadScene(loadSceneName);
-
-			}
-		}*/
 	}
 	
 	private void OnCollisionEnter2D(Collision2D other)
@@ -248,7 +237,7 @@ public class Player_subslope : MonoBehaviour {
     public void Die()
     {
 		isDie = true;
-		animator.SetBool("isDead", true);
+
 		playerposX = PlayerPrefs.GetFloat("posX");
         playerposY = PlayerPrefs.GetFloat("posY");
         loadSceneName = PlayerPrefs.GetString("SaveStage");
@@ -287,8 +276,9 @@ public class Player_subslope : MonoBehaviour {
 		}
 		else
 		{
+			animator.SetBool("isDead", true);
 			AnimatorStateInfo animStateInfo = animator.GetCurrentAnimatorStateInfo(0);
-			yield return new WaitForSeconds(animStateInfo.normalizedTime);
+			yield return new WaitForSeconds(animStateInfo.normalizedTime + 0.5f);
 
 			for (float i = 0; i <= 1; i += fadeSpeed)
 			{

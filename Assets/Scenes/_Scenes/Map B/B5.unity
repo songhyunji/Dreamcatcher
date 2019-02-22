@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 32131081}
   m_Layer: 0
   m_Name: Ladder 1X5 (2)
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 955863631}
   m_Layer: 0
   m_Name: Ladder 1X6
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2919,7 +2919,7 @@ GameObject:
   - component: {fileID: 1413442640}
   m_Layer: 0
   m_Name: Ladder 1X5
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8293,7 +8293,7 @@ GameObject:
   - component: {fileID: 2060420363}
   m_Layer: 0
   m_Name: Ladder 1X5 (1)
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

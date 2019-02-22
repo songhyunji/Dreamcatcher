@@ -38,19 +38,10 @@ public class Ladder_test : MonoBehaviour
 			animator.SetBool("isWalking", false);
 			animator.SetBool("isJumping", false);
 			player.transform.Translate(0 * Vector3.right);
+			rb2D.gravityScale = 0;
 			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			Vector3 otherPos = other.GetComponent<Transform>().position;
 			player.transform.position = new Vector3(otherPos.x, transform.position.y, transform.position.z);
-			/*if (playerScript.jumpDir == 1)
-			{
-				player.transform.position = new Vector3(otherPos.x - 0.25f, transform.position.y, transform.position.z);
-			}
-			else if (playerScript.jumpDir == -1)
-			{
-				player.transform.position = new Vector3(otherPos.x + 0.25f, transform.position.y, transform.position.z);
-			}*/
-
-			rb2D.gravityScale = 0;
             playerScript.isJumping = false;
             playerScript.isGround = false;
             playerScript.onLadder = true;

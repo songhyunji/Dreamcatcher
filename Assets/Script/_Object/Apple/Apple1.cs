@@ -77,12 +77,7 @@ public class Apple1 : MonoBehaviour {
 		}
 		else if (other.collider.CompareTag("Ground"))
 		{
-			if (isAttatch)
-			{
-				Debug.Log("땅에 닿음");
-				inGround = true;
-			}
-			else
+			if (!isAttatch)
 			{
 				Debug.Log("save position");
 				SaveData();
@@ -96,7 +91,20 @@ public class Apple1 : MonoBehaviour {
 		{
 			isTouch = false;
 		}
-		else if (other.collider.CompareTag("Ground"))
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag("inTile"))
+		{
+			Debug.Log("땅에 닿음");
+			inGround = true;
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.CompareTag("inTile"))
 		{
 			inGround = false;
 		}
