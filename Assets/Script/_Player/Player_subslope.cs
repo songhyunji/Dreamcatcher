@@ -232,6 +232,7 @@ public class Player_subslope : MonoBehaviour {
 			{
 				isJumping = true;
 				animator.SetBool("isJumping", true);
+				animator.SetBool("isWalking", false);
 				isGround = false;
 				rb2D.AddForce(Vector3.up * jumpspeed, ForceMode2D.Impulse);
 				isJumping = false;

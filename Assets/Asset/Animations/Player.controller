@@ -232,9 +232,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.26775753
+  m_TransitionDuration: 0.6265709
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 0.89521575
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
@@ -296,7 +296,7 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: velocityX
 --- !u!1102 &110253674
 AnimatorState:
   serializedVersion: 5

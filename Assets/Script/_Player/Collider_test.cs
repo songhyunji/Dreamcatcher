@@ -33,7 +33,6 @@ public class Collider_test : MonoBehaviour
 			playerScript.isGround = true;
 			playerScript.onFoothold = true;
 			playerScript.isJumping = false;
-			playerScript.animator.SetBool("isJumping",false);
 			if(spawnBtn != null)
 			{
 				spawnBtn.GetComponent<SpawnButton>().enabled = false;
@@ -59,7 +58,6 @@ public class Collider_test : MonoBehaviour
 		if (other.CompareTag("Foothold"))
 		{
 			playerScript.onFoothold = false;
-			playerScript.animator.SetBool("isJumping",true);
 			if (spawnBtn != null)
 			{
 				spawnBtn.GetComponent<SpawnButton>().enabled = true;

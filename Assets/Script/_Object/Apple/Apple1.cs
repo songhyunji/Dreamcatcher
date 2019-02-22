@@ -13,6 +13,8 @@ public class Apple1 : MonoBehaviour {
 	private Transform pos;
     private Collider2D playerCollider;
 
+	private bool inGround;
+
     public bool isHanging = true;
 	public bool isTouch;
     public bool isAttatch;
@@ -52,7 +54,20 @@ public class Apple1 : MonoBehaviour {
 
         }
 
-    }
+		if (inGround)
+		{
+			if (playerScript.isLeft)
+			{
+				pos.transform.Translate(Vector3.right * Time.deltaTime * 3);
+			}
+			else
+			{
+				pos.transform.Translate(Vector3.left * Time.deltaTime * 3);
+			}
+
+		}
+
+	}
 
     private void OnCollisionEnter2D(Collision2D other)
 	{
@@ -62,7 +77,16 @@ public class Apple1 : MonoBehaviour {
 		}
 		else if (other.collider.CompareTag("Ground"))
 		{
-			SaveData();
+			if (isAttatch)
+			{
+				Debug.Log("땅에 닿음");
+				inGround = true;
+			}
+			else
+			{
+				Debug.Log("save position");
+				SaveData();
+			}
 		}
 	}
 	
@@ -71,6 +95,10 @@ public class Apple1 : MonoBehaviour {
 		if (other.collider.CompareTag("Player"))
 		{
 			isTouch = false;
+		}
+		else if (other.collider.CompareTag("Ground"))
+		{
+			inGround = false;
 		}
 	}
 
