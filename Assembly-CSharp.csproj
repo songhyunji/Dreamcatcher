@@ -101,6 +101,7 @@
     <Compile Include="Assets\Script\_UI\Inventory_test.cs" />
     <Compile Include="Assets\Script\_UI\MapnameImage.cs" />
     <Compile Include="Assets\Script\_UI\SettingBtn.cs" />
+    <Compile Include="Assets\Script\_UI\TutorialFade.cs" />
     <Compile Include="Assets\Script\BGM\BackgroundSound.cs" />
     <Compile Include="Assets\Script\Dead\OntheDeadTrap.cs" />
     <Compile Include="Assets\Script\Prologue\prologue_fade.cs" />
