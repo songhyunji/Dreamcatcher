@@ -21,6 +21,8 @@ public class Enterence : MonoBehaviour
     private SpriteRenderer enterenceSptireRenderer;
     private Animator animator;
 
+    public VcamSceneLoad2 VSL2;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -67,6 +69,7 @@ public class Enterence : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerin = true;
+            VSL2.ColliderwithEntrance = true;
 
             if(!enterenceOpen)
             {

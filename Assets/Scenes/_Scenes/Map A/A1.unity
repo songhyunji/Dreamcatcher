@@ -453,7 +453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &129356031
 Transform:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129356030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 24.76, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1354612368}
@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f3acf64e4c5584c949c90cb06ddc7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColliderwithEntrance: 0
 --- !u!114 &129356033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2425,6 +2426,7 @@ MonoBehaviour:
   runeScript: {fileID: 1626727694}
   player: {fileID: 0}
   blinkSpeed: 0.2
+  VSL2: {fileID: 2131314013}
 --- !u!61 &524114406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11184,6 +11186,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
+--- !u!1 &2131314012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1441274574137992, guid: db868f80c49cc4846ad7c621a925b411,
+    type: 3}
+  m_PrefabInstance: {fileID: 2131314011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2131314013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131314012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f3acf64e4c5584c949c90cb06ddc7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderwithEntrance: 0
 --- !u!1 &1695250308612141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1695250512643438, guid: 0576b324cffd2d641a26da6400899cd6,
