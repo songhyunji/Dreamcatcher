@@ -8,11 +8,14 @@ public class MapnameImage : MonoBehaviour
     public float speed = 0.015f; // fade out 되는 속도
     float alpha; // 투명도
 
+    public Sprite image; // stage title image
+
 //    public Image image;
 
     // Start is called before the first frame update
     void Start()
     {
+        this.GetComponent<Image>().sprite = image; // title image 지정
         alpha = 1.5f;
     }
 
