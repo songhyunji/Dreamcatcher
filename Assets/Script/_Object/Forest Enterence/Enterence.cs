@@ -21,6 +21,8 @@ public class Enterence : MonoBehaviour
     private SpriteRenderer enterenceSptireRenderer;
     private Animator animator;
 
+    public VcamDirectionInA1 VDA1;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -67,6 +69,8 @@ public class Enterence : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerin = true;
+
+            VDA1.ColliderwithEntrance = true; // 문에 부딪힘 -> 연출 시작
 
             if(!enterenceOpen)
             {

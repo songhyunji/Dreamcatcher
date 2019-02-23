@@ -95,6 +95,8 @@
     <Compile Include="Assets\Script\_Player\SpawnButton.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />
+    <Compile Include="Assets\Script\_Scene\VcamDirectionInA1.cs" />
+    <Compile Include="Assets\Script\_Scene\VcamDirectionInB2.cs" />
     <Compile Include="Assets\Script\_Scene\VcamSceneLoad.cs" />
     <Compile Include="Assets\Script\_UI\DontDestroy.cs" />
     <Compile Include="Assets\Script\_UI\Inventory.cs" />

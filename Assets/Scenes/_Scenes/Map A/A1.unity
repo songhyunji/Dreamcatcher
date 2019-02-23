@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 7915719179777943516, guid: fdf0399d603d05f47a0de5a6687d55e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7915719179777943516, guid: fdf0399d603d05f47a0de5a6687d55e6,
         type: 3}
@@ -2303,6 +2303,7 @@ MonoBehaviour:
   runeScript: {fileID: 1626727694}
   player: {fileID: 0}
   blinkSpeed: 0.2
+  VDA1: {fileID: 2131314013}
 --- !u!61 &524114406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4278,7 +4279,7 @@ RectTransform:
   m_LocalScale: {x: 5.0225, y: 1.1659375, z: 1}
   m_Children: []
   m_Father: {fileID: 3587730147973857545}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -10768,6 +10769,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
+--- !u!1 &2131314012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1441274574137992, guid: db868f80c49cc4846ad7c621a925b411,
+    type: 3}
+  m_PrefabInstance: {fileID: 2131314011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2131314013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131314012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3df7cadba6e3e3439bce4d0ec6460ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderwithEntrance: 0
+  FirstPerformance: 1
 --- !u!1 &1695250308612141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1695250512643438, guid: 0576b324cffd2d641a26da6400899cd6,
@@ -11307,9 +11328,9 @@ RectTransform:
   - {fileID: 3587730149146438517}
   - {fileID: 3587730149569299970}
   - {fileID: 3587730149315147819}
+  - {fileID: 1066064235}
   - {fileID: 1141463751}
   - {fileID: 1150091429}
-  - {fileID: 1066064235}
   - {fileID: 270252203}
   m_Father: {fileID: 0}
   m_RootOrder: 1
