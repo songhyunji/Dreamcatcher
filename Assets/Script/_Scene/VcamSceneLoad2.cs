@@ -34,8 +34,8 @@ public class VcamSceneLoad2 : MonoBehaviour
                 Debug.Log(GameObject.Find("Background").transform.GetChild(4).name);
                 StartCoroutine(WaitForSeconds()); // 5초 동안 기다림
 
-                vcam.Follow = GameObject.Find("TestPlayer(Clone)").transform;
-                Debug.Log("follow 오브젝트 전환");
+//                vcam.Follow = GameObject.Find("TestPlayer(Clone)").transform;
+//                Debug.Log("follow 오브젝트 전환");
 
                 //                ColliderwithEntrance = false;
                 FirstPerformance = false;
@@ -47,12 +47,18 @@ public class VcamSceneLoad2 : MonoBehaviour
     {
         Debug.Log("기다림");
 
-        yield return new WaitForSeconds(5); // https://docs.unity3d.com/ScriptReference/WaitForSeconds.html 참고 (해당 라인 밑으로 5초 후에 실행)
+        yield return new WaitForSeconds(3); // https://docs.unity3d.com/ScriptReference/WaitForSeconds.html 참고 (해당 라인 밑으로 2초 후에 실행)
 
-//        vcam.Priority = 11; // 우선순위 바뀜
+        Debug.Log("흠냐,..");
+        vcam.Follow = GameObject.Find("Background").transform.GetChild(1);
+        vcam.Follow = GameObject.Find("Background").transform.GetChild(19);
+        vcam.Follow = GameObject.Find("Background").transform.GetChild(5);
+        vcam.Follow = GameObject.Find("TestPlayer(Clone)").transform;
+
+        //        vcam.Priority = 11; // 우선순위 바뀜
 
         //        Destroy(this.gameObject); // vcam 파괴
 
-//        Debug.Log("코루틴 - vcam파괴");
+        //        Debug.Log("코루틴 - vcam파괴");
     }
 }

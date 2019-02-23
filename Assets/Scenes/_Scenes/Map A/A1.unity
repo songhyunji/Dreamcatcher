@@ -482,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColliderwithEntrance: 0
+  FirstPerformance: 1
 --- !u!114 &129356033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11130,6 +11131,11 @@ PrefabInstance:
       propertyPath: m_Priority
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114897918898311120, guid: db868f80c49cc4846ad7c621a925b411,
+        type: 3}
+      propertyPath: m_Transitions.m_BlendHint
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4383656472127068, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.76
@@ -11205,6 +11211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColliderwithEntrance: 0
+  FirstPerformance: 1
 --- !u!1 &1695250308612141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1695250512643438, guid: 0576b324cffd2d641a26da6400899cd6,
