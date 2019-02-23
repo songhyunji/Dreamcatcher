@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class MapnameImage : MonoBehaviour
 {
     public float speed = 0.015f; // fade out 되는 속도
-    float alpha = 1.5f; // 투명도
+    float alpha; // 투명도
 
 //    public Image image;
 
     // Start is called before the first frame update
     void Start()
-    { 
-        
+    {
+        alpha = 1.5f;
     }
 
     // Update is called once per frame
