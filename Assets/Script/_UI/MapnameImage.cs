@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MapnameImage : MonoBehaviour
 {
     public float speed = 0.015f; // fade out 되는 속도
-    float alpha; // 투명도
+    public float alpha = 0f; // 투명도
 
     public Sprite image; // stage title image
 
 	public bool startFade;
+    
 
 //    public Image image;
 
@@ -18,7 +20,7 @@ public class MapnameImage : MonoBehaviour
     void Start()
     {
         this.GetComponent<Image>().sprite = image; // title image 지정
-        alpha = 1.5f;
+
     }
 
     // Update is called once per frame
@@ -26,10 +28,17 @@ public class MapnameImage : MonoBehaviour
     {
         //        this.GetComponent<Image>().color.a = alpha;
 		if(startFade)
-		{
-			this.GetComponent<Image>().CrossFadeAlpha(alpha, 0f, true);
-			alpha -= speed;
-		}
+		{            
+            alpha = 1.5f;
+            startFade = false;
+
+            Debug.Log("알파값 변경");
+        }
+
+//        Debug.Log("현재 알파값 : "+ alpha);
+
+        this.GetComponent<Image>().CrossFadeAlpha(alpha, 0f, true);
+        alpha -= speed;
 
     }
 }
