@@ -10,6 +10,8 @@ public class MapnameImage : MonoBehaviour
 
     public Sprite image; // stage title image
 
+	public bool startFade;
+
 //    public Image image;
 
     // Start is called before the first frame update
@@ -23,8 +25,11 @@ public class MapnameImage : MonoBehaviour
     void Update()
     {
         //        this.GetComponent<Image>().color.a = alpha;
-        this.GetComponent<Image>().CrossFadeAlpha(alpha, 0f, true);
+		if(startFade)
+		{
+			this.GetComponent<Image>().CrossFadeAlpha(alpha, 0f, true);
+			alpha -= speed;
+		}
 
-        alpha -= speed;
     }
 }

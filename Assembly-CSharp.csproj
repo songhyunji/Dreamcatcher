@@ -94,6 +94,7 @@
     <Compile Include="Assets\Script\_Player\SpawnBtnControl.cs" />
     <Compile Include="Assets\Script\_Player\SpawnButton.cs" />
     <Compile Include="Assets\Script\_Scene\DemoEnd.cs" />
+    <Compile Include="Assets\Script\_Scene\FadeScene.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene.cs" />
     <Compile Include="Assets\Script\_Scene\LoadScene_drop.cs" />
     <Compile Include="Assets\Script\_Scene\VcamDirectionInA1.cs" />

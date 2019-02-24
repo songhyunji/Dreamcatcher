@@ -30,8 +30,6 @@ public class Player_subslope : MonoBehaviour {
 	public Animator animator;
 	public Rigidbody2D rb2D;
 	public Image img;
-	public Text text1;
-	public Text text2;
 	public GameObject fade;
 
 	private bool isDie = false;
@@ -252,7 +250,7 @@ public class Player_subslope : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-		fade = GameObject.Find("GameoverFade");
+		fade = GameObject.Find("Fade");
 		img = fade.GetComponent<Image>();
 		isDie = false;
 	}
@@ -272,7 +270,6 @@ public class Player_subslope : MonoBehaviour {
 				yield return null;
 			}
 
-
 		}
 		else
 		{
@@ -283,15 +280,11 @@ public class Player_subslope : MonoBehaviour {
 			for (float i = 0; i <= 1; i += fadeSpeed)
 			{
 				img.color = new Color(0.6509f, 0.0627f, 0.1176f, i);
-				//text1.color = new Color(1, 1, 1, i);
-				//text2.color = new Color(1, 1, 1, i);
 				yield return null;
 			}
 			PlayerPrefs.SetInt("dieRestart", 1); // 1 == true, 0 == die
 			transform.position = new Vector3(playerposX, playerposY);
 			SceneManager.LoadScene(loadSceneName);
-			//isDie = true;
-			//Time.timeScale = 0;
 		}
 	}
 }
