@@ -8,10 +8,15 @@ public class VcamDirectionInA1 : MonoBehaviour
     public bool ColliderwithEntrance; // 문에 닿으면 연출 수행 : 문에 충돌했는지 얻어옴
     public bool FirstPerformance = true; // 연출을 수행했는지
 
-    // Start is called before the first frame update
-    void Start()
+	public Transform target;
+	public float speed = 5;
+	public GameObject mainCamrea;
+	public GameObject subCamera;
+
+	// Start is called before the first frame update
+	void Start()
     {
-    }
+	}
 
     // Update is called once per frame
     void Update()
@@ -28,18 +33,32 @@ public class VcamDirectionInA1 : MonoBehaviour
             if (ColliderwithEntrance)
             {
                 vcam = GameObject.Find("Camera").transform.GetChild(1).GetComponent<Cinemachine.CinemachineVirtualCamera>();
-                vcam.Follow = GameObject.Find("Background").transform.GetChild(4);
-                //            vcam.LookAt = GameObject.Find("Background").transform.GetChild(4);
+				target = GameObject.Find("Background").transform.GetChild(4).transform;
 
-                Debug.Log(GameObject.Find("Background").transform.GetChild(4).name);
-                StartCoroutine(WaitForSeconds()); // 5초 동안 기다림
+				if (subCamera.transform.position == target.position) // 서브 카메라와 타겟의 위치가 같다면 타겟을 비춤
+				{
+					mainCamrea.SetActive(true);
+					subCamera.SetActive(false);
 
-                //                vcam.Follow = GameObject.Find("TestPlayer(Clone)").transform;
-                //                Debug.Log("follow 오브젝트 전환");
+					vcam.Follow = GameObject.Find("Background").transform.GetChild(4);
+					//            vcam.LookAt = GameObject.Find("Background").transform.GetChild(4);
 
-                //                ColliderwithEntrance = false;
-                FirstPerformance = false;
+					Debug.Log(GameObject.Find("Background").transform.GetChild(4).name);
+					StartCoroutine(WaitForSeconds()); // 5초 동안 기다림
 
+					//                vcam.Follow = GameObject.Find("TestPlayer(Clone)").transform;
+					//                Debug.Log("follow 오브젝트 전환");
+
+					//                ColliderwithEntrance = false;
+					FirstPerformance = false;
+				}
+				else // 서브 카메라와 타겟의 위치가 다르다면 서브 카메라가 타겟의 위치로 이동 (메인 카메라 끄고, 서브 카메라로 이동)
+				{
+					mainCamrea.SetActive(false); 
+					subCamera.SetActive(true);
+
+					subCamera.transform.position = Vector3.MoveTowards(subCamera.transform.position, target.position, speed); // https://docs.unity3d.com/kr/530/ScriptReference/Vector3.MoveTowards.html 참고
+				}
             }
     }
 
