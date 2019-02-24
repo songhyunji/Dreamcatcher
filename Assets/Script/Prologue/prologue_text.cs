@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class prologue_text : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class prologue_text : MonoBehaviour
 	public string[] dialogues = new string[7];
 	public float speed = 0.2f;
 	public Text text;
+	public Image fade;
+	public GameObject player;
+	[HideInInspector]
+	public GameObject player_object;
 
 	int i = 0;
 	private bool isSaying = false;
@@ -53,6 +58,8 @@ public class prologue_text : MonoBehaviour
 				else
 				{
 					Debug.Log("end");
+					fade.gameObject.SetActive(true);
+					StartCoroutine(FadeImage());
 				}
 			}
 		}
@@ -94,5 +101,38 @@ public class prologue_text : MonoBehaviour
 			isSaying = false;
 		}
 
+	}
+
+	IEnumerator FadeImage()
+	{
+			for (float i = 0; i <= 1; i += Time.deltaTime)
+			{
+				fade.color = new Color(0, 0, 0, i);
+				yield return null;
+			}
+
+		CreatePlayer(new Vector3(-2.11f, -1.5f));
+
+		PlayerPrefs.DeleteAll();
+
+		PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
+		PlayerPrefs.SetFloat("posX", -2.11f);
+		PlayerPrefs.SetFloat("posY", -1.5f);
+		PlayerPrefs.SetString("SaveStage", "A0");
+		Debug.Log("저장");
+
+		Debug.Log("posX");
+		Debug.Log(PlayerPrefs.GetFloat("posX"));
+		Debug.Log("posY");
+		Debug.Log(PlayerPrefs.GetFloat("posY"));
+		Debug.Log("Scene Name");
+		Debug.Log(PlayerPrefs.GetString("SaveStage"));
+
+		SceneManager.LoadScene("A0");
+	}
+
+	public void CreatePlayer(Vector3 playerPosition)
+	{
+		player_object = Instantiate(player, playerPosition, Quaternion.identity);
 	}
 }

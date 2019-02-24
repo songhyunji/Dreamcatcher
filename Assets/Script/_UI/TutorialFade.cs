@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TutorialFade : MonoBehaviour
 {
-    Vector2 SizeVector = new Vector2(Screen.width, Screen.height);
+    //Vector2 SizeVector = new Vector2(Screen.width, Screen.height);
 
     float alpha = 1.5f;
     public float speed = 0.015f;
@@ -13,15 +13,18 @@ public class TutorialFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<RectTransform>().sizeDelta = SizeVector; // 스크린 사이즈와 동일하게 사이즈 맞추기
+        //this.GetComponent<RectTransform>().sizeDelta = SizeVector; // 스크린 사이즈와 동일하게 사이즈 맞추기
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Image>().CrossFadeAlpha(alpha, 0f, true);
+		if(alpha>=0)
+		{
+			this.GetComponent<Image>().CrossFadeAlpha(alpha, 0f, true);
 
-        alpha -= speed;
+			alpha -= speed;
+		}
     }
 }

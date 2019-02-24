@@ -33,7 +33,17 @@ public class BtnManager : MonoBehaviour {
 
 	public void LoadBtnPress()
 	{
-		StartCoroutine(FadeImage(false, 2));
+		loadSceneName = PlayerPrefs.GetString("SaveStage");
+		if (loadSceneName.Length == 0) // 저장된 데이터가 없을 때
+		{
+			Debug.Log("No data");
+			errorLoadPopup.SetActive(true);
+		}
+		else
+		{
+			StartCoroutine(FadeImage(false, 2));
+		}
+
     }
 
 	public void OptionBtnPress()
@@ -88,39 +98,17 @@ public class BtnManager : MonoBehaviour {
 			switch (caseNum)
 			{
 				case 1: // start game
-					CreatePlayer(new Vector3(-2.11f, -1.5f));
+					SceneManager.LoadScene("Prologue");
 
-					PlayerPrefs.DeleteAll();
 
-					PlayerPrefs.SetInt("wolf", 0); // 0 == false, 1 == true
-					PlayerPrefs.SetFloat("posX", -2.11f);
-					PlayerPrefs.SetFloat("posY", -1.5f);
-					PlayerPrefs.SetString("SaveStage", "A0");
-					Debug.Log("저장");
-
-					Debug.Log("posX");
-					Debug.Log(PlayerPrefs.GetFloat("posX"));
-					Debug.Log("posY");
-					Debug.Log(PlayerPrefs.GetFloat("posY"));
-					Debug.Log("Scene Name");
-					Debug.Log(PlayerPrefs.GetString("SaveStage"));
-
-					SceneManager.LoadScene("A0");
 					break;
 				case 2: // load game
 					playerposX = PlayerPrefs.GetFloat("posX");
 					playerposY = PlayerPrefs.GetFloat("posY");
 					loadSceneName = PlayerPrefs.GetString("SaveStage");
 
-					if (loadSceneName.Length == 0)
-					{
-						errorLoadPopup.SetActive(true);
-					}
-					else
-					{
-						CreatePlayer(new Vector3(playerposX, playerposY));
-						SceneManager.LoadScene(loadSceneName);
-					}
+					CreatePlayer(new Vector3(playerposX, playerposY));
+					SceneManager.LoadScene(loadSceneName);
 					break;
 				default:
 					break;

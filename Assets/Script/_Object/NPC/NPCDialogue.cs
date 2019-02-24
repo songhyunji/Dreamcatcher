@@ -9,7 +9,8 @@ public class NPCDialogue : MonoBehaviour
 	private bool isSpeaking;
 	private bool playerIn;
 
-	public string[] dialogues = new string[6];
+	public string[] dialogues = new string[7];
+	public string[] dialogues_after = new string[5];
 	public Text _text;
 	public GameObject img;
 	public GameObject key;
@@ -17,6 +18,7 @@ public class NPCDialogue : MonoBehaviour
 	public Inventory_test invenScript;
 
 	private int wolfEventEnd; // 1 == true, 0 == false;
+	private int wolf; // 1 == true, 0 == false
 
 	private void Start()
 	{
@@ -29,16 +31,17 @@ public class NPCDialogue : MonoBehaviour
 		{
 			playerIn = true;
 			wolfEventEnd = PlayerPrefs.GetInt("wolfEventEnd");
+			wolf = PlayerPrefs.GetInt("wolf");
 			if (firstMeet && wolfEventEnd == 0) // first meet && wolf event didn't end
 			{
 				img.SetActive(true);
 				StartCoroutine(npcDialogue());
 			}
 
-			if(firstMeet && wolfEventEnd==1) // wolf event end -> wolf btn == true
+			if(firstMeet && wolfEventEnd == 1 && wolf == 0) // wolf event end -> wolf btn == true
 			{
-				invenScript.UseLily();
-				PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
+				img.SetActive(true);
+				StartCoroutine(npcDialogue_after());
 			}
 
 		}
@@ -66,7 +69,7 @@ public class NPCDialogue : MonoBehaviour
 		}
 		else
 		{
-			for(int i=4;i<=5; i++)
+			for(int i=5;i<=6; i++)
 			{
 				_text.text = dialogues[i];
 				yield return new WaitForSeconds(3);
@@ -77,10 +80,26 @@ public class NPCDialogue : MonoBehaviour
 		}
 
 	}
-	
+
+	IEnumerator npcDialogue_after()
+	{
+		invenScript.UseLily();
+		foreach (string dialogue in dialogues_after)
+		{
+			_text.text = dialogue;
+			yield return new WaitForSeconds(3);
+		}
+		_text.text = "";
+		img.SetActive(false);
+		isSpeaking = false;
+		PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
+	}
+
 	public void PressInteractBtn()
 	{
-		if(!isSpeaking&&playerIn)
+		wolf = PlayerPrefs.GetInt("wolf");
+
+		if (!isSpeaking && playerIn && wolf == 0)
 		{
 			img.SetActive(true);
 			isSpeaking = true;
