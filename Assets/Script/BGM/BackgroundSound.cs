@@ -11,7 +11,8 @@ public class BackgroundSound : MonoBehaviour
 
 	public AudioClip mainBGM;
 	public AudioClip stageABGM;
-	
+	public AudioClip stageBBGM;
+
 
 	void Awake()
 	{
@@ -44,22 +45,20 @@ public class BackgroundSound : MonoBehaviour
 				}
 
 				break;
-			default:
+			case 1:
 				_audioSource.clip = stageABGM;
 				if (!_audioSource.isPlaying)
 				{
 					_audioSource.Play();
 				}
 				break;
-
-				/*case 1:
-					_audioSource.clip = stageABGM;
-					if (!_audioSource.isPlaying)
-					{
-						_audioSource.Play();
-					}
-					break;
-					*/
+			default:
+				_audioSource.clip = stageBBGM;
+				if (!_audioSource.isPlaying)
+				{
+					_audioSource.Play();
+				}
+				break;
 		}
 	}
 }

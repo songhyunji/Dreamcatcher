@@ -2865,6 +2865,7 @@ MonoBehaviour:
   y: 0
   mainBGM: {fileID: 8300000, guid: b5f3bf9ba8b341f4ab3e7cbae53662ef, type: 3}
   stageABGM: {fileID: 8300000, guid: 9ec29a4039ba8644c9464c1ddbf340c1, type: 3}
+  stageBBGM: {fileID: 8300000, guid: 2977eaeba8de20543872cebc7f286790, type: 3}
 --- !u!1 &845820795
 GameObject:
   m_ObjectHideFlags: 0
