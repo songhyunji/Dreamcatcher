@@ -520,6 +520,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12232790c86ce204cb668aa76040a630, type: 3}
+--- !u!114 &338867887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3351793398395676901, guid: 12232790c86ce204cb668aa76040a630,
+    type: 3}
+  m_PrefabInstance: {fileID: 338867886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b52d9e81ae32f41aaf6d4dcbf2394c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &513072064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1074,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: d2830b0524c497844afa656a2783013a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 481d7a152f9ad7c4abbaf1455dad4a14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1082,7 +1094,7 @@ Transform:
   m_GameObject: {fileID: 770083902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 126.7287, y: 3.838, z: 0}
-  m_LocalScale: {x: 2.9983008, y: -3.5515342, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1225555125}
   m_RootOrder: 2
@@ -1104,7 +1116,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8, y: 7.2}
+    oldSize: {x: 38.4, y: 25.6}
     newSize: {x: 12.8, y: 7.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1112,10 +1124,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -6.3999996, y: 3.6}
-      - {x: -6.3999996, y: -3.6}
-      - {x: 6.3999996, y: -3.6}
-      - {x: 6.3999996, y: 3.6}
+    - - {x: -19.204689, y: 12.8}
+      - {x: -19.204689, y: -12.8}
+      - {x: 19.204689, y: -12.8}
+      - {x: 19.204689, y: 12.8}
 --- !u!1839735485 &770083906
 Tilemap:
   m_ObjectHideFlags: 0
@@ -1887,6 +1899,11 @@ PrefabInstance:
       propertyPath: fade
       value: 
       objectReference: {fileID: 1733308258}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: titleScript
+      value: 
+      objectReference: {fileID: 338867887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318beaab825bbf24fa801f517e3d4f83, type: 3}
 --- !u!114 &1177686031 stripped
@@ -7259,11 +7276,11 @@ PrefabInstance:
       objectReference: {fileID: 770083905}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 134.72087
+      value: 132.09074
       objectReference: {fileID: 0}
     - target: {fileID: 4842146059773464, guid: db868f80c49cc4846ad7c621a925b411, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6124778
+      value: 0.59800005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868f80c49cc4846ad7c621a925b411, type: 3}

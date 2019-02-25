@@ -81,7 +81,6 @@
     <Compile Include="Assets\Script\_Object\Nettle\Nettle.cs" />
     <Compile Include="Assets\Script\_Object\Nettle\Nettle_Key.cs" />
     <Compile Include="Assets\Script\_Object\Nettle\Nettle_key_button.cs" />
-    <Compile Include="Assets\Script\_Object\NPC\NPC_Wolf.cs" />
     <Compile Include="Assets\Script\_Object\NPC\NPCDialogue.cs" />
     <Compile Include="Assets\Script\_Object\Rune\Rune.cs" />
     <Compile Include="Assets\Script\_Player\Canvas_Keep.cs" />
@@ -112,11 +111,6 @@
     <Compile Include="Assets\Script\End\DemoEnd_text.cs" />
     <Compile Include="Assets\Script\Prologue\prologue_text.cs" />
     <Compile Include="Assets\Script\SaveData.cs" />
-    <Compile Include="Assets\Shader\ShaderScript.cs" />
-    <None Include="Assets\Shader\Background_1.shader" />
-    <None Include="Assets\Shader\Background_2.shader" />
-    <None Include="Assets\Shader\Background_4.shader" />
-    <None Include="Assets\Shader\Background_3.shader" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

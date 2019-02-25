@@ -9,7 +9,9 @@ public class NPCDialogue : MonoBehaviour
 	private bool isSpeaking;
 	private bool playerIn;
 
+	[TextArea]
 	public string[] dialogues = new string[7];
+	[TextArea]
 	public string[] dialogues_after = new string[5];
 	public Text _text;
 	public GameObject img;
