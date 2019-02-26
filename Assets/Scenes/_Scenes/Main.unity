@@ -868,6 +868,8 @@ MonoBehaviour:
   player_object: {fileID: 0}
   canvas: {fileID: 1470679122}
   fade: {fileID: 1871801476}
+  touchSound: {fileID: 8300000, guid: 968e4ca4df1a05d499aaf1e77d5f3312, type: 3}
+  buttonSound: {fileID: 8300000, guid: 8a0c0775e2412bb4a83741d5854b4a52, type: 3}
 --- !u!4 &275760105
 Transform:
   m_ObjectHideFlags: 0

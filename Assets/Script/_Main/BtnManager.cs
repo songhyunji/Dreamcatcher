@@ -20,6 +20,8 @@ public class BtnManager : MonoBehaviour {
 	private Image img;
 
 	private AudioSource _audioSource;
+	public AudioClip touchSound;
+	public AudioClip buttonSound;
 
 	private void Start()
     {
@@ -30,12 +32,14 @@ public class BtnManager : MonoBehaviour {
 
     public void StartBtnPress()
 	{
+		_audioSource.clip = touchSound;
 		_audioSource.Play();
 		StartCoroutine(FadeImage(false, 1));
 	}
 
 	public void LoadBtnPress()
 	{
+		_audioSource.clip = touchSound;
 		_audioSource.Play();
 		loadSceneName = PlayerPrefs.GetString("SaveStage");
 		if (loadSceneName.Length == 0) // 저장된 데이터가 없을 때
@@ -52,6 +56,7 @@ public class BtnManager : MonoBehaviour {
 
 	public void ExitLoadPopup()
 	{
+		_audioSource.clip = buttonSound;
 		_audioSource.Play();
 		errorLoadPopup.SetActive(false);
 	}
