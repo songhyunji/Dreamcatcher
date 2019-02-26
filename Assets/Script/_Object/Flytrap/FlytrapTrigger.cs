@@ -11,9 +11,12 @@ public class FlytrapTrigger : MonoBehaviour
 	public Sprite flytrapTriggerOn;
 	public Sprite flytrapTriggerOff;
 
+	private AudioSource _audioSource;
+
 	private void Start()
 	{
 		_spriteRenderer = GetComponent<SpriteRenderer>();
+		_audioSource = GetComponent<AudioSource>();
 	}
 
 	private void Update()
@@ -26,13 +29,16 @@ public class FlytrapTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+		if(!_audioSource.isPlaying)
+		{
+			_audioSource.Play();
+		}
 		_spriteRenderer.sprite = flytrapTriggerOn;
         objectList.Add(collision);
     }
     
     private void OnTriggerExit2D(Collider2D collision)
     {
-
 		objectList.Remove(collision);
         StartCoroutine("CannotEat");
     }

@@ -17,10 +17,7 @@ public class JumpButton : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData ped)
 	{
-		if (!_audioSource.isPlaying)
-		{
-			_audioSource.Play();
-		}
+		_audioSource.Play();
 		playerScript.Jump();
 
 	}

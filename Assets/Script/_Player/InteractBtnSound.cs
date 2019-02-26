@@ -13,13 +13,9 @@ public class InteractBtnSound : MonoBehaviour
 		_audioSource = GetComponent<AudioSource>();
     }
 
-	public void OnPointerDown(PointerEventData ped)
+	public void PressInteractBtn()
 	{
 		Debug.Log("interact 버튼 눌렸음");
-		if(!_audioSource.isPlaying)
-		{
-			_audioSource.Play();
-		}
-
+		_audioSource.Play();
 	}
 }

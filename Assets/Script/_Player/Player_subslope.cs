@@ -40,7 +40,9 @@ public class Player_subslope : MonoBehaviour {
 	private ContactPoint2D[] contactPoint = new ContactPoint2D[16];
 
 	private AudioSource _audioSource;
-	public AudioClip[] _audio = new AudioClip[5];
+	public AudioClip[] _audio_walk = new AudioClip[5];
+	public AudioClip[] _audio_jump = new AudioClip[3];
+	public AudioClip[] _audio_ladder = new AudioClip[4];
 	private AudioClip _audioClip;
 	private float targetTime = 0;
 
@@ -110,13 +112,14 @@ public class Player_subslope : MonoBehaviour {
 				}
 				else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
 				{
-					if (!_audioSource.isPlaying)
+					if (!_audioSource.isPlaying && isGround)
 					{
-						int index = Random.Range(0, _audio.Length);
-						_audioClip = _audio[index];
+						int index = Random.Range(0, _audio_walk.Length);
+						_audioClip = _audio_walk[index];
 						_audioSource.clip = _audioClip;
 						_audioSource.Play();
 					}
+
 					direction = touch.position - startPos;
 					if (direction.x > 0)
 					{
@@ -167,6 +170,14 @@ public class Player_subslope : MonoBehaviour {
 				}
 				else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
 				{
+					if (!_audioSource.isPlaying)
+					{
+						int index = Random.Range(0, _audio_ladder.Length);
+						_audioClip = _audio_ladder[index];
+						_audioSource.clip = _audioClip;
+						_audioSource.Play();
+					}
+
 					direction = touch.position - startPos;
 					if (direction.y > 0)
 					{
@@ -217,6 +228,11 @@ public class Player_subslope : MonoBehaviour {
 		{
 			if (isGround)
 			{
+				int index = Random.Range(0, _audio_jump.Length);
+				_audioClip = _audio_jump[index];
+				_audioSource.clip = _audioClip;
+				_audioSource.Play();
+
 				isJumping = true;
 				animator.SetBool("isJumping", true);
 				animator.SetBool("isWalking", false);

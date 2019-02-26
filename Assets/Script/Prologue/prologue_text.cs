@@ -29,39 +29,44 @@ public class prologue_text : MonoBehaviour
 	{
 		if(Input.touchCount > 0||Input.GetKeyDown(KeyCode.Space))
 		{
-			if(isSaying)
+			Touch touch = Input.GetTouch(0);
+			if (touch.phase == TouchPhase.Ended)
 			{
-				isSaying = false;
-				StopAllCoroutines();
-				if(i==3)
+				if (isSaying)
 				{
-					text.text = "어느날 숲으로 들어간 아버지가\n\n<color=red>사라져버리기</color> 전까진 말이죠.";
-				}
-				else if (i == 6)
-				{
-					text.text = "막연한 희망을 품고, 아이는 집을 나섭니다.\n\n어머니의 유품인 <color=red>붉은 로브</color>를 뒤집어쓰고. . .";
+					isSaying = false;
+					StopAllCoroutines();
+					if (i == 3)
+					{
+						text.text = "어느날 숲으로 들어간 아버지가\n\n<color=red>사라져버리기</color> 전까진 말이죠.";
+					}
+					else if (i == 6)
+					{
+						text.text = "막연한 희망을 품고, 아이는 집을 나섭니다.\n\n어머니의 유품인 <color=red>붉은 로브</color>를 뒤집어쓰고. . .";
+					}
+					else
+					{
+						text.text = dialogues[i];
+					}
 				}
 				else
 				{
-					text.text = dialogues[i];
+					if (i < dialogues.Length - 1)
+					{
+						text.text = "";
+						i++;
+						isSaying = true;
+						StartCoroutine(Dialogue());
+					}
+					else
+					{
+						Debug.Log("end");
+						fade.gameObject.SetActive(true);
+						StartCoroutine(FadeImage());
+					}
 				}
 			}
-			else
-			{
-				if (i < dialogues.Length - 1)
-				{
-					text.text = "";
-					i++;
-					isSaying = true;
-					StartCoroutine(Dialogue());
-				}
-				else
-				{
-					Debug.Log("end");
-					fade.gameObject.SetActive(true);
-					StartCoroutine(FadeImage());
-				}
-			}
+			
 		}
 	}
 

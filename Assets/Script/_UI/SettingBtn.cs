@@ -31,8 +31,8 @@ public class SettingBtn : MonoBehaviour
 
 	public void SettingBtnPress()
 	{
-		_audioSource.Play();
-		Invoke("DelayTime", _audioSource.clip.length);
+		Time.timeScale = 0;
+		settingPanel.SetActive(true);
 	}
 
 	public void HomeBtnPress()
@@ -63,11 +63,5 @@ public class SettingBtn : MonoBehaviour
 	private void RestartSceneFunc()
 	{
 		fadeSceneScript.RestartSceneFunc();
-	}
-
-	private void DelayTime()
-	{
-		Time.timeScale = 0;
-		settingPanel.SetActive(true);
 	}
 }
