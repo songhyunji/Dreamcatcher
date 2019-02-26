@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/_Scenes/Map A/A0.unity
+=======
+- path: Assets/Scenes/_Scenes/Map A/A1.unity
+>>>>>>> cabf9e7c73c22d7ae8089fbed4a3d62b671e7086
   isLoaded: 1
   isActive: 1
