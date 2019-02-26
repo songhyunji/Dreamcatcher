@@ -10917,7 +10917,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fcfdb2aea08ab47a67fd95de5d133d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allAudioSources: []
+  touchSound: {fileID: 8300000, guid: 968e4ca4df1a05d499aaf1e77d5f3312, type: 3}
+  buttonSound: {fileID: 8300000, guid: 8a0c0775e2412bb4a83741d5854b4a52, type: 3}
   settingPanel: {fileID: 3587730148708128323}
   errorRestartPopup: {fileID: 3587730147731481404}
   player: {fileID: 0}

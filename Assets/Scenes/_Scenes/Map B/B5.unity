@@ -4300,6 +4300,16 @@ PrefabInstance:
       propertyPath: fadeSceneScript
       value: 
       objectReference: {fileID: 1587542858}
+    - target: {fileID: 3587730148356896845, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a0c0775e2412bb4a83741d5854b4a52, type: 3}
+    - target: {fileID: 3587730148356896845, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: touchSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 968e4ca4df1a05d499aaf1e77d5f3312, type: 3}
     - target: {fileID: 224799041892821620, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: m_RootOrder
@@ -7022,6 +7032,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fade
       objectReference: {fileID: 0}
+    - target: {fileID: 7970010409400096045, guid: 3d90a46fbca986344827105490caa2d9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7970010409400096044, guid: 3d90a46fbca986344827105490caa2d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7141,11 +7156,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7970010409400096045, guid: 3d90a46fbca986344827105490caa2d9,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d90a46fbca986344827105490caa2d9, type: 3}
