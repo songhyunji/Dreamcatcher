@@ -40,7 +40,6 @@ public class SettingBtn : MonoBehaviour
 
 	public void HomeBtnPress()
 	{
-		AudioListener.pause = false;
 		Time.timeScale = 1;
 		_audioSource.Play();
 		fadeSceneScript.HomeBtnPress();
@@ -48,7 +47,6 @@ public class SettingBtn : MonoBehaviour
 
 	public void RestartBtnPress()
 	{
-		AudioListener.pause = false;
 		Time.timeScale = 1;
 		_audioSource.Play();
 		RestartSceneFunc();

@@ -135,7 +135,7 @@ public class FadeScene : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(5); // 5초 동안 tutorial img 띄워놓음
+        yield return new WaitForSeconds(2); // 2초 동안 tutorial img 띄워놓음
 
         for (float i = 1; i >= 0; i -= 0.015f)
         {
