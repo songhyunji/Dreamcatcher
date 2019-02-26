@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3436,6 +3436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fcfdb2aea08ab47a67fd95de5d133d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allAudioSources: []
   settingPanel: {fileID: 129139927}
   errorRestartPopup: {fileID: 1299788200}
   player: {fileID: 0}
@@ -8211,6 +8212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351793398395676901, guid: 12232790c86ce204cb668aa76040a630,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12232790c86ce204cb668aa76040a630, type: 3}

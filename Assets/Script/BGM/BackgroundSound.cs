@@ -12,6 +12,7 @@ public class BackgroundSound : MonoBehaviour
 	public AudioClip mainBGM;
 	public AudioClip stageABGM;
 	public AudioClip stageBBGM;
+	public AudioClip prologueBGM;
 
 
 	void Awake()
@@ -67,7 +68,11 @@ public class BackgroundSound : MonoBehaviour
 				}
 				break;
 			default:
-				_audioSource.Stop();
+				_audioSource.clip = prologueBGM;
+				if (!_audioSource.isPlaying)
+				{
+					_audioSource.Play();
+				}
 				break;
 		}
 	}

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class SettingBtn : MonoBehaviour
 {
 	private AudioSource _audioSource;
+	[SerializeField]
+	private AudioSource[] allAudioSources;
 
 	public GameObject settingPanel;
 	public GameObject errorRestartPopup;
@@ -31,6 +33,7 @@ public class SettingBtn : MonoBehaviour
 
 	public void SettingBtnPress()
 	{
+		AudioListener.pause = true;
 		Time.timeScale = 0;
 		settingPanel.SetActive(true);
 	}
@@ -55,6 +58,7 @@ public class SettingBtn : MonoBehaviour
 
 	public void ExitSettingPanel()
 	{
+		AudioListener.pause = false;
 		Time.timeScale = 1;
 		_audioSource.Play();
 		settingPanel.SetActive(false);
@@ -63,5 +67,10 @@ public class SettingBtn : MonoBehaviour
 	private void RestartSceneFunc()
 	{
 		fadeSceneScript.RestartSceneFunc();
+	}
+
+	void StopAllAudio()
+	{
+
 	}
 }

@@ -79,8 +79,11 @@ public class FadeScene : MonoBehaviour
                     {
                         StartCoroutine(TutorialFade());
                     }
-                    titleScript.startFade = true;
-                    Debug.Log("startFade값 true로 변경");                    
+					else
+					{
+						titleScript.startFade = true;
+						Debug.Log("startFade값 true로 변경");
+					}
                     break;
                 default:
                     break;
@@ -140,6 +143,8 @@ public class FadeScene : MonoBehaviour
             yield return null;
         }
         tutorial.gameObject.SetActive(false);
-    }
+		titleScript.startFade = true;
+		Debug.Log("startFade값 true로 변경");
+	}
 
 }
