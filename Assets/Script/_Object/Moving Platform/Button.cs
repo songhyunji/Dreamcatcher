@@ -19,9 +19,9 @@ public class Button : MonoBehaviour
 	{
 		if(collision.CompareTag("Player") || collision.CompareTag("Foothold"))
 		{
-			isOn = true;
 			_audioSource.Play();
 			GetComponent<SpriteRenderer>().sprite = btnOn;
+			StartCoroutine(WaitForSeconds(1, true));
 		}
 	}
 
@@ -29,8 +29,14 @@ public class Button : MonoBehaviour
 	{
 		if (collision.CompareTag("Player") || collision.CompareTag("Foothold"))
 		{
-			isOn = false;
 			GetComponent<SpriteRenderer>().sprite = btnOff;
+			StartCoroutine(WaitForSeconds(1, false));
 		}
+	}
+
+	IEnumerator WaitForSeconds(int i, bool b)
+	{
+		yield return new WaitForSeconds(i);
+		isOn = b;
 	}
 }

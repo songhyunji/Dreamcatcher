@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Flytrap : MonoBehaviour
 {
     public bool canEat = true;
+	private bool isEating;
     public GameObject player;
 	public Player_subslope playerScript;
 
@@ -28,14 +29,18 @@ public class Flytrap : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!canEat)
-        {
-			GetComponent<SpriteRenderer>().sprite = flytrapOn;
-        }
-        if(canEat)
-        {
-			GetComponent<SpriteRenderer>().sprite = flytrapOff;
-        }
+		if(!isEating)
+		{
+			if (!canEat)
+			{
+				GetComponent<SpriteRenderer>().sprite = flytrapOn;
+			}
+			if (canEat)
+			{
+				GetComponent<SpriteRenderer>().sprite = flytrapOff;
+			}
+		}
+
     }
 
     private void Eat()
@@ -51,6 +56,7 @@ public class Flytrap : MonoBehaviour
         {
             Debug.Log("Eat");
             canEat = false;
+			isEating = true;
             Eat();
         }
     }

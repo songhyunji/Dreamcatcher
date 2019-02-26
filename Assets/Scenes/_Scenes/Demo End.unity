@@ -660,10 +660,10 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.2
   m_Text: "<color=#BE78F6><size=45>T</size><size=35>EAM</size>  <size=50>D</size><size=35>REAMCATCHER</size>
-    \n\uD300\uC7A5</color>\t\t\t\t\uC7A5\uC2B9\uD638\n<color=#BE78F6>\uAE30\uD68D</color>\t\t\t\t\uC774\uC131\uCC2C,
-    \uC7A5\uC2B9\uD638\n<color=#BE78F6>\uC0AC\uC6B4\uB4DC</color>\t\t\t\uC548\uC6B0\uB9BC\n<color=#BE78F6>\uC544\uD2B8</color>\t\t\t\t\uBC15\uC8FC\uC5F0,
-    \uC774\uC18C\uC601\n<color=#BE78F6>\uD504\uB85C\uADF8\uB798\uBC0D</color>\t\uBC29\uC2B9\uD76C,
-    \uC1A1\uD604\uC9C0\n<size=25><color=#BE78F6>Special Thanks to </color>\uBC15\uD604\uC815</size>\n<size=25><color=#BE78F6>Team
+    \n\uD300\uC7A5</color>\t\t\t\t\t\uC7A5\uC2B9\uD638\n<color=#BE78F6>\uAE30\uD68D</color>\t\t\t\t\t\uC774\uC131\uCC2C,
+    \uC7A5\uC2B9\uD638\n<color=#BE78F6>\uC0AC\uC6B4\uB4DC</color>\t\t\t\t\uC548\uC6B0\uB9BC\n<color=#BE78F6>\uC544\uD2B8</color>\t\t\t\t\t\uBC15\uC8FC\uC5F0,
+    \uC774\uC18C\uC601\n<color=#BE78F6>\uD504\uB85C\uADF8\uB798\uBC0D</color>\t\t\uBC29\uC2B9\uD76C,
+    \uC1A1\uD604\uC9C0\n<size=25><color=#BE78F6>Special Thanks to </color>\t\t\uBC15\uD604\uC815</size>\n<size=25><color=#BE78F6>Team
     Dreamcatcher\uB294 \uB300\uD559\uC0DD\uC5F0\uD569 \uAC8C\uC784\uC81C\uC791 \uB3D9\uC544\uB9AC</color>
     \uBE0C\uB9BF\uC9C0 <color=#BE78F6>\uC18C\uC18D\uC785\uB2C8\uB2E4.\r</color></size>\n"
 --- !u!222 &1581760490
@@ -703,7 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82577e0eff000674297ae57de403f3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.05
   img: {fileID: 43685190}
   firstText: {fileID: 1315453776}
   secondText: {fileID: 1258121615}

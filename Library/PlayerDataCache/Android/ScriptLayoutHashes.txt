@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/songh/Desktop/dreamcatcher_Line_Submission(final).apk
+C:/Users/songh/Desktop/dreamcatcher_Line_Submission(final)(3).apk
 SceneListBegin?
 Assets/Scenes/_Scenes/Main.unity
 Assets/Scenes/_Scenes/Prologue.unity
@@ -35,7 +35,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 0cd7a5a8ecb60b32e20416f9c8b617a2 Assembly-CSharp.dll:.VcamDirectionInB2
 f72843916d157884b92a9e11af2b02e0 Assembly-CSharp.dll:.JumpButton
-792c130a187510abc940c6b49251f197 Assembly-CSharp.dll:.NPCDialogue
+402738642874e3b3405bf6504122d469 Assembly-CSharp.dll:.NPCDialogue
 24ef1db3caa034833d3bab2ebf947705 Assembly-CSharp.dll:.Inventory_test
 a2113831d3323f931007e1b3812dc814 Cinemachine.dll:Cinemachine.CinemachineFollowZoom
 cf043d37865b2d498d120651fd3557af Assembly-CSharp.dll:.Collider_test

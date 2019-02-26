@@ -24,11 +24,18 @@ public class NPCDialogue : MonoBehaviour
 	private int wolf; // 1 == true, 0 == false
 	private AudioSource _audioSource;
 
+	public string saveName;
+
 	private void Start()
 	{
 		_audioSource = GetComponent<AudioSource>();
 		_text.text = "";
 		inventoryIndex = PlayerPrefs.GetInt("inventoryNum"); // if player has lily, inventoryIndex == 2 -> line 109 won't work
+
+		if (PlayerPrefs.HasKey(saveName))
+		{
+			LoadData();
+		}
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
@@ -55,34 +62,38 @@ public class NPCDialogue : MonoBehaviour
 
 	IEnumerator npcDialogue()
 	{
-		if(firstMeet)
+		if(!isSpeaking)
 		{
-			firstMeet = false;
-			foreach (string dialogue in dialogues)
+			isSpeaking = true;
+			if (firstMeet)
 			{
-				_text.text = dialogue;
-				yield return new WaitForSeconds(3);
-			}
-			_text.text = "";
-			img.SetActive(false);
-			isSpeaking = false;
+				firstMeet = false;
+				foreach (string dialogue in dialogues)
+				{
+					_text.text = dialogue;
+					yield return new WaitForSeconds(3);
+				}
+				_text.text = "";
+				img.SetActive(false);
+				isSpeaking = false;
 
-			if (key != null)
-			{
-				_audioSource.Play();
-				key.SetActive(true);
+				if (key != null)
+				{
+					_audioSource.Play();
+					key.SetActive(true);
+				}
 			}
-		}
-		else
-		{
-			for(int i=5;i<=6; i++)
+			else
 			{
-				_text.text = dialogues[i];
-				yield return new WaitForSeconds(3);
+				for (int i = 5; i <= 6; i++)
+				{
+					_text.text = dialogues[i];
+					yield return new WaitForSeconds(3);
+				}
+				_text.text = "";
+				img.SetActive(false);
+				isSpeaking = false;
 			}
-			_text.text = "";
-			img.SetActive(false);
-			isSpeaking = false;
 		}
 	}
 
@@ -101,6 +112,8 @@ public class NPCDialogue : MonoBehaviour
 			img.SetActive(false);
 			isSpeaking = false;
 			PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
+			SaveData();
+			Destroy(this.gameObject);
 		}
 	}
 
@@ -110,8 +123,24 @@ public class NPCDialogue : MonoBehaviour
 		if (!isSpeaking && playerIn && wolf == 0 && inventoryIndex != 2) // if player has lily(inventoryIndex == 2) -> it doesn't work
 		{
 			img.SetActive(true);
-			isSpeaking = true;
 			StartCoroutine(npcDialogue());
+		}
+	}
+
+	public void SaveData()
+	{
+		Destroy(this.gameObject);
+
+		PlayerPrefs.SetString(saveName, "destroy");
+	}
+
+	public void LoadData()
+	{
+		var data = PlayerPrefs.GetString(saveName);
+
+		if (data == "destroy")
+		{
+			Destroy(this.gameObject);
 		}
 	}
 

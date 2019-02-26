@@ -2542,16 +2542,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 8822607677684916146, guid: 9becc2746b8215f45b162609a996ed8b,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3587730148547050650, guid: 9becc2746b8215f45b162609a996ed8b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4495524548675223181, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2573,6 +2563,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: e18a223d5a2903c4bbfec472a42e87e9,
         type: 3}
+    - target: {fileID: 8822607677684916146, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587730148547050650, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114340580015642074, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
     - {fileID: 114768559281950012, guid: 9becc2746b8215f45b162609a996ed8b, type: 3}
@@ -2735,6 +2735,7 @@ MonoBehaviour:
   img: {fileID: 250788931}
   key: {fileID: 99155248}
   invenScript: {fileID: 1133796124}
+  saveName: wolfNPC
 --- !u!95 &862688956
 Animator:
   serializedVersion: 3
@@ -4169,7 +4170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398703876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 109.44, y: -2.56, z: 0}
+  m_LocalPosition: {x: 109.44, y: -1.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1100063443}
@@ -4734,7 +4735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672302942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.16, y: -4.48, z: 0}
+  m_LocalPosition: {x: 44.16, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1100063443}

@@ -123,7 +123,7 @@ MonoBehaviour:
   canEat: 1
   player: {fileID: 0}
   playerScript: {fileID: 0}
-  flytrapOff: {fileID: 21300000, guid: cb0036855c8f25948a5fd9c5119c44ec, type: 3}
+  flytrapOff: {fileID: 21300000, guid: 1b8b3bc98170fb543a99b8026a22c1fa, type: 3}
   flytrapOn: {fileID: 21300000, guid: 33beb76aaa5f74a40bcdbeffbcd17955, type: 3}
   flytrapEat: {fileID: 21300000, guid: 807e71ebb1c53bb4bb3574f98186de23, type: 3}
 --- !u!82 &268154508199501907
