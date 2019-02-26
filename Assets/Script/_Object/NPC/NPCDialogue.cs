@@ -8,6 +8,7 @@ public class NPCDialogue : MonoBehaviour
 	private bool firstMeet = true;
 	private bool isSpeaking;
 	private bool playerIn;
+	private int inventoryIndex;
 
 	[TextArea]
 	public string[] dialogues = new string[7];
@@ -27,6 +28,7 @@ public class NPCDialogue : MonoBehaviour
 	{
 		_audioSource = GetComponent<AudioSource>();
 		_text.text = "";
+		inventoryIndex = PlayerPrefs.GetInt("inventoryNum"); // if player has lily, inventoryIndex == 2 -> line 109 won't work
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
@@ -88,6 +90,7 @@ public class NPCDialogue : MonoBehaviour
 
 	IEnumerator npcDialogue_after()
 	{
+
 		invenScript.UseLily();
 		foreach (string dialogue in dialogues_after)
 		{
@@ -103,8 +106,7 @@ public class NPCDialogue : MonoBehaviour
 	public void PressInteractBtn()
 	{
 		wolf = PlayerPrefs.GetInt("wolf");
-
-		if (!isSpeaking && playerIn && wolf == 0)
+		if (!isSpeaking && playerIn && wolf == 0 && inventoryIndex != 2) // if player has lily(inventoryIndex == 2) -> it doesn't work
 		{
 			img.SetActive(true);
 			isSpeaking = true;
