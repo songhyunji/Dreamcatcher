@@ -37,7 +37,7 @@ public class BackgroundSound : MonoBehaviour
 
 		switch (y)
 		{
-			case 0:
+			case 0: // main Scene
 				_audioSource.clip = mainBGM;
 				if (!_audioSource.isPlaying)
 				{
@@ -45,19 +45,21 @@ public class BackgroundSound : MonoBehaviour
 				}
 
 				break;
-			case 1:
+			case 1: // A0 Scene
 				_audioSource.clip = stageABGM;
 				if (!_audioSource.isPlaying)
 				{
 					_audioSource.Play();
 				}
 				break;
-			default:
+			case 5: // B1 Scene
 				_audioSource.clip = stageBBGM;
 				if (!_audioSource.isPlaying)
 				{
 					_audioSource.Play();
 				}
+				break;
+			default:
 				break;
 		}
 	}

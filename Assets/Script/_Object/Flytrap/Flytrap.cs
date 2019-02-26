@@ -17,10 +17,13 @@ public class Flytrap : MonoBehaviour
 	public Sprite flytrapOn;
 	public Sprite flytrapEat;
 
+	private AudioSource _audioSource;
+
 	private void Start()
     {
         player = GameObject.Find("TestPlayer(Clone)");
 		playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
+		_audioSource = GetComponent<AudioSource>();
 	}
 
     private void FixedUpdate()
@@ -37,6 +40,7 @@ public class Flytrap : MonoBehaviour
 
     private void Eat()
     {
+		_audioSource.Play();
 		GetComponent<SpriteRenderer>().sprite = flytrapEat;
 		playerScript.Die();
 	}

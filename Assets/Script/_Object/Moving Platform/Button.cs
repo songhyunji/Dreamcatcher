@@ -8,11 +8,19 @@ public class Button : MonoBehaviour
 	public Sprite btnOn;
 	public bool isOn;
 
+	private AudioSource _audioSource;
+
+	private void Start()
+	{
+		_audioSource = GetComponent<AudioSource>();
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.CompareTag("Player") || collision.CompareTag("Foothold"))
 		{
 			isOn = true;
+			_audioSource.Play();
 			GetComponent<SpriteRenderer>().sprite = btnOn;
 		}
 	}

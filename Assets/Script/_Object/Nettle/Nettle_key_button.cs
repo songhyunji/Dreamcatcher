@@ -6,6 +6,7 @@ public class Nettle_key_button : MonoBehaviour
 {
     public Button buttonScript;
 
+	private AudioSource _audioSource;
 	private Rigidbody2D rb2D;
 	private BoxCollider2D collider2D;
 	private bool isGround = false;
@@ -14,6 +15,7 @@ public class Nettle_key_button : MonoBehaviour
 	{
 		rb2D = GetComponent<Rigidbody2D>();
 		collider2D = GetComponent<BoxCollider2D>();
+		_audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -29,6 +31,7 @@ public class Nettle_key_button : MonoBehaviour
 	{
 		if(collision.gameObject.CompareTag("Ground"))
 		{
+			_audioSource.Play();
 			isGround = true;
 			rb2D.gravityScale = 0;
 			collider2D.isTrigger = true;

@@ -12,6 +12,7 @@ public class Apple1 : MonoBehaviour {
     private Rigidbody2D rb2D;
 	private Transform pos;
     private Collider2D playerCollider;
+	private AudioSource _audioSource;
 
 	private bool inGround;
 
@@ -32,6 +33,7 @@ public class Apple1 : MonoBehaviour {
         rb2D = GetComponent<Rigidbody2D>();
 		pos = player.GetComponent<Transform>();
 		rb2D.gravityScale = 0;
+		_audioSource = GetComponent<AudioSource>();
 
 		if (PlayerPrefs.HasKey(saveName))
 		{
@@ -79,6 +81,11 @@ public class Apple1 : MonoBehaviour {
 		{
 			if (!isAttatch)
 			{
+				if (!_audioSource.isPlaying)
+				{
+					_audioSource.Play();
+				}
+
 				Debug.Log("save position");
 				SaveData();
 			}

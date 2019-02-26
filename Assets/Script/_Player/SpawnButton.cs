@@ -17,6 +17,7 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 	[HideInInspector]
 	public GameObject wolf_clone;
 	public bool isSpawned = false;
+	public float controlPosition;
 
 	private void Start()
 	{
@@ -33,7 +34,8 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 		{
 			if (!isSpawned)
 			{
-				wolf_clone = Instantiate(wolf, player_renderer.bounds.center, Quaternion.identity);
+				wolf_clone = Instantiate(wolf, new Vector3(player_renderer.bounds.center.x, player_renderer.bounds.center.y - controlPosition), Quaternion.identity); // 스케일 player dir에 따라 조정
+				wolf_clone.GetComponent<Transform>().localScale = new Vector3(-playerScript.dir, 1);
 				isSpawned = true;
 			
 			}

@@ -8,18 +8,21 @@ public class MovingPlatform_switch_horizontal : MonoBehaviour
 	public float maxX;
 	public float minX;
 	public float speed;
-	public bool rightleft;
-	public bool leftright;
-    public Button buttonScript;
+	public bool rightleft; // 스위치 눌렀을 때 right, 안 눌렀을 때 left
+	public bool leftright; // 스위치 눌렀을 때 left, 안 눌렀을 때 right
+	public Button buttonScript;
+	public AudioClip moveSound;
+	public AudioClip moveEndSound;
 
+	private AudioSource _audioSource;
 	[SerializeField]
 	private Transform pos;
 	[SerializeField]
 	private float posX;
-	private bool goDown = false;
 	
 	private void Start()
 	{
+		_audioSource = GetComponent<AudioSource>();
 		pos = GetComponent<Transform>();
 	}
 
@@ -57,16 +60,44 @@ public class MovingPlatform_switch_horizontal : MonoBehaviour
         posX = pos.position.x;
 		if (posX < maxX)
 		{
+			if (!_audioSource.isPlaying)
+			{
+				_audioSource.clip = moveSound;
+				_audioSource.loop = true;
+				_audioSource.Play();
+			}
+
 			transform.Translate(Vector3.right * speed * Time.deltaTime);
 		}
-    }
+		else
+		{
+			if (_audioSource.isPlaying)
+			{
+				_audioSource.Stop();
+			}
+		}
+	}
 
 	void MoveLeft()
 	{
 		posX = pos.position.x;
 		if (posX > minX)
 		{
+			if (!_audioSource.isPlaying)
+			{
+				_audioSource.clip = moveSound;
+				_audioSource.loop = true;
+				_audioSource.Play();
+			}
+
 			transform.Translate(Vector3.left * speed * Time.deltaTime);
+		}
+		else
+		{
+			if (_audioSource.isPlaying)
+			{
+				_audioSource.Stop();
+			}
 		}
 	}
 }

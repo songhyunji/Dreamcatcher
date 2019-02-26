@@ -7,6 +7,8 @@ public class Nettle : MonoBehaviour
 	public Player_subslope playerScript;
 	public Inventory_test invenScript;
 
+	private AudioSource _audioSource;
+
 	private int hasKey;
 
 	public string saveName;
@@ -14,6 +16,7 @@ public class Nettle : MonoBehaviour
 	private void Start()
 	{
 		playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
+		_audioSource = GetComponent<AudioSource>();
 
 		if (PlayerPrefs.HasKey(saveName))
 		{
@@ -28,10 +31,16 @@ public class Nettle : MonoBehaviour
 			hasKey = PlayerPrefs.GetInt("hasKey");
 			if(hasKey == 1)
 			{
-				invenScript.UseKey();
-				SaveData();
+				_audioSource.Play();
+				Invoke("DestroyNettle", _audioSource.clip.length);
 			}
 		}
+	}
+
+	private void DestroyNettle()
+	{
+		invenScript.UseKey();
+		SaveData();
 	}
 
 	public void SaveData()

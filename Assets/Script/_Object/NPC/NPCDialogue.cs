@@ -21,9 +21,11 @@ public class NPCDialogue : MonoBehaviour
 
 	private int wolfEventEnd; // 1 == true, 0 == false;
 	private int wolf; // 1 == true, 0 == false
+	private AudioSource _audioSource;
 
 	private void Start()
 	{
+		_audioSource = GetComponent<AudioSource>();
 		_text.text = "";
 	}
 
@@ -66,6 +68,7 @@ public class NPCDialogue : MonoBehaviour
 
 			if (key != null)
 			{
+				_audioSource.Play();
 				key.SetActive(true);
 			}
 		}

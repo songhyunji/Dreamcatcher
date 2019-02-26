@@ -11,6 +11,7 @@ public class MovingPlatform : MonoBehaviour
     public bool isWork = false;
     public Rune runeScript;
 
+	private AudioSource _audioSource;
 	private Transform pos;
 	private float posY;
 	private bool goDown = false;
@@ -18,6 +19,7 @@ public class MovingPlatform : MonoBehaviour
 	private void Start()
 	{
 		pos = GetComponent<Transform>();
+		_audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -38,7 +40,12 @@ public class MovingPlatform : MonoBehaviour
 
     void Move()
     {
-        posY = pos.position.y;
+		if (!_audioSource.isPlaying)
+		{
+			_audioSource.Play();
+		}
+
+		posY = pos.position.y;
 
         if (goDown)
         {

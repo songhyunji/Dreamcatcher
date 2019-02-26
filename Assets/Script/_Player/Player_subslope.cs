@@ -138,7 +138,7 @@ public class Player_subslope : MonoBehaviour {
 				}
 				else if (touch.phase == TouchPhase.Ended)
 				{
-					dir = 0;
+					//dir = 0;
 					animator.SetBool("isWalking", false);
 				}
 			}

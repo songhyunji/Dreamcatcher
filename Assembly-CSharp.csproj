@@ -111,6 +111,7 @@
     <Compile Include="Assets\Script\End\DemoEnd_text.cs" />
     <Compile Include="Assets\Script\Prologue\prologue_text.cs" />
     <Compile Include="Assets\Script\SaveData.cs" />
+    <Compile Include="Assets\Sounds\Object\Object_룬\CloseRuneSound.cs" />
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/songh/Documents/GitHub/Dreamcatcher/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

@@ -11,9 +11,11 @@ public class Rune : MonoBehaviour
 
     public Sprite Runeoff, Runeon; // 룬 꺼짐, 룬 켜짐
     public SpriteRenderer Runeimg;
-    public bool RuneSwitch = true; // 룬이 켜지면 1, 룬이 꺼지면 0
+    public bool RuneSwitch = true;
 
 	public string saveName;
+
+	private AudioSource _audioSource;
 
 	// 만약 플레이어가 룬의 위치와 같을 때
 	// 플레이어가 인터랙트 버튼을 누르면 룬 불빛이 켜짐 -> 꺼짐
@@ -23,6 +25,7 @@ public class Rune : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		_audioSource = GetComponent<AudioSource>();
         player = GameObject.Find("TestPlayer");
 		// 전 스테이지에서 넘어오는 플레이어 오브젝트 찾기
 
@@ -47,6 +50,7 @@ public class Rune : MonoBehaviour
 
             if (RuneSwitch) // 룬이 켜져 있음
             {
+				_audioSource.Play();
                 Runeimg.sprite = Runeoff;
                 RuneSwitch = false;
                 Debug.Log("룬 꺼짐");
