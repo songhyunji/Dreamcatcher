@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SettingBtn : MonoBehaviour
 {
+	private AudioSource _audioSource;
 
 	public GameObject settingPanel;
 	public GameObject errorRestartPopup;
@@ -25,23 +26,26 @@ public class SettingBtn : MonoBehaviour
 	void Start()
 	{
 		player = GameObject.Find("TestPlayer(Clone)");
+		_audioSource = GetComponent<AudioSource>();
 	}
 
 	public void SettingBtnPress()
 	{
-		Time.timeScale = 0;
-		settingPanel.SetActive(true);
+		_audioSource.Play();
+		Invoke("DelayTime", _audioSource.clip.length);
 	}
 
 	public void HomeBtnPress()
 	{
+		Time.timeScale = 1;
+		_audioSource.Play();
 		fadeSceneScript.HomeBtnPress();
-
 	}
 
 	public void RestartBtnPress()
 	{
 		Time.timeScale = 1;
+		_audioSource.Play();
 		RestartSceneFunc();
 	}
 	public void ExiterrorRestartPopup()
@@ -52,11 +56,18 @@ public class SettingBtn : MonoBehaviour
 	public void ExitSettingPanel()
 	{
 		Time.timeScale = 1;
+		_audioSource.Play();
 		settingPanel.SetActive(false);
 	}
 
 	private void RestartSceneFunc()
 	{
 		fadeSceneScript.RestartSceneFunc();
+	}
+
+	private void DelayTime()
+	{
+		Time.timeScale = 0;
+		settingPanel.SetActive(true);
 	}
 }

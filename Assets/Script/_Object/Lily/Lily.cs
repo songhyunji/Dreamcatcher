@@ -7,10 +7,15 @@ public class Lily : MonoBehaviour
 	public GameObject lily;
 	public Inventory_test invenScript;
 
+	private AudioSource _audioSource;
+	public AudioClip getItemSound;
+
 	public string saveName;
 
 	void Start()
 	{
+		_audioSource = GetComponent<AudioSource>();
+
 		if (PlayerPrefs.HasKey(saveName))
 		{
 			LoadData();
@@ -21,10 +26,17 @@ public class Lily : MonoBehaviour
 	{
 		if(collision.CompareTag("Player"))
 		{
-			invenScript.GetLily();
-			SaveData();
-			Destroy(lily);
+			_audioSource.clip = getItemSound;
+			_audioSource.Play();
+			Invoke("DestroyItem", _audioSource.clip.length);
 		}
+	}
+
+	private void DestroyItem()
+	{
+		invenScript.GetLily();
+		SaveData();
+		Destroy(lily);
 	}
 
 	public void SaveData()

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class SpawnButton : MonoBehaviour, IPointerDownHandler
 {
+	private AudioSource _audioSource;
 
 	public GameObject player;
 	public GameObject wolf;
@@ -21,10 +22,11 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 
 	private void Start()
 	{
-
         player = GameObject.Find("TestPlayer(Clone)");
         playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
         player_renderer = player.GetComponent<Renderer>();
+
+		_audioSource = GetComponent<AudioSource>();
 	}
 
 	public void OnPointerDown(PointerEventData ped)
@@ -34,6 +36,11 @@ public class SpawnButton : MonoBehaviour, IPointerDownHandler
 		{
 			if (!isSpawned)
 			{
+				if (!_audioSource.isPlaying)
+				{
+					_audioSource.Play();
+				}
+
 				wolf_clone = Instantiate(wolf, new Vector3(player_renderer.bounds.center.x, player_renderer.bounds.center.y - controlPosition), Quaternion.identity); // 스케일 player dir에 따라 조정
 				wolf_clone.GetComponent<Transform>().localScale = new Vector3(-playerScript.dir, 1);
 				isSpawned = true;

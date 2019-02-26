@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: saveName
       value: key1
       objectReference: {fileID: 0}
+    - target: {fileID: 1413333421117854527, guid: e0c8a159857c8ff44b0fb4a1668cbc7a,
+        type: 3}
+      propertyPath: getItemSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 96822c1bb4d00354db68c47c329663be, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c8a159857c8ff44b0fb4a1668cbc7a, type: 3}
 --- !u!1 &99155248 stripped
@@ -417,7 +422,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bad5f41fbf712694f934cd06d48dadd9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 96822c1bb4d00354db68c47c329663be, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2529,6 +2534,11 @@ PrefabInstance:
     - target: {fileID: 3587730148547050650, guid: 9becc2746b8215f45b162609a996ed8b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822607677684916146, guid: 9becc2746b8215f45b162609a996ed8b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
