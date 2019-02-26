@@ -114,7 +114,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 8e8a9ffc6f52ad5efaf8de9d7db5fa24 Assembly-CSharp.dll:.Door
 b5eb08b578a2f2d80bb106cbe65ab501 Cinemachine.dll:Cinemachine.CinemachineStoryboard
 0ba33ba555aea845eec9de74c98c2bd9 Assembly-CSharp.dll:.FadeScene
-bee952b0fc662d5dc11b3d9d085a018b Assembly-CSharp.dll:.SettingBtn
+f89529d5dbdce12d7cef16d312d5f8a3 Assembly-CSharp.dll:.SettingBtn
 29119af10c1f40729158ef9eb03aa80e Assembly-CSharp.dll:.Nettle
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Canvas_Keep
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -227,7 +227,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 8d8d7a39427730cc7af942455f199445 Assembly-CSharp.dll:.SpawnButton
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SaveData
 6225eb0973ab0af667bc5f9d1b1b18de Cinemachine.dll:Cinemachine.CinemachineCollider
-d7f911afd91f5f63f2a1890963a29c9b Assembly-CSharp.dll:.CloseRuneSound
+548d71692376879a8716aee5592cb601 Assembly-CSharp.dll:.CloseRuneSound
 bd50beb95120324d8c4e8386692b6e82 Cinemachine.dll:Cinemachine.CinemachineBlenderSettings
 c0201dbecd85f700bcdff493a272631d Cinemachine.dll:Cinemachine.CinemachineImpulseSource
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
