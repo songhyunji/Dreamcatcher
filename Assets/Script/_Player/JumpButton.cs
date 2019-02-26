@@ -5,19 +5,16 @@ using UnityEngine.EventSystems;
 
 public class JumpButton : MonoBehaviour, IPointerDownHandler
 {
-	private AudioSource _audioSource;
 	public Player_subslope playerScript;
 
     void Start()
     {
         playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
-		_audioSource = GetComponent<AudioSource>();
     }
 
 
     public void OnPointerDown(PointerEventData ped)
 	{
-		_audioSource.Play();
 		playerScript.Jump();
 
 	}
