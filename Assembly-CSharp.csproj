@@ -85,6 +85,7 @@
     <Compile Include="Assets\Script\_Object\Rune\Rune.cs" />
     <Compile Include="Assets\Script\_Player\Canvas_Keep.cs" />
     <Compile Include="Assets\Script\_Player\Collider_test.cs" />
+    <Compile Include="Assets\Script\_Player\InteractBtnSound.cs" />
     <Compile Include="Assets\Script\_Player\InteractButton.cs" />
     <Compile Include="Assets\Script\_Player\JumpButton.cs" />
     <Compile Include="Assets\Script\_Player\Ladder\Ladder_test.cs" />

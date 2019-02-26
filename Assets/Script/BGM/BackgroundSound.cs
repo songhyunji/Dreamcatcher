@@ -45,7 +45,9 @@ public class BackgroundSound : MonoBehaviour
 				}
 
 				break;
-			case 1: // A0 Scene
+			case 2: // A0 Scene
+			case 3:
+			case 4:
 				_audioSource.clip = stageABGM;
 				if (!_audioSource.isPlaying)
 				{
@@ -53,6 +55,11 @@ public class BackgroundSound : MonoBehaviour
 				}
 				break;
 			case 5: // B1 Scene
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
 				_audioSource.clip = stageBBGM;
 				if (!_audioSource.isPlaying)
 				{
@@ -60,6 +67,7 @@ public class BackgroundSound : MonoBehaviour
 				}
 				break;
 			default:
+				_audioSource.Stop();
 				break;
 		}
 	}

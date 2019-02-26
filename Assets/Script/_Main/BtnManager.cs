@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class BtnManager : MonoBehaviour {
 
 	public GameObject errorLoadPopup;
-	public GameObject OptionPopup;
     public GameObject player;
 	public GameObject inventory;
 	[HideInInspector]
@@ -20,19 +19,24 @@ public class BtnManager : MonoBehaviour {
 	public GameObject fade;
 	private Image img;
 
+	private AudioSource _audioSource;
+
 	private void Start()
     {
+		_audioSource = GetComponent<AudioSource>();
 		img = fade.GetComponent<Image>();
 		StartCoroutine(FadeImage(true, 0));
 	}
 
     public void StartBtnPress()
 	{
+		_audioSource.Play();
 		StartCoroutine(FadeImage(false, 1));
 	}
 
 	public void LoadBtnPress()
 	{
+		_audioSource.Play();
 		loadSceneName = PlayerPrefs.GetString("SaveStage");
 		if (loadSceneName.Length == 0) // 저장된 데이터가 없을 때
 		{
@@ -46,19 +50,10 @@ public class BtnManager : MonoBehaviour {
 
     }
 
-	public void OptionBtnPress()
-	{
-		OptionPopup.SetActive(true);
-	}
-
 	public void ExitLoadPopup()
 	{
+		_audioSource.Play();
 		errorLoadPopup.SetActive(false);
-	}
-
-	public void ExitOptionPopup()
-	{
-        OptionPopup.SetActive(false);
 	}
 
 	public void CreatePlayer(Vector3 playerPosition)
