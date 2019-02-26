@@ -16,6 +16,8 @@ public class Rune : MonoBehaviour
 	public string saveName;
 
 	private AudioSource _audioSource;
+	private GameObject bgm;
+	private AudioSource bgmAudioSource;
 
 	// 만약 플레이어가 룬의 위치와 같을 때
 	// 플레이어가 인터랙트 버튼을 누르면 룬 불빛이 켜짐 -> 꺼짐
@@ -26,7 +28,10 @@ public class Rune : MonoBehaviour
 	void Start()
     {
 		_audioSource = GetComponent<AudioSource>();
-        player = GameObject.Find("TestPlayer");
+		bgm = GameObject.Find("BackgroundSound");
+		bgmAudioSource = bgm.GetComponent<AudioSource>();
+
+		player = GameObject.Find("TestPlayer");
 		// 전 스테이지에서 넘어오는 플레이어 오브젝트 찾기
 
 		if (PlayerPrefs.HasKey(saveName))
@@ -51,7 +56,11 @@ public class Rune : MonoBehaviour
             if (RuneSwitch) // 룬이 켜져 있음
             {
 				_audioSource.Play();
-                Runeimg.sprite = Runeoff;
+				for (float i = 0; i <= 1; i += 0.001f)
+				{
+					bgmAudioSource.volume = i;
+				}
+				Runeimg.sprite = Runeoff;
                 RuneSwitch = false;
                 Debug.Log("룬 꺼짐");
 				SaveData();

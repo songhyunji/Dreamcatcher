@@ -57,7 +57,6 @@ public class NPCDialogue : MonoBehaviour
 	{
 		if(firstMeet)
 		{
-			
 			firstMeet = false;
 			foreach (string dialogue in dialogues)
 			{
@@ -85,22 +84,24 @@ public class NPCDialogue : MonoBehaviour
 			img.SetActive(false);
 			isSpeaking = false;
 		}
-
 	}
 
 	IEnumerator npcDialogue_after()
 	{
-
-		invenScript.UseLily();
-		foreach (string dialogue in dialogues_after)
+		if(!isSpeaking)
 		{
-			_text.text = dialogue;
-			yield return new WaitForSeconds(3);
+			isSpeaking = true;
+			invenScript.UseLily();
+			foreach (string dialogue in dialogues_after)
+			{
+				_text.text = dialogue;
+				yield return new WaitForSeconds(3);
+			}
+			_text.text = "";
+			img.SetActive(false);
+			isSpeaking = false;
+			PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
 		}
-		_text.text = "";
-		img.SetActive(false);
-		isSpeaking = false;
-		PlayerPrefs.SetInt("wolf", 1); // 1 == true, 0 == false;
 	}
 
 	public void PressInteractBtn()
