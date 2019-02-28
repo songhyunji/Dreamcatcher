@@ -1178,7 +1178,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.85}
+  m_Offset: {x: -0.03, y: -1.85}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292492449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.286133, y: -8.956202, z: -0.82330924}
+  m_LocalPosition: {x: 16.25613, y: -8.956202, z: -0.82330924}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1251633094}
@@ -2619,6 +2619,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fadeImg
+      value: 
+      objectReference: {fileID: 1060130901}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: img
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1060130901}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: titleScript
+      value: 
+      objectReference: {fileID: 2075083973}
     - target: {fileID: 3748608493579751790, guid: 318beaab825bbf24fa801f517e3d4f83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2724,26 +2744,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fadeImg
-      value: 
-      objectReference: {fileID: 1060130901}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: img
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fade
-      value: 
-      objectReference: {fileID: 1060130901}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: titleScript
-      value: 
-      objectReference: {fileID: 2075083973}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318beaab825bbf24fa801f517e3d4f83, type: 3}
 --- !u!114 &702778704 stripped
@@ -10912,7 +10912,7 @@ PrefabInstance:
     - target: {fileID: 5760117774071196700, guid: db26d9d8022e8c04c99c8931f44b5c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3438644
+      value: -6.313864
       objectReference: {fileID: 0}
     - target: {fileID: 5760117774071196700, guid: db26d9d8022e8c04c99c8931f44b5c3b,
         type: 3}
@@ -10964,6 +10964,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5760117774071196701, guid: db26d9d8022e8c04c99c8931f44b5c3b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db26d9d8022e8c04c99c8931f44b5c3b, type: 3}
 --- !u!4 &5760117773080888818 stripped
@@ -10987,7 +10992,7 @@ PrefabInstance:
     - target: {fileID: 8715462687817676679, guid: 01e2ed321fccea74cb99d4d12954fdce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.149864
+      value: -13.17986
       objectReference: {fileID: 0}
     - target: {fileID: 8715462687817676679, guid: 01e2ed321fccea74cb99d4d12954fdce,
         type: 3}
@@ -11038,6 +11043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715462687817676678, guid: 01e2ed321fccea74cb99d4d12954fdce,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01e2ed321fccea74cb99d4d12954fdce, type: 3}

@@ -1098,6 +1098,21 @@ PrefabInstance:
       propertyPath: saveName
       value: apple8
       objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -1752,6 +1767,21 @@ PrefabInstance:
         type: 3}
       propertyPath: saveName
       value: apple9
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -2780,7 +2810,7 @@ PrefabInstance:
     - target: {fileID: 5760117774071196700, guid: db26d9d8022e8c04c99c8931f44b5c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 99.37
+      value: 99.34
       objectReference: {fileID: 0}
     - target: {fileID: 5760117774071196700, guid: db26d9d8022e8c04c99c8931f44b5c3b,
         type: 3}
@@ -2836,6 +2866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760117774071196701, guid: db26d9d8022e8c04c99c8931f44b5c3b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db26d9d8022e8c04c99c8931f44b5c3b, type: 3}
@@ -5599,7 +5634,7 @@ PrefabInstance:
     - target: {fileID: 4651430346327570808, guid: 34fa0bc6e3460ca4fb8a37281d908543,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 103.616
+      value: 103.646
       objectReference: {fileID: 0}
     - target: {fileID: 4651430346327570808, guid: 34fa0bc6e3460ca4fb8a37281d908543,
         type: 3}
@@ -5650,6 +5685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016996374501343523, guid: 34fa0bc6e3460ca4fb8a37281d908543,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fa0bc6e3460ca4fb8a37281d908543, type: 3}
@@ -5744,6 +5784,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: img
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fadeImg
+      value: 
+      objectReference: {fileID: 1516299120}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1516299120}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: titleScript
+      value: 
+      objectReference: {fileID: 2116792317}
     - target: {fileID: 3748608493579751790, guid: 318beaab825bbf24fa801f517e3d4f83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5849,26 +5909,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: img
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fadeImg
-      value: 
-      objectReference: {fileID: 1516299120}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fade
-      value: 
-      objectReference: {fileID: 1516299120}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: titleScript
-      value: 
-      objectReference: {fileID: 2116792317}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318beaab825bbf24fa801f517e3d4f83, type: 3}
 --- !u!114 &1726092776 stripped
@@ -9018,7 +9058,7 @@ PrefabInstance:
     - target: {fileID: 4651430346327570808, guid: 34fa0bc6e3460ca4fb8a37281d908543,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 90.83
+      value: 90.86
       objectReference: {fileID: 0}
     - target: {fileID: 4651430346327570808, guid: 34fa0bc6e3460ca4fb8a37281d908543,
         type: 3}
@@ -9069,6 +9109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016996374501343523, guid: 34fa0bc6e3460ca4fb8a37281d908543,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fa0bc6e3460ca4fb8a37281d908543, type: 3}

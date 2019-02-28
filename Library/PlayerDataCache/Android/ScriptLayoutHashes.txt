@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/songh/Desktop/dreamcatcher_Line_Submission(final)(4).apk
+C:/Users/songh/Desktop/dreamcatcher_v09_20190228.apk
 SceneListBegin?
 Assets/Scenes/_Scenes/Main.unity
 Assets/Scenes/_Scenes/Prologue.unity
@@ -157,7 +157,7 @@ b21e86c89591e55b02af8b8c6dd7eeb8 Cinemachine.dll:Cinemachine.CinemachineFramingT
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DontDestroy
 af8d5d814da99223aa98b5aa0d3f4e05 Cinemachine.dll:Cinemachine.CinemachinePOV
 9cefced692dac59ab50f663a6a7b3a4f Assembly-CSharp.dll:.MovingPlatform_switch_horizontal
-4c3a05816ef49965cf275dd2ba07673a Assembly-CSharp.dll:.Enterence
+8e4e6bd36d2ab68dd495916bc2e66dac Assembly-CSharp.dll:.Enterence
 6c9005cf4b17d88b863a9331b2260465 Assembly-CSharp.dll:.Lily
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 1302249301c2382a9154fcbabfd6d2cf Cinemachine.dll:Cinemachine.CinemachineOrbitalTransposer
@@ -241,7 +241,7 @@ f971ba5d21446428a427a0e1182df100 Assembly-CSharp.dll:.Controller2D
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.InteractBtnSound
 158854ba3c90502f73abcffa6581a306 Assembly-CSharp.dll:.VcamDirectionInA1
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-576f50a9db4320327c40ee699ca10878 Assembly-CSharp.dll:.Player_subslope
+5badb78f6c0494df0ab4b530e385ffec Assembly-CSharp.dll:.Player_subslope
 07179fe2df105f03e34aa05036964586 Assembly-CSharp.dll:.DemoEnd_text
 34f619158a952c55b759343e915a772f Assembly-CSharp.dll:.SpawnBtnControl
 c12b8430f9f4963fca975a7979021448 Assembly-CSharp.dll:.prologue_text

@@ -45,6 +45,12 @@ public class Collider_test : MonoBehaviour
 		{
 			playerScript.touchedHeavyFoolhold = true;
 		}
+
+		if (other.CompareTag("inTile"))
+		{
+			transform.parent.Translate(Vector3.up * Time.deltaTime * 8);
+			Debug.Log("땅에 닿음");
+		}
 	}
 
 	private void OnTriggerExit2D(Collider2D other)

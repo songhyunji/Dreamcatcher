@@ -5480,6 +5480,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -6868,6 +6883,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fadeImg
+      value: 
+      objectReference: {fileID: 1669243435}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: img
+      value: 
+      objectReference: {fileID: 1669243435}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 539633010}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1669243435}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: titleScript
+      value: 
+      objectReference: {fileID: 1963090381}
     - target: {fileID: 3748608493579751790, guid: 318beaab825bbf24fa801f517e3d4f83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6973,31 +7013,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fadeImg
-      value: 
-      objectReference: {fileID: 1669243435}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: img
-      value: 
-      objectReference: {fileID: 1669243435}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 539633010}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fade
-      value: 
-      objectReference: {fileID: 1669243435}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: titleScript
-      value: 
-      objectReference: {fileID: 1963090381}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318beaab825bbf24fa801f517e3d4f83, type: 3}
 --- !u!114 &1842885879 stripped

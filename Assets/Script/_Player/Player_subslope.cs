@@ -19,6 +19,7 @@ public class Player_subslope : MonoBehaviour {
 	public bool onLadder = false;
 	public bool onFoothold = false;
 	public bool touchedHeavyFoolhold = false;
+	public bool isSceneLoading = false;
 	public float dir;
 	public float jumpDir;
 	public float speed;
@@ -65,7 +66,7 @@ public class Player_subslope : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if(!isDie) // can move while player alive
+		if(!isDie && !isSceneLoading) // can move while player alive and scene isn't loading
 		{
 			if (onLadder)
 			{
@@ -85,7 +86,6 @@ public class Player_subslope : MonoBehaviour {
 				animator.SetBool("isDead", false);
 			}
 		}
-
 
 	}
 	
@@ -224,7 +224,7 @@ public class Player_subslope : MonoBehaviour {
 	
 	public void Jump()
 	{
-		if(!isDie) // can jump while player alive
+		if(!isDie && !isSceneLoading) // can move while player alive and scene isn't loading
 		{
 			if (isGround)
 			{

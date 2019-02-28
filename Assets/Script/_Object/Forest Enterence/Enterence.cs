@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Enterence : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Enterence : MonoBehaviour
     public Rune runeScript;
 
 	public GameObject player;
+	private Player_subslope playerScript;
 
 	public float blinkSpeed;
 
@@ -21,12 +23,15 @@ public class Enterence : MonoBehaviour
     private SpriteRenderer enterenceSptireRenderer;
     private Animator animator;
 
-    public VcamDirectionInA1 VDA1;
+	public Image img;
+
+	public VcamDirectionInA1 VDA1;
 
 	// Start is called before the first frame update
 	void Start()
     {
 		player = GameObject.Find("TestPlayer(Clone)");
+		playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
 		enterenceSptireRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
@@ -54,8 +59,10 @@ public class Enterence : MonoBehaviour
         {
             if(enterenceOpen)
             {
-				LoadScene();
-            }
+				img.gameObject.SetActive(true);
+				playerScript.isSceneLoading = true;
+				StartCoroutine(FadeImage(false));
+			}
             else
             {
                 StartCoroutine("Blink");
@@ -100,13 +107,31 @@ public class Enterence : MonoBehaviour
         animator.SetBool("playerInteract", false);
     }
 
-	private void LoadScene()
+	IEnumerator FadeImage(bool fadeAway)
 	{
-		PlayerPrefs.SetFloat("posX", player.transform.position.x);
-		PlayerPrefs.SetFloat("posY", player.transform.position.y);
-		PlayerPrefs.SetString("SaveStage", "B1");
+		if (fadeAway)
+		{
+			for (float i = 1; i >= 0; i -= Time.deltaTime)
+			{
+				img.color = new Color(1, 1, 1, i);
+				yield return null;
+			}
 
-		SceneManager.LoadScene("B1");
+		}
+		else
+		{
+			for (float i = 0; i <= 1; i += Time.deltaTime)
+			{
+				img.color = new Color(0, 0, 0, i);
+				yield return null;
+			}
+			playerScript.isSceneLoading = false;
+			PlayerPrefs.SetFloat("posX", player.transform.position.x);
+			PlayerPrefs.SetFloat("posY", player.transform.position.y);
+			PlayerPrefs.SetString("SaveStage", "B1");
+
+			SceneManager.LoadScene("B1");
+		}
 	}
 
 }

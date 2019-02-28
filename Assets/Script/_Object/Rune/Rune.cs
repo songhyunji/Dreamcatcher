@@ -100,6 +100,8 @@ public class Rune : MonoBehaviour
 
 	public void SaveData()
 	{
+		Runeimg.sprite = Runeoff;
+		RuneSwitch = false;
 		Destroy(lightParticle);
 
 		PlayerPrefs.SetString(saveName, "destroy");
@@ -111,6 +113,8 @@ public class Rune : MonoBehaviour
 
 		if(data == "destroy")
 		{
+			Runeimg.sprite = Runeoff;
+			RuneSwitch = false;
 			Destroy(lightParticle);
 		}
 	}

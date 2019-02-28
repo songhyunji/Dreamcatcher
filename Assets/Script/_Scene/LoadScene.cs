@@ -28,6 +28,7 @@ public class LoadScene : MonoBehaviour {
 		{
 			PlayerPrefs.Save();
 			img.gameObject.SetActive(true);
+			playerScript.isSceneLoading = true;
 			StartCoroutine(FadeImage(false));
         }
     }
@@ -54,6 +55,7 @@ public class LoadScene : MonoBehaviour {
 				img.color = new Color(0, 0, 0, i);
 				yield return null;
 			}
+			playerScript.isSceneLoading = false;
 			SceneManager.LoadScene(sceneName + sceneNum);
 
 			PlayerPrefs.SetFloat("posX", player.transform.position.x);

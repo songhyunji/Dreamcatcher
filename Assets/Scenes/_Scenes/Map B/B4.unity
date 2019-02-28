@@ -454,6 +454,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fadeImg
+      value: 
+      objectReference: {fileID: 1190452441}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: img
+      value: 
+      objectReference: {fileID: 1672547133}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1190452441}
+    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
+        type: 3}
+      propertyPath: titleScript
+      value: 
+      objectReference: {fileID: 1478415617}
     - target: {fileID: 3748608493579751790, guid: 318beaab825bbf24fa801f517e3d4f83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -559,26 +579,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fadeImg
-      value: 
-      objectReference: {fileID: 1190452441}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: img
-      value: 
-      objectReference: {fileID: 1672547133}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: fade
-      value: 
-      objectReference: {fileID: 1190452441}
-    - target: {fileID: 3748608493579751791, guid: 318beaab825bbf24fa801f517e3d4f83,
-        type: 3}
-      propertyPath: titleScript
-      value: 
-      objectReference: {fileID: 1478415617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318beaab825bbf24fa801f517e3d4f83, type: 3}
 --- !u!114 &240229267 stripped
@@ -11275,7 +11275,7 @@ PrefabInstance:
     - target: {fileID: 1957739777998138482, guid: 616bd816b14b19e4fbef67cedf116478,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 133.996
+      value: 133.966
       objectReference: {fileID: 0}
     - target: {fileID: 1957739777998138482, guid: 616bd816b14b19e4fbef67cedf116478,
         type: 3}
@@ -11331,6 +11331,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957739777998138481, guid: 616bd816b14b19e4fbef67cedf116478,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616bd816b14b19e4fbef67cedf116478, type: 3}
