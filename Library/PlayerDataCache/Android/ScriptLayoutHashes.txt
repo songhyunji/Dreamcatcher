@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/songh/Desktop/dreamcatcher_Bridge_Exhibition.apk
+C:/Users/songh/Desktop/dreamcatcher_Bridge_Exhibition(1).apk
 SceneListBegin?
 Assets/Scenes/_Scenes/Bridge Logo.unity
 Assets/Scenes/_Scenes/Main.unity
@@ -243,6 +243,7 @@ b2ff30e58a9474ed2c1cec648c896c54 Assembly-CSharp.dll:.Apple1
 158854ba3c90502f73abcffa6581a306 Assembly-CSharp.dll:.VcamDirectionInA1
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 5badb78f6c0494df0ab4b530e385ffec Assembly-CSharp.dll:.Player_subslope
+1c1cd5575a3dd7159e566b523216017c Assembly-CSharp.dll:.LogoScene
 07179fe2df105f03e34aa05036964586 Assembly-CSharp.dll:.DemoEnd_text
 34f619158a952c55b759343e915a772f Assembly-CSharp.dll:.SpawnBtnControl
 c12b8430f9f4963fca975a7979021448 Assembly-CSharp.dll:.prologue_text
@@ -260,4 +261,3 @@ afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.TutorialFade
 2792936179724025482dc04d68a47ca7 Cinemachine.dll:Cinemachine.CinemachineClearShot
 a23c10b6560b6d717ebac27dc7af56e8 Assembly-CSharp.dll:.HeavyApple
 07df0ff4655fee3f5e57fee4648dfed0 Assembly-CSharp.dll:.LoadScene
-1c1cd5575a3dd7159e566b523216017c Assembly-CSharp.dll:.LogoScene
