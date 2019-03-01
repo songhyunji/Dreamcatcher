@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 549304382}
   m_Layer: 0
   m_Name: MovingPlatform Horizontal
-  m_TagString: Ground
+  m_TagString: Foothold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9768,7 +9768,7 @@ GameObject:
   - component: {fileID: 4889492444133996532}
   m_Layer: 0
   m_Name: MovingPlatform Vertical
-  m_TagString: Ground
+  m_TagString: Foothold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

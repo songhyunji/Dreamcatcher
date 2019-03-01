@@ -1998,7 +1998,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: b043c5dd3fdefa8489c1629286d33e98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d4c368ee33fe544bb39948facd67a47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6772,7 +6772,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1738011385992562, guid: 81fb5cc32af4278418853ebb413f3e90, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Foothold
       objectReference: {fileID: 0}
     - target: {fileID: 1738011385992562, guid: 81fb5cc32af4278418853ebb413f3e90, type: 3}
       propertyPath: m_Layer

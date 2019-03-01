@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/_Scenes/Bridge Logo.unity
+    guid: deefac7b4533665478cd4d39c97c0147
+  - enabled: 1
     path: Assets/Scenes/_Scenes/Main.unity
     guid: 8d0460689c812414787ef3f342fc0636
   - enabled: 1

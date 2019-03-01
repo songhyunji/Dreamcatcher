@@ -16,7 +16,6 @@ public class Apple1 : MonoBehaviour {
 
 	private bool inGround;
 
-    public bool isHanging = true;
 	public bool isTouch;
     public bool isAttatch;
     public bool isGround;

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class FadeScene : MonoBehaviour
 {
     public GameObject player;
+	public Player_subslope playerScript;
     public Image fade;
     public Image tutorial;
 
@@ -40,12 +41,14 @@ public class FadeScene : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("TestPlayer(Clone)");
-    }
+		playerScript = GameObject.Find("TestPlayer(Clone)").GetComponent<Player_subslope>();
+	}
 
     public void HomeBtnPress()
     {
         Time.timeScale = 1;
-        StartCoroutine(FadeImage(fade, false, 1));
+		playerScript.isSceneLoading = true;
+		StartCoroutine(FadeImage(fade, false, 1));
 
     }
 
@@ -56,7 +59,8 @@ public class FadeScene : MonoBehaviour
         loadSceneName = PlayerPrefs.GetString("SaveStage");
 
         fade.gameObject.SetActive(true);
-        StartCoroutine(FadeImage(fade, false, 2));
+		playerScript.isSceneLoading = true;
+		StartCoroutine(FadeImage(fade, false, 2));
     }
 
     IEnumerator FadeImage(Image img, bool fadeAway, int num)
@@ -97,8 +101,9 @@ public class FadeScene : MonoBehaviour
                 img.color = new Color(0, 0, 0, i);
                 yield return null;
             }
+			playerScript.isSceneLoading = false;
 
-            switch (num)
+			switch (num)
             {
                 case 1:
                     Debug.Log("home btn");

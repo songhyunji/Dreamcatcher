@@ -560,16 +560,6 @@ PrefabInstance:
       propertyPath: spawnBtn
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
       propertyPath: m_Color.r
@@ -584,6 +574,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -604,7 +604,6 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnBtn: {fileID: 0}
   playerScript: {fileID: 0}
-  isHanging: 1
   isTouch: 0
   isAttatch: 0
   isGround: 0
@@ -3297,7 +3296,7 @@ Transform:
   - {fileID: 2090499521}
   - {fileID: 126635668}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791143361
 GameObject:
@@ -3702,7 +3701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &910029085
 Transform:
   m_ObjectHideFlags: 0
@@ -6603,7 +6602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1738011385992562, guid: 81fb5cc32af4278418853ebb413f3e90, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Foothold
       objectReference: {fileID: 0}
     - target: {fileID: 4954318817511554, guid: 81fb5cc32af4278418853ebb413f3e90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10014,22 +10013,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4773041711591774, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114412858200936208, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212993059438199638, guid: 0576b324cffd2d641a26da6400899cd6,
         type: 3}
@@ -10045,6 +10034,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 50999366397739304, guid: 0576b324cffd2d641a26da6400899cd6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114203028732378360, guid: 0576b324cffd2d641a26da6400899cd6, type: 3}
@@ -10065,7 +10064,6 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnBtn: {fileID: 0}
   playerScript: {fileID: 0}
-  isHanging: 1
   isTouch: 0
   isAttatch: 0
   isGround: 0
@@ -11237,7 +11235,7 @@ RectTransform:
   - {fileID: 1141463751}
   - {fileID: 270252203}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12595,7 +12593,7 @@ PrefabInstance:
     - target: {fileID: 3748608493579751790, guid: 318beaab825bbf24fa801f517e3d4f83,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3748608493579751790, guid: 318beaab825bbf24fa801f517e3d4f83,
         type: 3}
